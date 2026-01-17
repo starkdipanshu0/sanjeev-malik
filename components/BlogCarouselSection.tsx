@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, animate } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, ArrowLeft, Calendar, Clock } from "lucide-react";
 
 // Mock Data for Blog Posts
 const articles = [
@@ -45,6 +45,7 @@ const articles = [
 const BlogCarouselSection = () => {
     const [width, setWidth] = useState(0);
     const carousel = useRef<HTMLDivElement>(null);
+    const x = useMotionValue(0);
 
     useEffect(() => {
         if (carousel.current) {
@@ -52,12 +53,28 @@ const BlogCarouselSection = () => {
         }
     }, []);
 
+    const slide = (direction: "left" | "right") => {
+        const moveAmount = 350 + 32; // Card width + gap
+        const currentX = x.get();
+        let newX = direction === "left" ? currentX + moveAmount : currentX - moveAmount;
+
+        // Clamp
+        if (newX > 0) newX = 0;
+        if (newX < -width) newX = -width;
+
+        animate(x, newX, {
+            type: "spring",
+            stiffness: 300,
+            damping: 30
+        });
+    };
+
     return (
         <section className="w-full py-12 md:py-20 bg-secondary/30 text-foreground overflow-hidden">
             <div className="container mx-auto px-6 md:px-12 max-w-7xl">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 relative">
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <div className="h-px w-8 bg-primary" />
@@ -68,12 +85,34 @@ const BlogCarouselSection = () => {
                         </h2>
                     </div>
 
-                    {/* Desktop View All Button (Hidden on Mobile) */}
-                    <div className="hidden md:block">
-                        <Button variant="outline" size="lg" className="border-primary/20 hover:bg-primary/5 group" asChild>
-                            <Link href="/articles">
+                    {/* Controls & Desktop View All */}
+                    <div className="hidden md:flex items-center gap-6">
+                        {/* Navigation Arrows */}
+                        <div className="flex gap-2">
+                            <Button
+                                variant="outline"
+                                size="icon"
+                                className="rounded-full border-primary/20 hover:bg-primary hover:text-white transition-colors"
+                                onClick={() => slide("left")}
+                            >
+                                <ArrowLeft className="w-4 h-4" />
+                            </Button>
+                            <Button
+                                variant="outline"
+                                size="icon"
+                                className="rounded-full border-primary/20 hover:bg-primary hover:text-white transition-colors"
+                                onClick={() => slide("right")}
+                            >
+                                <ArrowRight className="w-4 h-4" />
+                            </Button>
+                        </div>
+
+                        <div className="w-px h-8 bg-border/50" />
+
+                        <Button variant="ghost" className="hover:bg-transparent hover:text-primary group px-0" asChild>
+                            <Link href="/articles" className="flex items-center gap-2">
                                 View All Articles
-                                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
                     </div>
@@ -84,12 +123,13 @@ const BlogCarouselSection = () => {
                     <motion.div
                         drag="x"
                         dragConstraints={{ right: 0, left: -width }}
+                        style={{ x }}
                         className="flex gap-6 md:gap-8 pb-4" // pb-4 for shadow clearance
                     >
                         {articles.map((article) => (
                             <motion.div
                                 key={article.id}
-                                className="min-w-[300px] md:min-w-[350px] bg-background rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
+                                className="min-w-[300px] md:min-w-[400px] bg-background rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
                             >
                                 {/* Card Content */}
                                 <div className="p-6 md:p-8 flex flex-col h-full">
@@ -128,7 +168,25 @@ const BlogCarouselSection = () => {
                 </motion.div>
 
                 {/* Mobile View All Button (Visible only on Mobile) */}
-                <div className="mt-8 md:hidden flex justify-center">
+                <div className="mt-8 md:hidden flex justify-center gap-4">
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full border-primary/20"
+                        onClick={() => slide("left")}
+                    >
+                        <ArrowLeft className="w-4 h-4" />
+                    </Button>
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full border-primary/20"
+                        onClick={() => slide("right")}
+                    >
+                        <ArrowRight className="w-4 h-4" />
+                    </Button>
+                </div>
+                <div className="mt-6 md:hidden flex justify-center">
                     <Button variant="outline" className="w-full max-w-xs border-primary/20" asChild>
                         <Link href="/articles">
                             View All Articles

@@ -212,7 +212,7 @@ const HeroSection = () => {
                                     }}
                                 >
                                     <Image
-                                        src="/images/book_cover_3d.jpg"
+                                        src="/images/book_cover_flat.jpg"
                                         alt="The Graphene Mentality Book Cover"
                                         fill
                                         className="object-contain drop-shadow-2xl"
