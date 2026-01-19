@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { Linkedin, Twitter, Instagram } from "lucide-react";
 
 const AboutHero = () => {
     return (
@@ -55,13 +57,24 @@ const AboutHero = () => {
                         ))}
                     </ul>
 
-                    <div className="pt-4">
-                        {/* Button removed or kept? User said "below one line qoute and 4 pointes". 
-                             The original plan mentioned keeping the button in the AboutAuthorSection plan, 
-                             but here in AboutHero, it wasn't explicitly asked to REMOVE anything, but the focus is on these elements. 
-                             The previous AboutHero didn't have a button, so I won't add one unless I see a need. 
-                             Wait, the previous AboutHero strictly had paragraphs. I will stick to the requested items.
-                         */}
+                    {/* Social Media Links */}
+                    <div className="pt-8 flex items-center gap-6">
+                        <span className="text-sm font-semibold tracking-widest text-muted-foreground uppercase">Connect</span>
+                        <div className="flex gap-4">
+                            {[
+                                { icon: Linkedin, href: "#" },
+                                { icon: Twitter, href: "#" },
+                                { icon: Instagram, href: "#" }
+                            ].map((social, i) => (
+                                <Link
+                                    key={i}
+                                    href={social.href}
+                                    className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                                >
+                                    <social.icon className="w-5 h-5" />
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </motion.div>
             </div>
