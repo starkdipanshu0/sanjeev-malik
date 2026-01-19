@@ -7,7 +7,7 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
-import Header from "@/components/Header";
+import { TopLayout } from "@/components/TopLayout";
 import Footer from "@/components/Footer";
 
 // ... existing code ...
@@ -33,7 +33,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${playfair.variable} ${sourceSans.variable} antialiased font-sans flex flex-col min-h-screen`}
       >
-        <Header />
+        <TopLayout />
         <main className="flex-1">
           {children}
         </main>

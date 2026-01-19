@@ -54,10 +54,10 @@ const Footer = () => {
                         <h4 className="font-serif text-lg text-white mb-6">Explore</h4>
                         <ul className="space-y-3">
                             {[
-                                { label: 'The Book', href: '#' },
-                                { label: 'Latest Articles', href: '#' },
-                                { label: 'Speaking & Events', href: '#' },
-                                { label: 'About the Author', href: '#' }
+                                { label: 'The Book', href: '/book' },
+                                { label: 'Latest Articles', href: '/articles' },
+                                { label: 'Achievements', href: '/achievements' },
+                                { label: 'About the Author', href: '/about' }
                             ].map((item) => (
                                 <li key={item.label}>
                                     <Link href={item.href} className="text-sm text-white/50 hover:text-primary transition-colors flex items-center gap-3 group/link">

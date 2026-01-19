@@ -24,7 +24,7 @@ const Header = () => {
     const navLinks = [
         { name: "The Book", href: "/book" },
         { name: "Articles", href: "/articles" },
-        { name: "Speaking", href: "/speaking" },
+        { name: "Achievements", href: "/achievements" },
         { name: "About", href: "/about" },
     ];
 
@@ -35,7 +35,7 @@ const Header = () => {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className={cn(
-                    "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500",
+                    "w-full transition-all duration-500",
                     isScrolled
                         ? "bg-white/80 backdrop-blur-md border-b border-black/5 py-3"
                         : "bg-transparent py-6"
