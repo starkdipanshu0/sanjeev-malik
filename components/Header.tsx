@@ -78,17 +78,19 @@ const Header = () => {
                                 </Link>
                             ))}
 
-                            <Button
-                                size="sm"
-                                className={cn(
-                                    "ml-4 font-serif italic tracking-wide transition-all duration-300",
-                                    isScrolled
-                                        ? "bg-black text-white hover:bg-zinc-800"
-                                        : "bg-black/90 text-white hover:bg-black hover:scale-105 shadow-lg"
-                                )}
-                            >
-                                Get the Book
-                            </Button>
+                            <Link href="/book#purchase-options">
+                                <Button
+                                    size="sm"
+                                    className={cn(
+                                        "ml-4 font-serif italic tracking-wide transition-all duration-300",
+                                        isScrolled
+                                            ? "bg-black text-white hover:bg-zinc-800"
+                                            : "bg-black/90 text-white hover:bg-black hover:scale-105 shadow-lg"
+                                    )}
+                                >
+                                    Get the Book
+                                </Button>
+                            </Link>
                         </nav>
 
                         {/* Mobile Toggle */}
@@ -134,13 +136,14 @@ const Header = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5 }}
                             >
-                                <Button
-                                    size="lg"
-                                    className="mt-8 bg-black text-white rounded-full px-8"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    Get the Book
-                                </Button>
+                                <Link href="/book#purchase-options" onClick={() => setIsMobileMenuOpen(false)}>
+                                    <Button
+                                        size="lg"
+                                        className="mt-8 bg-black text-white rounded-full px-8"
+                                    >
+                                        Get the Book
+                                    </Button>
+                                </Link>
                             </motion.div>
                         </nav>
                     </motion.div>

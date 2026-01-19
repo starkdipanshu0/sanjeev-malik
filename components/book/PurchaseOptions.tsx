@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const PurchaseOptions = () => {
     return (
-        <section className="py-24 relative overflow-hidden">
+        <section id="purchase-options" className="py-24 relative overflow-hidden">
             <div className="absolute inset-0 bg-primary/5 -skew-y-3 origin-top-left scale-110 z-0"></div>
 
             <div className="container relative z-10 mx-auto px-6 md:px-12 text-center">
