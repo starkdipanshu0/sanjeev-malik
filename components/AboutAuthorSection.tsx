@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const AboutAuthorSection = () => {
     return (
-        <section className="w-full py-12 md:py-20 bg-secondary/30">
+        <section className="w-full py-6 md:py-20 bg-secondary/30 min-h-[50vh] md:min-h-auto flex items-center">
             <div className="container mx-auto px-6 md:px-12 max-w-7xl">
                 <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
 
@@ -19,10 +19,10 @@ const AboutAuthorSection = () => {
                         transition={{ duration: 0.8 }}
                         className="relative"
                     >
-                        <div className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-2xl">
+                        <div className="relative aspect-[4/5] w-48 md:w-full max-w-md mx-auto overflow-hidden rounded-xl shadow-2xl border-4 border-background/50">
                             {/* Author Image */}
                             <Image
-                                src="/images/author.jpg"
+                                src="/images/homeauther.jpeg"
                                 alt="Lt. Col. Dr. Sanjeev Malik"
                                 fill
                                 className="object-cover"
@@ -39,7 +39,7 @@ const AboutAuthorSection = () => {
                     </motion.div>
 
                     {/* Right Column: Text Content */}
-                    <div className="flex flex-col space-y-8">
+                    <div className="flex flex-col space-y-4 md:space-y-8 text-center md:text-left mt-[-1rem] md:mt-0">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -53,28 +53,37 @@ const AboutAuthorSection = () => {
                                 </span>
                             </div>
 
-                            <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
-                                I am <br />
-                                <span className="text-primary italic">Sanjeev Malik</span>
+                            <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
+                                Hi, I’m <span className="text-primary italic">Lt Col Sanjeev Malik</span>
                             </h2>
+                            <p className="text-base md:text-xl font-medium text-foreground mb-4">
+                                I’m an Indian Army doctor and have served with elite special forces.
+                            </p>
 
-                            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                            <div className="space-y-2 md:space-y-6 text-sm md:text-lg text-muted-foreground leading-relaxed hidden md:block">
                                 <p>
-                                    As a Lieutenant Colonel in the Indian Army, I learned that the strongest battles are not fought on the field, but in the mind.
-                                    My journey from leading troops in high-stakes environments to mentoring corporate leaders has taught me one universal truth:
-                                    <strong>Resilience is a skill, not a gift.</strong>
+                                    I’m the author of <em>The Graphene Mentality</em>.
                                 </p>
                                 <p>
-                                    I wrote <em>The Graphene Mentality</em> to decode the structure of an unbreakable mind.
-                                    Like Graphene, we must be incredibly strong yet flexible enough to adapt.
-                                    My mission is to help you dream bigger, dare greater, and deliver beyond your perceived limits.
+                                    It took me almost 5 years to dig out this priceless treasure from my graphite pencil.
+                                </p>
+                                <p>
+                                    Life has given me many uniforms to wear—from serving with the Special Forces and the President's Bodyguard to representing India at the World Medical and Health Games, where I was blessed to win five gold medals in athletics.
+                                </p>
+                            </div>
+
+                            {/* Mobile only simplified bio */}
+                            <div className="space-y-2 text-sm text-muted-foreground leading-relaxed md:hidden">
+                                <p>
+                                    <span className="font-semibold text-primary">Author of The Graphene Mentality.</span><br />
+                                    From Special Forces to winning 5 gold medals for India, I help you build an unbreakable mind.
                                 </p>
                             </div>
 
                             <div className="pt-8">
-                                <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md">
+                                <Button asChild size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5 hover:text-primary transition-all">
                                     <Link href="/about">
-                                        Read Full Story
+                                        Read More
                                     </Link>
                                 </Button>
                             </div>

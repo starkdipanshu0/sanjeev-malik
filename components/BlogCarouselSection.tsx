@@ -81,7 +81,7 @@ const BlogCarouselSection = () => {
                             <span className="text-xs font-bold tracking-widest text-primary uppercase">Latest Insights</span>
                         </div>
                         <h2 className="font-serif text-3xl md:text-5xl font-bold">
-                            Thoughts & <span className="text-primary italic">Perspectives</span>
+                          My Blogs {/* <span className="text-primary italic">Perspectives</span> */}
                         </h2>
                     </div>
 

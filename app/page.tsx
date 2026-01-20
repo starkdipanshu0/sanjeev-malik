@@ -3,6 +3,8 @@ import AboutAuthorSection from "@/components/AboutAuthorSection";
 import BookBenefitsSection from "@/components/BookBenefitsSection";
 import BlogCarouselSection from "@/components/BlogCarouselSection";
 import NewsletterSection from "@/components/NewsletterSection";
+import ConnectSection from "@/components/ConnectSection";
+import BookCTASection from "@/components/BookCTASection";
 
 export default function Home() {
   return (
@@ -11,7 +13,9 @@ export default function Home() {
       <AboutAuthorSection />
       <BookBenefitsSection />
       <BlogCarouselSection />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
+      <BookCTASection />
+      <ConnectSection />
     </div>
   );
 }

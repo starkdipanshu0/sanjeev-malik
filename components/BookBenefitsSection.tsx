@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Shield, Target, Users, TrendingUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Shield, Target, Users, TrendingUp, Plus, Minus } from "lucide-react";
+import { useState } from "react";
 
 const benefits = [
     {
@@ -31,39 +32,74 @@ const benefits = [
 ];
 
 const BookBenefitsSection = () => {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const toggleAccordion = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
     return (
         <section className="w-full py-12 md:py-20 bg-background">
-            <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div className="container mx-auto px-6 md:px-12 max-w-3xl">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground">
-                        How This Book Will <span className="text-primary italic">Help You</span>
+                        Unlock Your Potential with <span className="text-primary italic">The Graphene Mentality</span>
                     </h2>
                     <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+                <div className="space-y-4">
                     {benefits.map((benefit, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group flex flex-col md:flex-row gap-6 p-6 rounded-2xl hover:bg-secondary/50 transition-colors duration-300 border border-transparent hover:border-primary/10"
+                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                            className={`rounded-2xl overflow-hidden border transition-colors duration-300 ${openIndex === index
+                                ? "bg-secondary/30 border-primary/20"
+                                : "bg-background border-transparent hover:bg-secondary/20"
+                                }`}
                         >
-                            <div className="shrink-0">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                                    <benefit.icon className="w-6 h-6" />
+                            <button
+                                onClick={() => toggleAccordion(index)}
+                                className="w-full flex items-center justify-between p-6 text-left"
+                            >
+                                <div className="flex items-center gap-4">
+                                    <div className={`p-2 rounded-full transition-colors duration-300 ${openIndex === index ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary"
+                                        }`}>
+                                        <benefit.icon className="w-5 h-5" />
+                                    </div>
+                                    <span className={`text-lg font-bold transition-colors duration-300 ${openIndex === index ? "text-primary" : "text-foreground"
+                                        }`}>
+                                        {benefit.title}
+                                    </span>
                                 </div>
-                            </div>
-                            <div className="space-y-3">
-                                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                                    {benefit.title}
-                                </h3>
-                                <p className="text-muted-foreground leading-relaxed">
-                                    {benefit.description}
-                                </p>
-                            </div>
+                                <div className={`transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}>
+                                    {openIndex === index ? (
+                                        <Minus className="w-5 h-5 text-primary" />
+                                    ) : (
+                                        <Plus className="w-5 h-5 text-muted-foreground" />
+                                    )}
+                                </div>
+                            </button>
+
+                            <AnimatePresence>
+                                {openIndex === index && (
+                                    <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: "auto", opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                                    >
+                                        <div className="px-6 pb-6 pt-0 pl-[4.5rem]">
+                                            <p className="text-muted-foreground leading-relaxed">
+                                                {benefit.description}
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </motion.div>
                     ))}
                 </div>
