@@ -54,8 +54,8 @@ const Footer = () => {
                         <h4 className="font-serif text-lg text-white mb-6">Explore</h4>
                         <ul className="space-y-3">
                             {[
-                                { label: 'The Book', href: '/book' },
-                                { label: 'Latest Articles', href: '/articles' },
+                                { label: 'Book', href: '/book' },
+                                { label: 'Latest Blogs', href: '/articles' },
                                 { label: 'Achievements', href: '/achievements' },
                                 { label: 'About the Author', href: '/about' }
                             ].map((item) => (
@@ -73,12 +73,9 @@ const Footer = () => {
                     <div className="md:col-span-4 p-10 bg-white/[0.02] relative overflow-hidden group hover:bg-white/[0.04] transition-colors duration-500 border-t md:border-t-0 border-white/10">
                         <div className="relative z-10 h-full flex flex-col justify-center gap-6">
                             <div>
-                                <h4 className="font-mono text-[10px] text-primary uppercase tracking-[0.2em] mb-2 flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" /> Weekly Dispatch
-                                </h4>
-                                <h3 className="text-xl font-serif text-white/90">Join the Inner Circle</h3>
+                                <h3 className="text-xl font-serif text-white/90">Subscribe to my weekly Newsletter</h3>
                                 <p className="text-xs text-white/40 mt-2 leading-relaxed">
-                                    Strategic insights on leadership, resilience, and growth delivered to your inbox.
+                                    Get powerful mindset-building tips delivered straight to your inbox.
                                 </p>
                             </div>
 
@@ -112,7 +109,7 @@ const Footer = () => {
                         {[...Array(4)].map((_, i) => (
                             <div key={i} className="flex items-center gap-16 opacity-40 hover:opacity-100 transition-opacity duration-500">
                                 <span className="text-lg font-serif tracking-widest text-white uppercase">
-                                    Lt. Col. Dr. Sanjeev Malik
+                                    Lt. Col. Sanjeev Malik
                                 </span>
                                 <span className="w-1 h-1 rounded-full bg-primary" />
                                 <span className="text-sm font-sans font-bold tracking-[0.2em] text-white/60 uppercase">
@@ -132,7 +129,7 @@ const Footer = () => {
                         {[...Array(4)].map((_, i) => (
                             <div key={i} className="flex items-center gap-16 opacity-40 hover:opacity-100 transition-opacity duration-500">
                                 <span className="text-lg font-serif tracking-widest text-white uppercase">
-                                    Lt. Col. Dr. Sanjeev Malik
+                                    Lt. Col. Sanjeev Malik
                                 </span>
                                 <span className="w-1 h-1 rounded-full bg-primary" />
                                 <span className="text-sm font-sans font-bold tracking-[0.2em] text-white/60 uppercase">

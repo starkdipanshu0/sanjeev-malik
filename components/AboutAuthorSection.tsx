@@ -65,9 +65,6 @@ const AboutAuthorSection = () => {
                                     I’m the author of <em>The Graphene Mentality</em>.
                                 </p>
                                 <p>
-                                    It took me almost 5 years to dig out this priceless treasure from my graphite pencil.
-                                </p>
-                                <p>
                                     Life has given me many uniforms to wear—from serving with the Special Forces and the President's Bodyguard to representing India at the World Medical and Health Games, where I was blessed to win five gold medals in athletics.
                                 </p>
                             </div>

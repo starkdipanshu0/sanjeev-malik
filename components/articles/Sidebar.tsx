@@ -24,9 +24,9 @@ export const Sidebar = () => {
 
             {/* Newsletter - Minimalist */}
             <div className="space-y-4">
-                <h3 className="font-serif text-2xl font-bold">Join the Inner Circle</h3>
+                <h3 className="font-serif text-2xl font-bold">Subscribe to my weekly Newsletter</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                    Get exclusive strategies on leadership, resilience, and mental fortitude delivered to your inbox.
+                    Get powerful mindset-building tips delivered straight to your inbox.
                 </p>
                 <form className="flex flex-col gap-3">
                     <input

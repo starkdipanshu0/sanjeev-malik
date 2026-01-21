@@ -11,14 +11,14 @@ export default function ArticlesPage() {
     const articles = getAllArticles();
 
     return (
-        <main className="min-h-screen bg-background pt-32 pb-20">
+        <main className="min-h-screen bg-background pt-48 pb-20">
             {/* Page Header */}
             <div className="container mx-auto px-6 md:px-12 mb-20 text-center">
                 <span className="text-primary font-mono text-xs uppercase tracking-[0.2em] mb-4 block">
                     The Journal
                 </span>
                 <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6">
-                    Insights & <span className="italic text-muted-foreground">Perspectives</span>
+                    My <span className="italic text-muted-foreground">Blogs</span>
                 </h1>
                 <p className="max-w-xl mx-auto text-muted-foreground text-lg">
                     Exploring the intersection of military discipline, corporate strategy, and human potential.

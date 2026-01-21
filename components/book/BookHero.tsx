@@ -40,7 +40,7 @@ const BookHero = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative min-h-[90vh] w-full overflow-hidden bg-background flex items-center justify-center py-24 perspective-1000"
+            className="relative min-h-[100dvh] w-full overflow-hidden bg-background flex items-center justify-center py-12 md:py-24 perspective-1000"
         >
             {/* Dynamic Background Elements */}
             <div className="absolute inset-0 z-0">
@@ -49,54 +49,61 @@ const BookHero = () => {
                 <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: "url('/images/noise.png')" }}></div>
             </div>
 
-            <div className="container relative z-10 mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="container relative z-10 mx-auto px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
+                {/* 3D Book Visual - Mobile: Show First (smaller) / Desktop: Show Second (right column behavior) 
+                    Re-ordering for mobile to show image first or keeping text first? 
+                    Usually Hero text is first. Key is size.
+                */}
+
                 {/* Text Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="space-y-8 text-center lg:text-left"
+                    className="space-y-4 md:space-y-8 text-center lg:text-left order-2 lg:order-1 flex flex-col items-center lg:items-start"
                 >
-                    <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+                    {/* <div className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] md:text-xs font-bold tracking-widest uppercase mb-2 md:mb-4">
                         International Bestseller
-                    </div>
+                    </div> */}
 
-                    <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight text-foreground leading-[1.1]">
+                    <h1 className="text-4xl md:text-7xl font-serif font-bold tracking-tight text-foreground leading-[1.1]">
                         The <span className="text-primary">Graphene</span> Mentality
                     </h1>
 
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                        Unlock the secret to becoming unbreakable. Like graphene, be the strongest yet most flexible version of yourself.
-                        <span className="block mt-4 text-base font-medium text-primary">
+                    <p className="text-sm md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Unlock the secret to becoming unbreakable. Be the strongest yet most flexible version of yourself.
+                        <span className="block mt-2 md:mt-4 text-sm md:text-base font-medium text-primary">
                             By Author Lt. Col. Sanjeev Malik
                         </span>
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <Button size="lg" className="h-14 px-8 text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:-translate-y-1 transition-all duration-300">
-                            Buy Now
-                        </Button>
+                    <div className="flex flex-row gap-3 md:gap-4 justify-center lg:justify-start pt-2 md:pt-4 w-full md:w-auto px-2 md:px-0">
+                        <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3" target="_blank" rel="noopener noreferrer" className="flex-1 md:flex-none">
+                            <Button size="lg" className="w-full h-12 md:h-14 px-4 md:px-8 text-sm md:text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:-translate-y-1 transition-all duration-300">
+                                Buy Now
+                            </Button>
+                        </a>
                         <Button
                             size="lg"
                             variant="outline"
-                            className="h-14 px-8 text-lg font-medium border-primary/20 hover:bg-primary/5 hover:text-primary transition-all duration-300"
+                            className="flex-1 md:flex-none h-12 md:h-14 px-4 md:px-8 text-sm md:text-lg font-medium border-primary/20 hover:bg-primary/5 hover:text-primary transition-all duration-300"
                             onClick={() => {
                                 document.getElementById("free-chapter")?.scrollIntoView({ behavior: "smooth" });
                             }}
                         >
-                            Read Free Chapter
+                            Read Sample
                         </Button>
                     </div>
                 </motion.div>
 
                 {/* 3D Book Visual */}
-                <div className="flex items-center justify-center perspective-1000">
+                <div className="flex items-center justify-center perspective-1000 order-1 lg:order-2 mb-4 lg:mb-0">
                     <motion.div
                         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
                         initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
                         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                         transition={{ duration: 1.2, ease: "circOut", delay: 0.2 }}
-                        className="relative w-[300px] h-[460px] md:w-[400px] md:h-[600px] shadow-2xl rounded-r-2xl"
+                        className="relative w-[180px] h-[280px] sm:w-[240px] sm:h-[360px] md:w-[400px] md:h-[600px] shadow-2xl rounded-r-xl md:rounded-r-2xl"
                     >
                         <motion.div
                             animate={{ y: [-10, 10, -10] }}
@@ -107,14 +114,14 @@ const BookHero = () => {
                                 src="/images/book_cover_flat.jpg"
                                 alt="The Graphene Mentality Book Cover"
                                 fill
-                                className="object-cover rounded-r-2xl shadow-[20px_20px_60px_rgba(0,0,0,0.3)]"
+                                className="object-cover rounded-r-xl md:rounded-r-2xl shadow-[10px_10px_30px_rgba(0,0,0,0.3)] md:shadow-[20px_20px_60px_rgba(0,0,0,0.3)]"
                                 priority
                             />
-                            {/* Spine Effect (Simple visual trick) */}
-                            <div className="absolute top-0 bottom-0 left-0 w-[15px] bg-gradient-to-r from-white/20 to-transparent z-10 pointer-events-none" />
+                            {/* Spine Effect */}
+                            <div className="absolute top-0 bottom-0 left-0 w-[8px] md:w-[15px] bg-gradient-to-r from-white/20 to-transparent z-10 pointer-events-none" />
                             {/* Sheen */}
                             <motion.div
-                                className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 z-20 pointer-events-none rounded-r-2xl"
+                                className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 z-20 pointer-events-none rounded-r-xl md:rounded-r-2xl"
                                 style={{
                                     x: useTransform(mouseXSpring, [-0.5, 0.5], ["100%", "-100%"]),
                                     opacity: useTransform(mouseYSpring, [-0.5, 0.5], [0, 0.4])

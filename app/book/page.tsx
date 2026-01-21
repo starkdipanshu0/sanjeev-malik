@@ -5,6 +5,7 @@ import FreeChapterSignup from '@/components/book/FreeChapterSignup';
 import ChapterWalkthrough from '@/components/book/ChapterWalkthrough';
 import KeyThemes from '@/components/book/KeyThemes';
 import PurchaseOptions from '@/components/book/PurchaseOptions';
+import BookBenefitsSection from '@/components/BookBenefitsSection';
 
 export const metadata: Metadata = {
     title: 'The Graphene Mentality | Book',
@@ -16,8 +17,9 @@ export default function BookPage() {
         <main className="min-h-screen">
             <BookHero />
             <BookSynopsis />
+            {/* <BookBenefitsSection /> */}
             <FreeChapterSignup />
-            <KeyThemes />
+            {/* <KeyThemes /> */}
             <ChapterWalkthrough />
             <PurchaseOptions />
         </main>

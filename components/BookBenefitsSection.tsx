@@ -1,107 +1,112 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { Shield, Target, Users, TrendingUp, Plus, Minus } from "lucide-react";
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { ZapOff, Crosshair, Anchor, Mountain } from "lucide-react";
 
 const benefits = [
     {
-        icon: Shield,
-        title: "Unbreakable Resilience",
-        description:
-            "Forge a mind that thrives under pressure. Learn to transmute stress into strength and turn every obstacle into a stepping stone for success.",
+        icon: ZapOff,
+        text: "Cut through constant distractions",
+        highlight: "distractions"
     },
     {
-        icon: Target,
-        title: "Laser Focus",
-        description:
-            "Cut through the noise of the digital age. Master the art of deep concentration to achieve your most ambitious goals without distraction.",
+        icon: Crosshair,
+        text: "Develop laser sharp focus",
+        highlight: "laser sharp focus"
     },
     {
-        icon: Users,
-        title: "Strategic Leadership",
-        description:
-            "Apply battle-tested strategies from the army to the corporate world. Lead your team with clarity, decisiveness, and unwavering empathy.",
+        icon: Anchor,
+        text: "Build discipline anchored in a higher purpose",
+        highlight: "discipline"
     },
     {
-        icon: TrendingUp,
-        title: "Sustainable Growth",
-        description:
-            "Move beyond fleeting motivation. Build robust mental systems and habits that ensure continuous personal and professional evolution.",
-    },
+        icon: Mountain,
+        text: "Stay resilient and committed to your goals even when motivation fades",
+        highlight: "resilient"
+    }
 ];
 
 const BookBenefitsSection = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-    const toggleAccordion = (index: number) => {
-        setOpenIndex(openIndex === index ? null : index);
-    };
-
     return (
-        <section className="w-full py-12 md:py-20 bg-background">
-            <div className="container mx-auto px-6 md:px-12 max-w-3xl">
-                <div className="text-center mb-16 space-y-4">
-                    <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground">
-                        Unlock Your Potential with <span className="text-primary italic">The Graphene Mentality</span>
-                    </h2>
-                    <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
-                </div>
+        <section className="w-full py-20 md:py-32 bg-background relative overflow-hidden">
+            {/* Ambient Background Elements */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3" />
 
-                <div className="space-y-4">
-                    {benefits.map((benefit, index) => (
+            {/* Grid Pattern Overlay */}
+            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03] pointer-events-none" />
+
+            <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                    {/* Header Section */}
+                    <div className="space-y-8 text-center lg:text-left">
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.3, delay: index * 0.1 }}
-                            className={`rounded-2xl overflow-hidden border transition-colors duration-300 ${openIndex === index
-                                ? "bg-secondary/30 border-primary/20"
-                                : "bg-background border-transparent hover:bg-secondary/20"
-                                }`}
+                            transition={{ duration: 0.6 }}
                         >
-                            <button
-                                onClick={() => toggleAccordion(index)}
-                                className="w-full flex items-center justify-between p-6 text-left"
-                            >
-                                <div className="flex items-center gap-4">
-                                    <div className={`p-2 rounded-full transition-colors duration-300 ${openIndex === index ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary"
-                                        }`}>
-                                        <benefit.icon className="w-5 h-5" />
-                                    </div>
-                                    <span className={`text-lg font-bold transition-colors duration-300 ${openIndex === index ? "text-primary" : "text-foreground"
-                                        }`}>
-                                        {benefit.title}
-                                    </span>
-                                </div>
-                                <div className={`transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}>
-                                    {openIndex === index ? (
-                                        <Minus className="w-5 h-5 text-primary" />
-                                    ) : (
-                                        <Plus className="w-5 h-5 text-muted-foreground" />
-                                    )}
-                                </div>
-                            </button>
-
-                            <AnimatePresence>
-                                {openIndex === index && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                                    >
-                                        <div className="px-6 pb-6 pt-0 pl-[4.5rem]">
-                                            <p className="text-muted-foreground leading-relaxed">
-                                                {benefit.description}
-                                            </p>
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
+                            <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground leading-[1.1]">
+                                How the <br />
+                                <span className="text-primary italic">Graphene Mentality</span> <br />
+                                will benefit you
+                            </h2>
+                            <div className="h-1.5 w-24 bg-primary/20 mt-6 rounded-full mx-auto lg:mx-0 overflow-hidden">
+                                <motion.div
+                                    className="h-full bg-primary"
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: "100%" }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1, delay: 0.4, ease: "circOut" }}
+                                />
+                            </div>
                         </motion.div>
-                    ))}
+
+                        <motion.p
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="text-muted-foreground text-lg md:text-xl font-light leading-relaxed max-w-md mx-auto lg:mx-0"
+                        >
+                            Through simple and practical strategies, this book will help you forge an unbreakable mind.
+                        </motion.p>
+                    </div>
+
+                    {/* Benefits Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                        {benefits.map((benefit, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
+                                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                                className="group relative p-5 md:p-8 rounded-3xl bg-secondary/10 hover:bg-secondary/20 border border-white/5 hover:border-primary/20 backdrop-blur-sm transition-all duration-300"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
+
+                                <div className="relative z-10 flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-4">
+                                    <div className="shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_-5px_rgba(var(--primary-rgb),0.3)]">
+                                        <benefit.icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
+                                    </div>
+
+                                    <p className="text-base md:text-lg text-foreground/90 font-medium leading-relaxed">
+                                        {benefit.text.split(benefit.highlight).map((part, i, arr) => (
+                                            <span key={i}>
+                                                {part}
+                                                {i < arr.length - 1 && (
+                                                    <span className="text-primary font-semibold">{benefit.highlight}</span>
+                                                )}
+                                            </span>
+                                        ))}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

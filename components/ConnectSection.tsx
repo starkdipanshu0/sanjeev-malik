@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Send, Phone, Mail, ArrowRight } from "lucide-react";
+import { Phone, Mail, ArrowRight, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 const ConnectSection = () => {
@@ -27,15 +27,16 @@ const ConnectSection = () => {
     };
 
     return (
-        <section className="w-full py-20 md:py-32 bg-background relative overflow-hidden">
-            {/* Background Decoration */}
+        <section className="w-full py-16 md:py-32 bg-background relative overflow-hidden" id="connect">
+            {/* Dynamic Background */}
             <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-[10%] right-[5%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] opacity-60 animate-pulse-slow" />
-                <div className="absolute bottom-[10%] left-[5%] w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] opacity-60 animate-pulse-slow delay-1000" />
+                <div className="absolute top-[10%] right-[0%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] opacity-40 animate-pulse-slow" />
+                <div className="absolute bottom-[0%] left-[-10%] w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px] opacity-40 animate-pulse-slow delay-700" />
             </div>
 
             <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+
                     {/* Left Column: Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -45,44 +46,44 @@ const ConnectSection = () => {
                         className="space-y-10 lg:sticky lg:top-32"
                     >
                         <div className="space-y-6">
-                            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wider uppercase">
-                                Get in Touch
+                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase border border-primary/20">
+                                <Sparkles className="w-3 h-3" /> Get into the circle
                             </span>
-                            <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground leading-[1.1]">
+                            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1]">
                                 Reserve a Spot <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60 italic">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400 italic">
                                     With the Author
                                 </span>
                             </h2>
-                            <p className="text-muted-foreground text-xl leading-relaxed max-w-md">
-                                Whether you have a question about the book, want to book a speaking engagement, or just want to say hello.
+                            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-lg">
+                                Whether you have a question about the book, want to book a speaking engagement, or just want to explore a collaboration.
                             </p>
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="flex flex-col sm:flex-row lg:flex-col gap-4">
                             <a
                                 href="tel:+919626633688"
-                                className="flex items-center gap-6 group p-6 rounded-3xl bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 border border-transparent hover:border-primary/20 backdrop-blur-sm"
+                                className="flex items-center gap-6 group p-5 rounded-2xl bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 border border-white/5 hover:border-primary/20 backdrop-blur-md"
                             >
-                                <div className="w-14 h-14 rounded-full bg-background flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                    <Phone className="w-6 h-6" />
+                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                                    <Phone className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-1">Call Me</p>
-                                    <p className="text-xl md:text-2xl font-serif font-bold text-foreground group-hover:text-primary transition-colors">+91 9626633688</p>
+                                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest mb-1">Direct Line</p>
+                                    <p className="text-lg font-serif font-bold text-foreground group-hover:text-primary transition-colors">+91 96266 33688</p>
                                 </div>
                             </a>
 
                             <a
                                 href="mailto:sanjeevmalik470@gmail.com"
-                                className="flex items-center gap-6 group p-6 rounded-3xl bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 border border-transparent hover:border-primary/20 backdrop-blur-sm"
+                                className="flex items-center gap-6 group p-5 rounded-2xl bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 border border-white/5 hover:border-primary/20 backdrop-blur-md"
                             >
-                                <div className="w-14 h-14 rounded-full bg-background flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform duration-300">
-                                    <Mail className="w-6 h-6" />
+                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                                    <Mail className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-muted-foreground font-bold uppercase tracking-widest mb-1">Email Me</p>
-                                    <p className="text-xl md:text-2xl font-serif font-bold text-foreground group-hover:text-primary transition-colors">sanjeevmalik470@gmail.com</p>
+                                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest mb-1">Email Inquiry</p>
+                                    <p className="text-lg font-serif font-bold text-foreground group-hover:text-primary transition-colors">sanjeevmalik470@gmail.com</p>
                                 </div>
                             </a>
                         </div>
@@ -90,21 +91,17 @@ const ConnectSection = () => {
 
                     {/* Right Column: Form */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-card/30 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] border border-white/10 shadow-2xl dark:shadow-none dark:border-white/5 relative overflow-hidden"
+                        className="bg-card/20 backdrop-blur-xl p-6 md:p-10 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden"
                     >
-                        {/* Subtle Form Decoration */}
-                        <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
-                            <Send size={120} />
-                        </div>
-
-                        <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div className="space-y-2 group">
-                                    <label htmlFor="firstName" className="text-sm font-semibold text-foreground/80 ml-1 group-focus-within:text-primary transition-colors">First Name</label>
+                        {/* Interactive Form */}
+                        <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                    <label htmlFor="firstName" className="text-xs font-bold text-foreground/70 uppercase tracking-wider ml-1">First Name</label>
                                     <input
                                         type="text"
                                         id="firstName"
@@ -112,12 +109,12 @@ const ConnectSection = () => {
                                         value={formState.firstName}
                                         onChange={handleChange}
                                         placeholder="John"
-                                        className="w-full px-5 py-4 rounded-xl bg-background/50 border-2 border-transparent focus:border-primary/20 focus:bg-background outline-none transition-all duration-300 placeholder:text-muted-foreground/30 font-medium"
+                                        className="w-full h-12 px-4 rounded-xl bg-background/40 border border-white/10 focus:border-primary/50 focus:bg-background/60 outline-none transition-all duration-300 placeholder:text-muted-foreground/30 text-sm"
                                         required
                                     />
                                 </div>
-                                <div className="space-y-2 group">
-                                    <label htmlFor="lastName" className="text-sm font-semibold text-foreground/80 ml-1 group-focus-within:text-primary transition-colors">Last Name</label>
+                                <div className="space-y-2">
+                                    <label htmlFor="lastName" className="text-xs font-bold text-foreground/70 uppercase tracking-wider ml-1">Last Name</label>
                                     <input
                                         type="text"
                                         id="lastName"
@@ -125,15 +122,15 @@ const ConnectSection = () => {
                                         value={formState.lastName}
                                         onChange={handleChange}
                                         placeholder="Doe"
-                                        className="w-full px-5 py-4 rounded-xl bg-background/50 border-2 border-transparent focus:border-primary/20 focus:bg-background outline-none transition-all duration-300 placeholder:text-muted-foreground/30 font-medium"
+                                        className="w-full h-12 px-4 rounded-xl bg-background/40 border border-white/10 focus:border-primary/50 focus:bg-background/60 outline-none transition-all duration-300 placeholder:text-muted-foreground/30 text-sm"
                                         required
                                     />
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div className="space-y-2 group">
-                                    <label htmlFor="email" className="text-sm font-semibold text-foreground/80 ml-1 group-focus-within:text-primary transition-colors">Email Address</label>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                    <label htmlFor="email" className="text-xs font-bold text-foreground/70 uppercase tracking-wider ml-1">Email</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -141,44 +138,44 @@ const ConnectSection = () => {
                                         value={formState.email}
                                         onChange={handleChange}
                                         placeholder="john@company.com"
-                                        className="w-full px-5 py-4 rounded-xl bg-background/50 border-2 border-transparent focus:border-primary/20 focus:bg-background outline-none transition-all duration-300 placeholder:text-muted-foreground/30 font-medium"
+                                        className="w-full h-12 px-4 rounded-xl bg-background/40 border border-white/10 focus:border-primary/50 focus:bg-background/60 outline-none transition-all duration-300 placeholder:text-muted-foreground/30 text-sm"
                                         required
                                     />
                                 </div>
-                                <div className="space-y-2 group">
-                                    <label htmlFor="phone" className="text-sm font-semibold text-foreground/80 ml-1 group-focus-within:text-primary transition-colors">Phone Number</label>
+                                <div className="space-y-2">
+                                    <label htmlFor="phone" className="text-xs font-bold text-foreground/70 uppercase tracking-wider ml-1">Phone</label>
                                     <input
                                         type="tel"
                                         id="phone"
                                         name="phone"
                                         value={formState.phone}
                                         onChange={handleChange}
-                                        placeholder="+91 90000 00000"
-                                        className="w-full px-5 py-4 rounded-xl bg-background/50 border-2 border-transparent focus:border-primary/20 focus:bg-background outline-none transition-all duration-300 placeholder:text-muted-foreground/30 font-medium"
+                                        placeholder="+91..."
+                                        className="w-full h-12 px-4 rounded-xl bg-background/40 border border-white/10 focus:border-primary/50 focus:bg-background/60 outline-none transition-all duration-300 placeholder:text-muted-foreground/30 text-sm"
                                     />
                                 </div>
                             </div>
 
-                            <div className="space-y-2 group">
-                                <label htmlFor="message" className="text-sm font-semibold text-foreground/80 ml-1 group-focus-within:text-primary transition-colors">Your Message</label>
+                            <div className="space-y-2">
+                                <label htmlFor="message" className="text-xs font-bold text-foreground/70 uppercase tracking-wider ml-1">Message</label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     value={formState.message}
                                     onChange={handleChange}
                                     placeholder="How can we help you today?"
-                                    rows={5}
-                                    className="w-full px-5 py-4 rounded-xl bg-background/50 border-2 border-transparent focus:border-primary/20 focus:bg-background outline-none transition-all duration-300 placeholder:text-muted-foreground/30 font-medium resize-none"
+                                    rows={4}
+                                    className="w-full p-4 rounded-xl bg-background/40 border border-white/10 focus:border-primary/50 focus:bg-background/60 outline-none transition-all duration-300 placeholder:text-muted-foreground/30 text-sm resize-none"
                                     required
                                 />
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full py-5 px-8 bg-primary text-primary-foreground font-bold text-lg rounded-xl hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 flex items-center justify-center gap-3 group"
+                                className="w-full h-14 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base rounded-xl transition-all duration-300 shadow-lg hover:shadow-primary/25 flex items-center justify-center gap-2 group mt-2"
                             >
                                 <span>Send Message</span>
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                             </button>
                         </form>
                     </motion.div>

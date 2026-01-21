@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,9 @@ import { Menu, X } from "lucide-react";
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
+
+    const isDarkPage = pathname === "/achievements";
 
     // Handle Scroll Effect
     useEffect(() => {
@@ -22,8 +26,8 @@ const Header = () => {
     }, []);
 
     const navLinks = [
-        { name: "The Book", href: "/book" },
-        { name: "Articles", href: "/articles" },
+        { name: "Book", href: "/book" },
+        { name: "Blogs", href: "/articles" },
         { name: "Achievements", href: "/achievements" },
         { name: "About", href: "/about" },
     ];
@@ -35,7 +39,7 @@ const Header = () => {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className={cn(
-                    "w-full transition-all duration-500",
+                    "w-full fixed top-0 left-0 z-50 transition-all duration-500",
                     isScrolled
                         ? "bg-white/80 backdrop-blur-md border-b border-black/5 py-3"
                         : "bg-transparent py-6"
@@ -53,7 +57,8 @@ const Header = () => {
                                 height={45}
                                 className={cn(
                                     "object-contain transition-all duration-500",
-                                    isScrolled ? "h-8 w-auto opacity-100" : "h-10 w-auto opacity-90 group-hover:opacity-100"
+                                    isScrolled ? "h-6 md:h-8 w-auto opacity-100" : "h-8 md:h-10 w-auto opacity-90 group-hover:opacity-100",
+                                    !isScrolled && isDarkPage && "brightness-0 invert"
                                 )}
                                 priority
                             />
@@ -69,12 +74,19 @@ const Header = () => {
                                 >
                                     <span className={cn(
                                         "text-sm font-medium tracking-wide transition-colors duration-300",
-                                        isScrolled ? "text-zinc-600 group-hover:text-black" : "text-zinc-800 group-hover:text-black"
+                                        isScrolled
+                                            ? "text-zinc-600 group-hover:text-black"
+                                            : isDarkPage
+                                                ? "text-white/80 group-hover:text-white"
+                                                : "text-zinc-800 group-hover:text-black"
                                     )}>
                                         {link.name}
                                     </span>
                                     {/* Animated Underline */}
-                                    <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
+                                    <span className={cn(
+                                        "absolute bottom-0 left-0 w-0 h-px transition-all duration-300 group-hover:w-full",
+                                        !isScrolled && isDarkPage ? "bg-white" : "bg-primary"
+                                    )} />
                                 </Link>
                             ))}
 
@@ -85,7 +97,9 @@ const Header = () => {
                                         "ml-4 font-serif italic tracking-wide transition-all duration-300",
                                         isScrolled
                                             ? "bg-black text-white hover:bg-zinc-800"
-                                            : "bg-black/90 text-white hover:bg-black hover:scale-105 shadow-lg"
+                                            : isDarkPage
+                                                ? "bg-white text-black hover:bg-white/90"
+                                                : "bg-black/90 text-white hover:bg-black hover:scale-105 shadow-lg"
                                     )}
                                 >
                                     Get the Book
@@ -95,10 +109,13 @@ const Header = () => {
 
                         {/* Mobile Toggle */}
                         <button
-                            className="md:hidden relative z-50 p-2 -mr-2 text-zinc-800"
+                            className={cn(
+                                "md:hidden relative z-50 p-2 -mr-2 transition-colors",
+                                !isScrolled && isDarkPage ? "text-white" : "text-zinc-800"
+                            )}
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
-                            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                            {isMobileMenuOpen ? <X className="w-6 h-6 text-zinc-800" /> : <Menu className="w-6 h-6" />}
                         </button>
                     </div>
                 </div>

@@ -74,14 +74,14 @@ const BlogCarouselSection = () => {
             <div className="container mx-auto px-6 md:px-12 max-w-7xl">
 
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 relative">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 relative">
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <div className="h-px w-8 bg-primary" />
                             <span className="text-xs font-bold tracking-widest text-primary uppercase">Latest Insights</span>
                         </div>
                         <h2 className="font-serif text-3xl md:text-5xl font-bold">
-                          My Blogs {/* <span className="text-primary italic">Perspectives</span> */}
+                            My Blogs {/* <span className="text-primary italic">Perspectives</span> */}
                         </h2>
                     </div>
 
@@ -111,7 +111,7 @@ const BlogCarouselSection = () => {
 
                         <Button variant="ghost" className="hover:bg-transparent hover:text-primary group px-0" asChild>
                             <Link href="/articles" className="flex items-center gap-2">
-                                View All Articles
+                                View All Blogs
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </Button>
@@ -189,7 +189,7 @@ const BlogCarouselSection = () => {
                 <div className="mt-6 md:hidden flex justify-center">
                     <Button variant="outline" className="w-full max-w-xs border-primary/20" asChild>
                         <Link href="/articles">
-                            View All Articles
+                            View All Blogs
                         </Link>
                     </Button>
                 </div>

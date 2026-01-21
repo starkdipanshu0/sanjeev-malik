@@ -21,7 +21,7 @@ const PurchaseOptions = () => {
                     Choose the format that fits your lifestyle. Available worldwide.
                 </p>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {/* eBook */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -36,9 +36,11 @@ const PurchaseOptions = () => {
                             <div className="text-4xl font-bold text-foreground mb-2">₹199</div>
                             <p className="text-xs text-muted-foreground line-through">₹399</p>
                         </div>
-                        <Button variant="outline" className="w-full mt-8 border-primary text-primary hover:bg-primary hover:text-white">
-                            Buy on Amazon
-                        </Button>
+                        <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver-ebook/dp/B0FJ1GFZZX/ref=tmm_kin_swatch_0?_encoding=UTF8&sr=8-3" target="_blank" rel="noopener noreferrer" className="w-full mt-8">
+                            <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                                Buy on Amazon
+                            </Button>
+                        </a>
                     </motion.div>
 
                     {/* Paperback - Featured */}
@@ -58,28 +60,11 @@ const PurchaseOptions = () => {
                             <div className="text-4xl font-bold text-foreground mb-2">₹499</div>
                             <p className="text-xs text-muted-foreground line-through">₹699</p>
                         </div>
-                        <Button className="w-full mt-8 bg-primary text-white hover:bg-primary/90 text-lg py-6 shadow-lg hover:shadow-primary/25">
-                            Order Paperback
-                        </Button>
-                    </motion.div>
-
-                    {/* Audiobook */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="bg-background border border-border rounded-2xl p-8 flex flex-col justify-between hover:border-primary/50 transition-colors shadow-lg"
-                    >
-                        <div>
-                            <h3 className="text-2xl font-serif font-bold mb-2">Audiobook</h3>
-                            <p className="text-muted-foreground text-sm mb-6">Narrated by the author.</p>
-                            <div className="text-4xl font-bold text-foreground mb-2">₹999</div>
-                            <p className="text-xs text-muted-foreground mb-2">or 1 credit</p>
-                        </div>
-                        <Button variant="outline" className="w-full mt-8 hover:bg-primary/5">
-                            Listen on Audible
-                        </Button>
+                        <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3" target="_blank" rel="noopener noreferrer" className="w-full mt-8">
+                            <Button className="w-full bg-primary text-white hover:bg-primary/90 text-lg py-6 shadow-lg hover:shadow-primary/25">
+                                Order Paperback
+                            </Button>
+                        </a>
                     </motion.div>
                 </div>
 

@@ -1,6 +1,6 @@
 import { AchievementHero } from "@/components/achievements/AchievementHero";
-import { HistoricVictory } from "@/components/achievements/HistoricVictory";
-import { AchievementsCarousel } from "@/components/achievements/AchievementsCarousel";
+import GrapheneIntro from "@/components/achievements/GrapheneIntro";
+import AchievementGallery from "@/components/achievements/AchievementGallery";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,8 +12,8 @@ export default function AchievementsPage() {
     return (
         <main className="min-h-screen bg-[#050505]">
             <AchievementHero />
-            <HistoricVictory />
-            <AchievementsCarousel />
+            <GrapheneIntro />
+            <AchievementGallery />
 
             {/* Footer Call to Action */}
             <section className="py-24 bg-white text-black text-center">
@@ -22,7 +22,7 @@ export default function AchievementsPage() {
                     <p className="text-xl text-black/60 max-w-2xl mx-auto mb-8 font-sans">
                         Discover the mindset behind these achievements in the book "The Graphene Mentality".
                     </p>
-                    <a href="/book" className="inline-block bg-black text-white px-8 py-4 rounded-full font-bold tracking-wider hover:scale-105 transition-transform">
+                    <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3" target="_blank" rel="noopener noreferrer" className="inline-block bg-black text-white px-8 py-4 rounded-full font-bold tracking-wider hover:scale-105 transition-transform">
                         GET THE BOOK
                     </a>
                 </div>

@@ -56,10 +56,10 @@ const BookCTASection = () => {
                         transition={{ duration: 0.6 }}
                         className="flex-1 space-y-6 text-center md:text-left"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 border border-background/20 backdrop-blur-sm w-fit mx-auto md:mx-0">
+                        {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 border border-background/20 backdrop-blur-sm w-fit mx-auto md:mx-0">
                             <BookOpen size={16} className="text-primary" />
                             <span className="text-sm font-medium tracking-wide text-background/80">BESTSELLER</span>
-                        </div>
+                        </div> */}
 
                         <h2 className="font-serif text-4xl md:text-6xl font-bold leading-tight">
                             Ready to Transform <br />
@@ -139,10 +139,10 @@ const BookCTASection = () => {
                             <div className="space-y-3 w-full">
                                 <p className="text-xs font-semibold tracking-widest text-primary uppercase">Available Now On</p>
                                 <div className="flex items-center justify-center gap-4">
-                                    <div className="bg-white px-4 py-2 rounded-lg hover:scale-105 transition-transform cursor-pointer shadow-lg opacity-90 hover:opacity-100 flex items-center gap-2">
+                                    <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3" target="_blank" rel="noopener noreferrer" className="bg-white px-4 py-2 rounded-lg hover:scale-105 transition-transform cursor-pointer shadow-lg opacity-90 hover:opacity-100 flex items-center gap-2">
                                         <ShoppingCart className="w-4 h-4 text-black" />
                                         <span className="text-black font-bold text-sm">Amazon</span>
-                                    </div>
+                                    </a>
                                     {/* Add more logos here if needed */}
                                 </div>
                             </div>
