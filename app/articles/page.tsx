@@ -11,7 +11,7 @@ export default function ArticlesPage() {
     const articles = getAllArticles();
 
     return (
-        <main className="min-h-screen bg-background pt-48 pb-20">
+        <main className="min-h-screen bg-background pt-12 pb-20">
             {/* Page Header */}
             <div className="container mx-auto px-6 md:px-12 mb-20 text-center">
                 <span className="text-primary font-mono text-xs uppercase tracking-[0.2em] mb-4 block">

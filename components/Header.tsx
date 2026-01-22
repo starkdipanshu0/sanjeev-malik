@@ -39,7 +39,7 @@ const Header = () => {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className={cn(
-                    "w-full fixed top-0 left-0 z-50 transition-all duration-500",
+                    "w-full z-50 transition-all duration-500",
                     isScrolled
                         ? "bg-white/80 backdrop-blur-md border-b border-black/5 py-3"
                         : "bg-transparent py-6"

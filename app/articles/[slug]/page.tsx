@@ -46,7 +46,7 @@ export default async function ArticlePage({ params }: PageProps) {
     const otherArticles = getOtherArticles(article.id);
 
     return (
-        <article className="min-h-screen bg-background pt-24 pb-20 relative">
+        <article className="min-h-screen bg-background pt-12 pb-20 relative">
             <ReadingProgressBar />
 
             {/* Header / Hero */}
