@@ -29,10 +29,10 @@ const NewsletterSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="font-serif text-4xl md:text-6xl font-bold text-foreground leading-tight"
+                            className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight"
                         >
-                            Join the <br />
-                            <span className="text-primary italic">Inner Circle</span>
+                            Subscribe to my <br />
+                            <span className="text-primary italic">weekly Newsletter</span>
                         </motion.h2>
 
                         <motion.p
@@ -42,7 +42,7 @@ const NewsletterSection = () => {
                             transition={{ duration: 0.6, delay: 0.3 }}
                             className="text-muted-foreground text-lg max-w-md leading-relaxed"
                         >
-                            Weekly strategies on resilience and leadership. No fluff, just actionable wisdom for the modern leader.
+                            Get powerful mindset-building tips delivered straight to your inbox.
                         </motion.p>
                     </div>
 

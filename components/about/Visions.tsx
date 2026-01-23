@@ -22,15 +22,12 @@ const Visions = () => {
                         The Vision
                     </span>
 
-                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-8">
-                        To build an <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-primary bg-[length:200%_auto] animate-gradient">
-                            Unbreakable Spirit.
-                        </span>
+                    <h2 className="text-3xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight mb-8">
+                        To <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-primary bg-[length:200%_auto] animate-gradient">inspire</span> the next generation of professionals and athletes
                     </h2>
 
-                    <p className="text-lg md:text-2xl font-light text-zinc-400 leading-relaxed max-w-2xl mx-auto mb-12">
-                        "I envision a world where challenges are fuel, leadership is empathy, and every individual has the fortitude to conquer their own mind."
+                    <p className="text-lg md:text-xl font-light text-zinc-300 leading-relaxed max-w-3xl mx-auto mb-12">
+                        by showing that with <strong className="text-white">discipline</strong>, <strong className="text-white">resilience</strong>, and <strong className="text-white">passion</strong>, one can achieve greatness in any field. My mission is to continue contributing to India’s legacy through sports, fitness, and service to the nation.
                     </p>
 
                     <div className="flex justify-center">

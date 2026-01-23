@@ -50,7 +50,7 @@ const GrapheneIntro = () => {
                         </ul>
                     </div>
 
-                    <p className="text-lg text-muted-foreground leading-relaxed italic border-l-4 border-primary/30 pl-6 py-2">
+                    <p className="text-lg text-muted-foreground leading-relaxed italic border-l-4 border-primary/30 pl-6 py-2 text-balance">
                         "Your dreams deserve your full attention. It’s time to reclaim it."
                     </p>
                 </motion.div>

@@ -17,25 +17,33 @@ const AboutAuthorSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative"
+                        className="relative flex justify-center md:justify-start"
                     >
-                        <div className="relative aspect-[4/5] w-48 md:w-full max-w-md mx-auto overflow-hidden rounded-xl shadow-2xl border-4 border-background/50">
-                            {/* Author Image */}
-                            <Image
-                                src="/images/homeauther.jpeg"
-                                alt="Lt. Col. Dr. Sanjeev Malik"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                priority={false}
-                            />
-                            {/* Overlay Gradient for cinematic feel */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                        </div>
+                        <div className="relative group">
+                            {/* Offset Border Frame */}
+                            <div className="absolute -inset-4 border-2 border-primary/20 rounded-2xl z-0 transition-all duration-500 group-hover:inset-[-1.5rem] group-hover:border-primary/40" />
 
-                        {/* Decorative Element */}
-                        <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl -z-10" />
-                        <div className="absolute -top-6 -left-6 w-32 h-32 bg-zinc-200 rounded-full blur-3xl -z-10 dark:bg-zinc-800" />
+                            {/* Background Pattern/Block */}
+                            <div className="absolute top-4 -right-4 w-full h-full bg-primary/10 rounded-2xl -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2" />
+
+                            {/* Main Image Container */}
+                            <div className="relative aspect-[3.5/4.5] w-64 md:w-80 lg:w-96 overflow-hidden rounded-xl shadow-2xl bg-zinc-100">
+                                <Image
+                                    src="/images/homeauther.jpeg"
+                                    alt="Lt. Col. Dr. Sanjeev Malik"
+                                    fill
+                                    className="object-cover object-[45%_50%] transition-transform duration-700 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    priority={false}
+                                />
+
+                                {/* Professional Overlay Gradient */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+
+                                {/* Inner Border */}
+                                <div className="absolute inset-0 border border-white/10 rounded-xl z-20" />
+                            </div>
+                        </div>
                     </motion.div>
 
                     {/* Right Column: Text Content */}

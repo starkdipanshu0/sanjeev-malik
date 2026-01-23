@@ -47,12 +47,12 @@ const ConnectSection = () => {
                     >
                         <div className="space-y-6">
                             <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase border border-primary/20">
-                                <Sparkles className="w-3 h-3" /> Get into the circle
+                                <Sparkles className="w-3 h-3" /> Connect with me
                             </span>
                             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1]">
                                 Reserve a Spot <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400 italic">
-                                    With the Author
+                                    With me
                                 </span>
                             </h2>
                             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-lg">
@@ -63,27 +63,27 @@ const ConnectSection = () => {
                         <div className="flex flex-col sm:flex-row lg:flex-col gap-4">
                             <a
                                 href="tel:+919626633688"
-                                className="flex items-center gap-6 group p-5 rounded-2xl bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 border border-white/5 hover:border-primary/20 backdrop-blur-md"
+                                className="flex items-center gap-5 group p-5 rounded-2xl bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 border border-white/5 hover:border-primary/20 backdrop-blur-md"
                             >
-                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300 shrink-0">
                                     <Phone className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest mb-1">Direct Line</p>
-                                    <p className="text-lg font-serif font-bold text-foreground group-hover:text-primary transition-colors">+91 96266 33688</p>
+                                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest leading-none mb-1.5">Direct Line</p>
+                                    <p className="text-lg font-serif font-bold text-foreground group-hover:text-primary transition-colors leading-tight">+91 96266 33688</p>
                                 </div>
                             </a>
 
                             <a
                                 href="mailto:sanjeevmalik470@gmail.com"
-                                className="flex items-center gap-6 group p-5 rounded-2xl bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 border border-white/5 hover:border-primary/20 backdrop-blur-md"
+                                className="flex items-center gap-5 group p-5 rounded-2xl bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 border border-white/5 hover:border-primary/20 backdrop-blur-md"
                             >
-                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300 shrink-0">
                                     <Mail className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest mb-1">Email Inquiry</p>
-                                    <p className="text-lg font-serif font-bold text-foreground group-hover:text-primary transition-colors">sanjeevmalik470@gmail.com</p>
+                                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest leading-none mb-1.5">Email Inquiry</p>
+                                    <p className="text-lg font-serif font-bold text-foreground group-hover:text-primary transition-colors leading-tight break-all">sanjeevmalik470@gmail.com</p>
                                 </div>
                             </a>
                         </div>

@@ -138,11 +138,15 @@ export default async function ArticlePage({ params }: PageProps) {
                                     case 'list':
                                         return block.style === 'ordered' ? (
                                             <ol key={index} className="list-decimal pl-6 space-y-2 marker:text-primary font-medium my-6">
-                                                {block.items.map((it, i) => <li key={i}>{it}</li>)}
+                                                {block.items.map((it, i) => (
+                                                    <li key={i} dangerouslySetInnerHTML={{ __html: it }} />
+                                                ))}
                                             </ol>
                                         ) : (
                                             <ul key={index} className="list-disc pl-6 space-y-2 marker:text-primary font-medium my-6">
-                                                {block.items.map((it, i) => <li key={i}>{it}</li>)}
+                                                {block.items.map((it, i) => (
+                                                    <li key={i} dangerouslySetInnerHTML={{ __html: it }} />
+                                                ))}
                                             </ul>
                                         );
                                     case 'divider':
@@ -176,7 +180,8 @@ export default async function ArticlePage({ params }: PageProps) {
 
                             {/* More Perspectives */}
                             <div className="bg-secondary/5 rounded-xl p-8 border border-border/50">
-                                <h3 className="font-serif text-xl font-bold mb-6">More Perspectives</h3>
+                                {/* <h3 className="font-serif text-xl font-bold mb-6">More Perspectives</h3> */}
+                                <h3 className="font-serif text-xl font-bold mb-6">More Blogs</h3>
                                 <div className="space-y-6">
                                     {otherArticles.map((other) => (
                                         <Link key={other.id} href={`/articles/${other.slug}`} className="group block space-y-2">

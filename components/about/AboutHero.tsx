@@ -45,10 +45,11 @@ const AboutHero = () => {
 
                     <ul className="space-y-4 pt-4">
                         {[
-                            "Lieutenant Colonel (Retd), Indian Army",
+                            "Lieutenant Colonel, Indian Army",
                             "Author of \"The Graphene Mentality\"",
-                            "Corporate Strategist & Leadership Mentor",
-                            "Transformational Keynote Speaker"
+                            "Athlete",
+                            "Gold Medalist in Athletics",
+                
                         ].map((item, index) => (
                             <li key={index} className="flex items-center gap-3 text-lg font-medium text-foreground/90">
                                 <div className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />

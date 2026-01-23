@@ -33,8 +33,7 @@ const PurchaseOptions = () => {
                         <div>
                             <h3 className="text-2xl font-serif font-bold mb-2">Kindle / eBook</h3>
                             <p className="text-muted-foreground text-sm mb-6">Read instantly on any device.</p>
-                            <div className="text-4xl font-bold text-foreground mb-2">₹199</div>
-                            <p className="text-xs text-muted-foreground line-through">₹399</p>
+                            <div className="text-4xl font-bold text-foreground mb-2">₹273.60</div>
                         </div>
                         <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver-ebook/dp/B0FJ1GFZZX/ref=tmm_kin_swatch_0?_encoding=UTF8&sr=8-3" target="_blank" rel="noopener noreferrer" className="w-full mt-8">
                             <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
@@ -57,8 +56,8 @@ const PurchaseOptions = () => {
                         <div>
                             <h3 className="text-2xl font-serif font-bold mb-2">Paperback</h3>
                             <p className="text-muted-foreground text-sm mb-6">The classic reading experience.</p>
-                            <div className="text-4xl font-bold text-foreground mb-2">₹499</div>
-                            <p className="text-xs text-muted-foreground line-through">₹699</p>
+                            <div className="text-4xl font-bold text-foreground mb-2">₹288.00</div>
+
                         </div>
                         <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3" target="_blank" rel="noopener noreferrer" className="w-full mt-8">
                             <Button className="w-full bg-primary text-white hover:bg-primary/90 text-lg py-6 shadow-lg hover:shadow-primary/25">

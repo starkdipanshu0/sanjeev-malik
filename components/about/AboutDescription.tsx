@@ -30,18 +30,15 @@ const AboutDescription = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
                     {/* Main Story Text */}
-                    <div className="lg:col-span-7 space-y-6 text-lg text-muted-foreground leading-relaxed">
+                    <div className="lg:col-span-7 space-y-6 text-lg text-muted-foreground leading-relaxed text-justify hyphens-auto">
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <span className="float-left text-7xl font-serif font-bold text-primary leading-[0.8] mr-3 mt-1">S</span>
-                            anjeev Malik's story is one of transformation and grit. Starting his journey in the Indian Army,
-                            he served in some of the most challenging terrains and high-pressure situations imaginable.
-                            These experiences were not just about combat; they were <strong className="text-foreground">masterclasses in leadership</strong>,
-                            decision-making under fire, and the sheer power of the human spirit.
+                            <span className="float-left text-7xl font-serif font-bold text-primary leading-[0.8] mr-3 mt-1">L</span>
+                            ife has given me many uniforms to wear, from serving with the <strong className="text-foreground">Special Forces</strong> and the <strong className="text-foreground">President’s Bodyguard</strong> to representing India at the <strong className="text-foreground">World Medical and Health Games</strong> where I was blessed to win 5 Gold medals in Athletics.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -49,9 +46,7 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            Transitioning from the military to the corporate world, Sanjeev realized that the principles of warfare—strategy,
-                            discipline, and adaptability—were directly applicable to modern business challenges. He didn't just adapt;
-                            he thrived, bringing a unique <span className="text-foreground font-medium italic">"soldier-scholar"</span> perspective to organizational leadership.
+                            While serving these roles, I've learnt one of the most important lessons of my life! The human mind is far stranger and more adaptable than we think. My journey taught me that real success doesn't come from talent, genetics, or intelligence—it comes from the <strong className="text-foreground">Right Mindset</strong>.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -59,9 +54,23 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            Today, as a sought-after speaker and mentor, he dedicates his life to decoding success.
-                            He believes that true strength isn't about being rigid; it's about being structured yet flexible—like <strong className="text-primary">Graphene</strong>.
-                            His philosophy helps leaders and individuals build resilience that doesn't just withstand pressure but gains strength from it.
+                            A mindset that makes you fearless to pursue your bold decisions. A mindset that makes you focused and disciplined to do the boring but necessary work everyday. A mindset that makes you resilient to rise stronger after every failure.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.5 }}
+                        >
+                            This realization inspired me to write my book, <em className="text-foreground font-serif">The Graphene Mentality</em>. Just like Graphene—the world’s strongest yet most flexible material—I believe our minds too can become unbreakable yet adaptable enough to thrive and succeed in any situation.
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        >
+                            Through my work, I share practical strategies to build focus, discipline and mental resilience needed to thrive, perform, and succeed in any field especially in an age of constant distraction.
                         </motion.p>
                     </div>
 

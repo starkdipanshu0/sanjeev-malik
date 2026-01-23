@@ -1,6 +1,6 @@
 import { AchievementHero } from "@/components/achievements/AchievementHero";
-import GrapheneIntro from "@/components/achievements/GrapheneIntro";
 import AchievementGallery from "@/components/achievements/AchievementGallery";
+import HistoricVictory from "@/components/achievements/HistoricVictory";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function AchievementsPage() {
     return (
         <main className="min-h-screen bg-[#050505]">
             <AchievementHero />
-            <GrapheneIntro />
+            <HistoricVictory />
             <AchievementGallery />
 
             {/* Footer Call to Action */}

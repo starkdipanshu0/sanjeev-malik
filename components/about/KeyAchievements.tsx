@@ -1,50 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, BookOpen, Briefcase, Mic, Users, Target } from "lucide-react";
+import { Award, BookOpen, Briefcase, Mic, Users, Target, Star, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const achievements = [
     {
         icon: Award,
-        title: "Military Distinguished Service",
-        description: "Served as a Lieutenant Colonel in the Indian Army, delivering strategic excellence in high-stakes operational environments.",
-        className: "md:col-span-2 md:row-span-2 bg-gradient-to-br from-primary/10 to-transparent border-primary/20",
+        title: "5 Gold Medals",
+        description: "42nd World Medicine and Health Games, Columbia (2023)",
+        className: "bg-gradient-to-br from-primary/10 to-transparent border-primary/20",
         iconClass: "w-12 h-12"
     },
     {
-        icon: BookOpen,
-        title: "Bestselling Author",
-        description: "Author of 'The Graphene Mentality', creating a global impact on mindset and resilience training.",
-        className: "md:col-span-2",
-        iconClass: "w-8 h-8"
-    },
-    {
-        icon: Briefcase,
-        title: "Corporate Strategist",
-        description: "Bridging military precision with corporate agility.",
+        icon: Star,
+        title: "National Recognition",
+        description: "Felicitated by COAS Gen Upender Dwivedi & Shri Bhupinder Singh Hooda",
         className: "",
         iconClass: "w-8 h-8"
     },
     {
-        icon: Mic,
-        title: "Global Speaker",
-        description: "Inspiring thousands with transformational storytelling.",
+        icon: Globe,
+        title: "Global Representation",
+        description: "Represented India on international platforms since 2010",
         className: "",
-        iconClass: "w-8 h-8"
-    },
-    {
-        icon: Users,
-        title: "Leadership Mentor",
-        description: "Building the next generation of unbreakable leaders.",
-        className: "",
-        iconClass: "w-8 h-8"
-    },
-    {
-        icon: Target,
-        title: "Visionary",
-        description: "Pioneering mental toughness frameworks.",
-        className: "md:col-span-2 md:col-start-2", // Centered or wide at bottom
         iconClass: "w-8 h-8"
     }
 ];
@@ -68,7 +47,7 @@ const KeyAchievements = () => {
                     </motion.h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[minmax(180px,auto)]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[minmax(180px,auto)]">
                     {achievements.map((item, index) => (
                         <motion.div
                             key={index}
