@@ -69,10 +69,6 @@ const PurchaseOptions = () => {
 
                 <div className="mt-16 text-muted-foreground text-sm">
                     <p>Also available at bookstores nationwide.</p>
-                    <div className="flex justify-center gap-4 mt-4 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                        {/* Placeholders for logos if needed, just text for now */}
-                        <span>Amazon</span> • <span>Flipkart</span> • <span>Crossword</span>
-                    </div>
                 </div>
             </div>
         </section>

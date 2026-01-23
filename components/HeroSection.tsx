@@ -45,7 +45,7 @@ const HeroSection = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative min-h-screen w-full overflow-hidden bg-background flex flex-col items-center justify-center py-12 md:py-32 perspective-1000"
+            className="relative min-h-screen w-full overflow-hidden bg-background flex flex-col items-center justify-center py-12 py-24 md:py-32 perspective-1000"
         >
             {/* 1. Ambient Background Effects */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none z-0" />

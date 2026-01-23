@@ -49,7 +49,7 @@ const AboutHero = () => {
                             "Author of \"The Graphene Mentality\"",
                             "Athlete",
                             "Gold Medalist in Athletics",
-                
+
                         ].map((item, index) => (
                             <li key={index} className="flex items-center gap-3 text-lg font-medium text-foreground/90">
                                 <div className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
@@ -62,19 +62,30 @@ const AboutHero = () => {
                     <div className="pt-8 flex items-center gap-6">
                         <span className="text-sm font-semibold tracking-widest text-muted-foreground uppercase">Connect</span>
                         <div className="flex gap-4">
-                            {[
-                                { icon: Linkedin, href: "#" },
-                                { icon: Twitter, href: "#" },
-                                { icon: Instagram, href: "#" }
-                            ].map((social, i) => (
-                                <Link
-                                    key={i}
-                                    href={social.href}
-                                    className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-                                >
-                                    <social.icon className="w-5 h-5" />
-                                </Link>
-                            ))}
+                            <Link
+                                href="https://www.linkedin.com/in/lt-col-dr-sanjeev-malik"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                            >
+                                <Linkedin className="w-5 h-5" />
+                            </Link>
+                            <Link
+                                href="https://x.com/LtColDrMalik?s=20"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                            >
+                                <Twitter className="w-5 h-5" />
+                            </Link>
+                            <Link
+                                href="https://www.instagram.com/thesanjeevmalik?igsh=MThhNG9qZ2VwZjRtdQ=="
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                            >
+                                <Instagram className="w-5 h-5" />
+                            </Link>
                         </div>
                     </div>
                 </motion.div>

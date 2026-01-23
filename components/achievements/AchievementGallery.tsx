@@ -42,19 +42,11 @@ const galleryItems: AchievementEntry[] = [
     },
     {
         media: [
-            { type: "image", src: "/achievements/IMG_7070.JPEG" }
+            { type: "image", src: "/achievements/WhatsApp Image 2026-01-20 at 11.03.45 AM.jpeg" }
         ],
-        title: "The Gold Medal Moment",
-        description: "Standing on the podium receiving the Gold Medal was not just a personal victory, but a testament to the Graphene Mentality—unbreakable, resilient, and focused. It proved that age and circumstances are no barrier to excellence.",
-        date: "Nov 2023"
-    },
-    {
-        media: [
-            { type: "image", src: "/achievements/WhatsApp Image 2026-01-20 at 11.03.45 AM.jpeg" },
-            { type: "image", src: "/achievements/WhatsApp Image 2026-01-20 at 11.03.47 AM.jpeg" }
-        ],
-        title: "Service & Dedication",
-        description: "The foundation of every achievement lies in the lessons learned from the Special Forces. The camaraderie, the high-stakes environment, and the call to serve laid the groundwork for a life dedicated to excellence.",
+        title: "State Honor",
+        description: "Felicitated by Former CM of Haryana Shri Bhupinder Singh Hooda. Acknowledging the distinguished achievements and contributions to the nation.",
+        date: "2024"
     },
     {
         media: [

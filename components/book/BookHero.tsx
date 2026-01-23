@@ -40,7 +40,7 @@ const BookHero = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative min-h-[100dvh] w-full overflow-hidden bg-background flex items-center justify-center py-12 md:py-24 perspective-1000"
+            className="relative min-h-[100dvh] w-full overflow-hidden bg-background flex items-center justify-center pt-32 pb-12 md:py-24 lg:pt-40 perspective-1000"
         >
             {/* Dynamic Background Elements */}
             <div className="absolute inset-0 z-0">

@@ -37,15 +37,30 @@ const Footer = () => {
                         </div>
 
                         <div className="flex gap-4">
-                            {[Linkedin, Twitter, Instagram].map((Icon, i) => (
-                                <Link
-                                    key={i}
-                                    href="#"
-                                    className="w-10 h-10 rounded-full bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition-all duration-300 border border-white/5"
-                                >
-                                    <Icon className="w-4 h-4" />
-                                </Link>
-                            ))}
+                            <Link
+                                href="https://www.linkedin.com/in/lt-col-dr-sanjeev-malik"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition-all duration-300 border border-white/5"
+                            >
+                                <Linkedin className="w-4 h-4" />
+                            </Link>
+                            <Link
+                                href="https://x.com/LtColDrMalik?s=20"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition-all duration-300 border border-white/5"
+                            >
+                                <Twitter className="w-4 h-4" />
+                            </Link>
+                            <Link
+                                href="https://www.instagram.com/thesanjeevmalik?igsh=MThhNG9qZ2VwZjRtdQ=="
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-white/5 hover:bg-white hover:text-black flex items-center justify-center transition-all duration-300 border border-white/5"
+                            >
+                                <Instagram className="w-4 h-4" />
+                            </Link>
                         </div>
                     </div>
 
