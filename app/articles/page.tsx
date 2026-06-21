@@ -18,7 +18,7 @@ export default function ArticlesPage() {
                     The Journal
                 </span>
                 <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6">
-                    My <span className="italic text-muted-foreground">Blogs</span>
+                    My <span className="text-muted-foreground">Blogs</span>
                 </h1>
                 <p className="max-w-xl mx-auto text-muted-foreground text-lg">
                     Exploring the intersection of military discipline, corporate strategy, and human potential.

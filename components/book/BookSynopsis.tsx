@@ -22,11 +22,11 @@ const BookSynopsis = () => {
                         className="text-center"
                     >
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6 leading-tight">
-                            In the Age of Distraction, Build <span className="text-primary italic">Focus</span> and Mental Strength to Fulfil Your Dreams
+                            In the Age of Distraction, Build <span className="text-primary">Focus</span> and Mental Strength to Fulfil Your Dreams
                         </h2>
                         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full mb-8" />
 
-                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light italic">
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light">
                             &ldquo;Notifications never stop. Attention is scattered over too many things. Passion dilutes, purpose fades—and dreams are quietly sabotaged.&rdquo;
                         </p>
                     </motion.div>
@@ -81,7 +81,7 @@ const BookSynopsis = () => {
                             <p className="font-medium text-foreground text-xl mb-6">
                                 If you’re tired of starting and stopping, feeling overwhelmed, or losing direction, this book will help you build the mindset required to stay focused, consistent, and committed.
                             </p>
-                            <p className="font-serif text-2xl md:text-3xl text-primary italic text-balance">
+                            <p className="font-serif text-2xl md:text-3xl text-primary text-balance">
                                 Your dreams deserve your full attention. It’s time to reclaim it.
                             </p>
                         </div>

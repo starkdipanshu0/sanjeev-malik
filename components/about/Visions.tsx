@@ -33,7 +33,7 @@ const Visions = () => {
                     <div className="flex justify-center">
                         <div className="relative">
                             {/* Decorative Signature Placeholder */}
-                            <span className="font-serif italic text-3xl md:text-4xl text-white/80 transform -rotate-6">
+                            <span className="font-serif text-3xl md:text-4xl text-white/80 transform -rotate-6">
                                 Sanjeev Malik
                             </span>
                             <div className="absolute -bottom-2 w-full h-0.5 bg-primary/50 opacity-50 transform -rotate-1" />

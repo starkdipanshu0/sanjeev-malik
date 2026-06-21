@@ -94,7 +94,7 @@ const Header = () => {
                                 <Button
                                     size="sm"
                                     className={cn(
-                                        "ml-4 font-serif italic tracking-wide transition-all duration-300",
+                                        "ml-4 font-serif tracking-wide transition-all duration-300",
                                         isScrolled
                                             ? "bg-black text-white hover:bg-zinc-800"
                                             : isDarkPage

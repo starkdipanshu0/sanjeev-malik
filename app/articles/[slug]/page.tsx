@@ -113,7 +113,7 @@ export default async function ArticlePage({ params }: PageProps) {
                                         );
                                     case 'quote':
                                         return (
-                                            <blockquote key={index} className="border-l-4 border-primary bg-secondary/10 p-6 rounded-r-lg italic my-8">
+                                            <blockquote key={index} className="border-l-4 border-primary bg-secondary/10 p-6 rounded-r-lg my-8">
                                                 "{block.content}"
                                             </blockquote>
                                         );
@@ -129,7 +129,7 @@ export default async function ArticlePage({ params }: PageProps) {
                                                     />
                                                 </div>
                                                 {block.caption && (
-                                                    <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
+                                                    <figcaption className="text-center text-sm text-muted-foreground mt-3">
                                                         {block.caption}
                                                     </figcaption>
                                                 )}

@@ -24,7 +24,7 @@ const FreeChapterSignup = () => {
                 >
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground">
                         Experience the <br />
-                        <span className="text-primary italic">Transformation</span> First.
+                        <span className="text-primary">Transformation</span> First.
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
                         Begin your journey with the first chapter of "The Graphene Mentality". Discover the core principles of resilience before you commit.

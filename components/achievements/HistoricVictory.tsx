@@ -27,7 +27,7 @@ const HistoricVictory = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
 
                             <div className="absolute bottom-6 left-6 right-6">
-                                <p className="text-white/90 font-serif italic text-lg leading-snug">
+                                <p className="text-white/90 font-serif text-lg leading-snug">
                                     “The only athlete in 2023 to achieve this feat.”
                                 </p>
                             </div>
@@ -60,7 +60,7 @@ const HistoricVictory = () => {
                                 On <strong className="text-white">11 Nov 2023</strong>, while representing India, Lt Col Sanjeev Malik made history by winning <strong className="text-white">Five Gold medals</strong> in the <strong className="text-white">42nd World Medicine and Health Games</strong> held in Columbia.
                             </p>
                             <p>
-                                Competing against top athletes from around the globe, he demonstrated unparalleled endurance, discipline, and mental fortitude. This victory was not just a personal milestone but a testament to the <em className="text-white">Graphene Mentality</em>—proving that with the right mindset, age and circumstances are merely numbers.
+                                Competing against top athletes from around the globe, he demonstrated unparalleled endurance, discipline, and mental fortitude. This victory was not just a personal milestone but a testament to the <span className="text-white font-semibold">Graphene Mentality</span>—proving that with the right mindset, age and circumstances are merely numbers.
                             </p>
                         </div>
 

@@ -19,7 +19,7 @@ const GrapheneIntro = () => {
 
                     <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground leading-tight">
                         In the Age of Distraction, Build <br />
-                        <span className="text-primary italic">Focus and Mental Strength</span> to Fulfil Your Dreams
+                        <span className="text-primary">Focus and Mental Strength</span> to Fulfil Your Dreams
                     </h2>
 
                     <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -27,7 +27,7 @@ const GrapheneIntro = () => {
                             Notifications never stop. Attention is scattered over too many things. Passion dilutes, purpose fades—and dreams are quietly sabotaged.
                         </p>
                         <p>
-                            In a world overwhelmed by distractions, <strong className="text-foreground">Lt Col Sanjeev Malik</strong>—a Special Forces doctor and a renowned endurance athlete—introduces <em className="text-foreground">The Graphene Mentality</em>. More than a book, it is a practical guide for building unbreakable focus and mental strength. He believes that most people fail to pursue their passions not because they lack talent, but because they lack a strong purpose and a disciplined mindset. The Graphene Mentality bridges that gap.
+                            In a world overwhelmed by distractions, <strong className="text-foreground">Lt Col Sanjeev Malik</strong>—a Special Forces doctor and a renowned endurance athlete—introduces <span className="text-foreground font-semibold">The Graphene Mentality</span>. More than a book, it is a practical guide for building unbreakable focus and mental strength. He believes that most people fail to pursue their passions not because they lack talent, but because they lack a strong purpose and a disciplined mindset. The Graphene Mentality bridges that gap.
                         </p>
                     </div>
 
@@ -50,7 +50,7 @@ const GrapheneIntro = () => {
                         </ul>
                     </div>
 
-                    <p className="text-lg text-muted-foreground leading-relaxed italic border-l-4 border-primary/30 pl-6 py-2 text-balance">
+                    <p className="text-lg text-muted-foreground leading-relaxed border-l-4 border-primary/30 pl-6 py-2 text-balance">
                         "Your dreams deserve your full attention. It’s time to reclaim it."
                     </p>
                 </motion.div>

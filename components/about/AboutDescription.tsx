@@ -22,7 +22,7 @@ const AboutDescription = () => {
                     className="max-w-4xl mx-auto mb-16 text-center"
                 >
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
-                        From the <span className="text-primary italic">Frontlines</span> to the <span className="text-primary italic">Boardroom</span>
+                        From the <span className="text-primary">Frontlines</span> to the <span className="text-primary">Boardroom</span>
                     </h2>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                 </motion.div>
@@ -62,7 +62,7 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.5 }}
                         >
-                            This realization inspired me to write my book, <em className="text-foreground font-serif">The Graphene Mentality</em>. Just like Graphene—the world’s strongest yet most flexible material—I believe our minds too can become unbreakable yet adaptable enough to thrive and succeed in any situation.
+                            This realization inspired me to write my book, <span className="text-foreground font-serif font-semibold">The Graphene Mentality</span>. Just like Graphene—the world’s strongest yet most flexible material—I believe our minds too can become unbreakable yet adaptable enough to thrive and succeed in any situation.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ const AboutDescription = () => {
                         >
                             <div className="relative p-8 bg-background rounded-2xl border border-primary/10 shadow-xl">
                                 <div className="absolute -top-6 -left-4 text-8xl text-primary/10 font-serif leading-none">“</div>
-                                <blockquote className="relative z-10 text-2xl font-serif italic text-foreground leading-normal">
+                                <blockquote className="relative z-10 text-2xl font-serif text-foreground leading-normal">
                                     The strongest battles are not fought on the field, but in the mind.
                                     <span className="block mt-4 text-primary font-bold not-italic text-lg tracking-wide uppercase">
                                         — Conquer Yourself

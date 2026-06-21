@@ -45,7 +45,7 @@ const HeroSection = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative min-h-screen w-full overflow-hidden bg-background flex flex-col items-center justify-center py-12 py-24 md:py-32 perspective-1000"
+            className="relative min-h-dvh w-full overflow-hidden bg-background flex flex-col items-center justify-center pt-20 pb-4 md:py-32 perspective-1000"
         >
             {/* 1. Ambient Background Effects */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none z-0" />
@@ -66,19 +66,16 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1 }}
-                    className="mb-8 md:mb-16 relative"
+                    className="mb-6 md:mb-16 relative"
                 >
-                    <div className="flex flex-col items-center gap-4">
-                        <span className="w-12 h-1 bg-primary rounded-full mb-2" />
-                        <blockquote className="text-lg md:text-3xl font-serif italic text-foreground max-w-3xl leading-relaxed">
+                    <div className="flex flex-col items-center gap-2 md:gap-4">
+                        <span className="w-12 h-1 bg-primary rounded-full mb-1 md:mb-2" />
+                        <blockquote className="text-lg md:text-3xl font-serif text-foreground max-w-3xl leading-relaxed">
                             <span className="text-primary font-bold mr-1">“</span>
                             In the Age of Distraction,<br className="hidden md:block" />
                             Build <span className="text-primary font-medium">Focus</span> and <span className="text-primary font-medium">Mental Strength</span> to Fulfill your <span className="text-primary font-medium">Dreams</span>
                             <span className="text-primary font-bold ml-1">”</span>
                         </blockquote>
-                        <cite className="text-sm font-bold tracking-widest text-muted-foreground uppercase not-italic">
-                            — Lt. Col. Sanjeev Malik
-                        </cite>
                     </div>
                 </motion.div>
 
@@ -88,7 +85,7 @@ const HeroSection = () => {
                     initial={{ opacity: 0, scale: 0.8, rotateX: 20 }}
                     animate={{ opacity: 1, scale: 1, rotateX: 0 }}
                     transition={{ duration: 1.2, type: "spring", bounce: 0.3 }}
-                    className="relative z-20 mb-8 md:mb-12"
+                    className="relative z-20 mb-6 md:mb-12"
                 >
                     <motion.div
                         style={{
@@ -96,7 +93,7 @@ const HeroSection = () => {
                             rotateY,
                             transformStyle: "preserve-3d"
                         }}
-                        className="relative w-[180px] h-[270px] md:w-[350px] md:h-[530px] rounded-r-xl"
+                        className="relative w-[150px] h-[225px] md:w-[350px] md:h-[530px] rounded-r-xl"
                     >
                         {/* Glow Behind */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-primary/20 to-transparent blur-3xl rounded-full" />
@@ -134,13 +131,13 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="flex flex-col items-center gap-6 md:gap-8"
+                    className="flex flex-col items-center gap-4 md:gap-8"
                 >
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                         <h2 className="text-3xl md:text-6xl font-serif font-bold tracking-tight text-foreground">
                             The <span className="text-primary">Graphene</span> Mentality
                         </h2>
-                        <p className="text-muted-foreground text-sm md:text-lg max-w-xl mx-auto">
+                        <p className="text-muted-foreground text-sm md:text-lg max-w-xl mx-auto leading-snug">
                             Inspired from the element Graphene that is 200 times stronger than steel and yet highly flexible,
                             this book will make you strong and adaptable to deal with all challenges in pursuit of your dreams.
                         </p>
@@ -156,15 +153,6 @@ const HeroSection = () => {
                             Get Free Chapter
                         </Button>
                     </form>
-
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground opacity-80 mt-4">
-                        <div className="flex -space-x-2">
-                            {[1, 2, 3].map(i => (
-                                <div key={i} className="w-6 h-6 rounded-full bg-gray-200 border-2 border-background" />
-                            ))}
-                        </div>
-                        <span>Join <strong className="text-foreground">10,000+</strong> others</span>
-                    </div>
 
                 </motion.div>
 

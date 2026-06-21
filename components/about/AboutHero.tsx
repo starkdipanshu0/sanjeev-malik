@@ -36,10 +36,10 @@ const AboutHero = () => {
                 >
                     <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight text-foreground">
                         Hi, I&apos;m <br />
-                        <span className="text-primary italic">Sanjeev Malik</span>
+                        <span className="text-primary">Sanjeev Malik</span>
                     </h1>
 
-                    <blockquote className="border-l-4 border-primary pl-4 italic text-xl text-muted-foreground">
+                    <blockquote className="border-l-4 border-primary pl-4 text-xl text-muted-foreground">
                         &quot;The strongest battles are not fought on the field, but in the mind.&quot;
                     </blockquote>
 

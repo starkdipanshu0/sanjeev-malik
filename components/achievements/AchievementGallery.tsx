@@ -89,7 +89,7 @@ const AchievementGallery = () => {
                     className="text-center mb-24"
                 >
                     <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4">
-                        Journey of <span className="text-primary italic">Excellence</span>
+                        Journey of <span className="text-primary">Excellence</span>
                     </h2>
                     <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
                         Each milestone holds a story of perseverance.

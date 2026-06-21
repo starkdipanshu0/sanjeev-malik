@@ -13,7 +13,7 @@ export const Sidebar = () => {
                         <path d="M14.017 21L14.017 18C14.017 16.896 14.789 15.548 15.696 14.787C16.34 14.248 17.526 13.916 18.232 13.845L18.428 13.824V11.895C16.928 11.966 15.568 12.38 14.356 13.064C12.923 13.87 12 15.352 12 17.152L12 21H14.017ZM8 21L8 18C8 16.896 8.772 15.548 9.679 14.787C10.323 14.248 11.509 13.916 12.215 13.845L12.411 13.824V11.895C10.911 11.966 9.551 12.38 8.339 13.064C6.906 13.87 5.983 15.352 5.983 17.152L5.983 21H8Z" />
                     </svg>
                 </div>
-                <blockquote className="font-serif italic text-lg text-foreground/80 leading-relaxed">
+                <blockquote className="font-serif text-lg text-foreground/80 leading-relaxed">
                     "The mind is the ultimate weapon. Sharpen it daily."
                 </blockquote>
                 <div className="mt-4 flex items-center gap-3">
@@ -60,7 +60,7 @@ export const Sidebar = () => {
                 <div className="h-48 bg-zinc-900 flex items-center justify-center relative">
                     {/* <Image ... /> if we had one here */}
                     <div className="relative z-20 text-center p-6 text-white transform group-hover:-translate-y-1 transition-transform">
-                        <p className="font-serif text-xl italic mb-2">The Graphene Mentality</p>
+                        <p className="font-serif text-xl mb-2">The Graphene Mentality</p>
                         <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest border border-white/30 px-3 py-1 rounded-full group-hover:bg-white group-hover:text-black transition-all">
                             Get the Book <ArrowRight className="w-3 h-3" />
                         </div>

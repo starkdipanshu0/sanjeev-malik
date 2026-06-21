@@ -54,15 +54,8 @@ const AboutAuthorSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="h-px w-12 bg-primary" />
-                                <span className="text-sm font-bold tracking-widest text-primary uppercase">
-                                    The Author
-                                </span>
-                            </div>
-
                             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
-                                Hi, I’m <span className="text-primary italic">Lt Col Sanjeev Malik</span>
+                                Hi, I’m <span className="text-primary">Lt Col Sanjeev Malik</span>
                             </h2>
                             <p className="text-base md:text-xl font-medium text-foreground mb-4">
                                 I’m an Indian Army doctor and have served with elite special forces.
@@ -70,7 +63,7 @@ const AboutAuthorSection = () => {
 
                             <div className="space-y-2 md:space-y-6 text-sm md:text-lg text-muted-foreground leading-relaxed hidden md:block">
                                 <p>
-                                    I’m the author of <em>The Graphene Mentality</em>.
+                                    I’m the author of <span className="font-semibold text-foreground">The Graphene Mentality</span>.
                                 </p>
                                 <p>
                                     Life has given me many uniforms to wear—from serving with the Special Forces and the President's Bodyguard to representing India at the World Medical and Health Games, where I was blessed to win five gold medals in athletics.

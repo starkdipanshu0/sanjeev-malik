@@ -1,36 +1,23 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import { motion, useMotionValue, animate } from "framer-motion";
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, Calendar, Clock } from "lucide-react";
 import { ARTICLES } from "@/lib/articles";
 
 const BlogCarouselSection = () => {
-    const [width, setWidth] = useState(0);
     const carousel = useRef<HTMLDivElement>(null);
-    const x = useMotionValue(0);
-
-    useEffect(() => {
-        if (carousel.current) {
-            setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-        }
-    }, []);
 
     const slide = (direction: "left" | "right") => {
-        const moveAmount = 350 + 32; // Card width + gap
-        const currentX = x.get();
-        let newX = direction === "left" ? currentX + moveAmount : currentX - moveAmount;
-
-        // Clamp
-        if (newX > 0) newX = 0;
-        if (newX < -width) newX = -width;
-
-        animate(x, newX, {
-            type: "spring",
-            stiffness: 300,
-            damping: 30
+        const el = carousel.current;
+        if (!el) return;
+        // Scroll by roughly one card width (falls back to ~85% of the viewport)
+        const firstCard = el.firstElementChild as HTMLElement | null;
+        const amount = firstCard ? firstCard.offsetWidth + 24 : el.clientWidth * 0.85;
+        el.scrollBy({
+            left: direction === "left" ? -amount : amount,
+            behavior: "smooth",
         });
     };
 
@@ -41,12 +28,8 @@ const BlogCarouselSection = () => {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 relative">
                     <div className="space-y-4">
-                        <div className="flex items-center gap-2">
-                            <div className="h-px w-8 bg-primary" />
-                            <span className="text-xs font-bold tracking-widest text-primary uppercase">Latest Insights</span>
-                        </div>
                         <h2 className="font-serif text-3xl md:text-5xl font-bold">
-                            My Blogs {/* <span className="text-primary italic">Perspectives</span> */}
+                            My Blogs
                         </h2>
                     </div>
 
@@ -83,56 +66,46 @@ const BlogCarouselSection = () => {
                     </div>
                 </div>
 
-                {/* Carousel */}
-                <motion.div ref={carousel} className="cursor-grab active:cursor-grabbing overflow-hidden">
-                    <motion.div
-                        drag="x"
-                        dragConstraints={{ right: 0, left: -width }}
-                        style={{ x }}
-                        className="flex gap-6 md:gap-8 pb-4" // pb-4 for shadow clearance
-                    >
-                        {ARTICLES.map((article) => (
-                            <motion.div
-                                key={article.id}
-                                className="min-w-[300px] md:min-w-[400px] bg-background rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
-                            >
-                                <Link href={`/articles/${article.slug}`} className="flex flex-col h-full">
-                                    {/* Card Content */}
-                                    <div className="p-6 md:p-8 flex flex-col h-full">
-                                        <div className="mb-4">
-                                            <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase rounded-full">
-                                                {article.category}
+                {/* Carousel - native smooth scroll + snap */}
+                <div
+                    ref={carousel}
+                    className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                >
+                    {ARTICLES.map((article) => (
+                        <div
+                            key={article.id}
+                            className="snap-start shrink-0 w-[300px] md:w-[400px] bg-background rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
+                        >
+                            <Link href={`/articles/${article.slug}`} className="flex flex-col h-full">
+                                {/* Card Content */}
+                                <div className="p-6 md:p-8 flex flex-col h-full">
+                                    <h3 className="text-xl md:text-2xl font-bold font-serif mb-3 group-hover:text-primary transition-colors">
+                                        {article.title}
+                                    </h3>
+
+                                    <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                                        {article.excerpt}
+                                    </p>
+
+                                    <div className="pt-6 border-t border-border/50 flex items-center justify-between text-xs text-muted-foreground mt-auto">
+                                        <div className="flex items-center gap-4">
+                                            <span className="flex items-center gap-1">
+                                                <Calendar className="w-3 h-3" /> {article.date}
+                                            </span>
+                                            <span className="flex items-center gap-1">
+                                                <Clock className="w-3 h-3" /> {article.readTime}
                                             </span>
                                         </div>
 
-                                        <h3 className="text-xl md:text-2xl font-bold font-serif mb-3 group-hover:text-primary transition-colors">
-                                            {article.title}
-                                        </h3>
-
-                                        <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
-                                            {article.excerpt}
-                                        </p>
-
-                                        <div className="pt-6 border-t border-border/50 flex items-center justify-between text-xs text-muted-foreground mt-auto">
-                                            <div className="flex items-center gap-4">
-                                                <span className="flex items-center gap-1">
-                                                    <Calendar className="w-3 h-3" /> {article.date}
-                                                </span>
-                                                <span className="flex items-center gap-1">
-                                                    <Clock className="w-3 h-3" /> {article.readTime}
-                                                </span>
-                                            </div>
-
-                                            <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                                                <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                                            </div>
+                                        <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                            <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                                         </div>
                                     </div>
-                                </Link>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </motion.div>
+                                </div>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
 
                 {/* Mobile View All Button (Visible only on Mobile) */}
                 <div className="mt-8 md:hidden flex justify-center gap-4">

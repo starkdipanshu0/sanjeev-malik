@@ -210,7 +210,7 @@ const ChapterWalkthrough = () => {
                                                     </p>
                                                     <div className="p-3 bg-background rounded border border-border flex gap-3 items-start">
                                                         <span className="text-primary text-xl leading-none font-serif">“</span>
-                                                        <p className="text-sm font-medium text-foreground italic">
+                                                        <p className="text-sm font-medium text-foreground">
                                                             {chapter.highlight}
                                                         </p>
                                                     </div>

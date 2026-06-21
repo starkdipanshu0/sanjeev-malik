@@ -43,7 +43,7 @@ const KeyAchievements = () => {
                         transition={{ duration: 0.5 }}
                         className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4"
                     >
-                        Milestones of <span className="text-primary italic">Excellence</span>
+                        Milestones of <span className="text-primary">Excellence</span>
                     </motion.h2>
                 </div>
 

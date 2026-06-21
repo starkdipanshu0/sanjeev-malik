@@ -15,7 +15,7 @@ const PurchaseOptions = () => {
                     viewport={{ once: true }}
                     className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4"
                 >
-                    Start Your <span className="text-primary italic">Transformation</span>
+                    Start Your <span className="text-primary">Transformation</span>
                 </motion.h2>
                 <p className="text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">
                     Choose the format that fits your lifestyle. Available worldwide.

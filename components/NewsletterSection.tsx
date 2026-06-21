@@ -32,7 +32,7 @@ const NewsletterSection = () => {
                             className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight"
                         >
                             Subscribe to my <br />
-                            <span className="text-primary italic">weekly Newsletter</span>
+                            <span className="text-primary">weekly Newsletter</span>
                         </motion.h2>
 
                         <motion.p
