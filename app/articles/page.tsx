@@ -14,9 +14,6 @@ export default function ArticlesPage() {
         <main className="min-h-screen bg-background pt-12 pb-20">
             {/* Page Header */}
             <div className="container mx-auto px-6 md:px-12 mb-20 text-center">
-                <span className="text-primary font-mono text-xs uppercase tracking-[0.2em] mb-4 block">
-                    The Journal
-                </span>
                 <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6">
                     My <span className="text-muted-foreground">Blogs</span>
                 </h1>

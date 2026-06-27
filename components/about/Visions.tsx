@@ -19,15 +19,15 @@ const Visions = () => {
                     className="max-w-4xl mx-auto"
                 >
                     <span className="inline-block py-1 px-4 rounded-full border border-white/10 bg-white/5 text-sm font-medium tracking-widest uppercase mb-8 text-white/60">
-                        The Vision
+                        Vision &amp; Mission
                     </span>
 
                     <h2 className="text-3xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight mb-8">
-                        To <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-primary bg-[length:200%_auto] animate-gradient">inspire</span> the next generation of professionals and athletes
+                        To empower a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-primary bg-[length:200%_auto] animate-gradient">Billion Minds</span> with the Graphene Mentality
                     </h2>
 
                     <p className="text-lg md:text-xl font-light text-zinc-300 leading-relaxed max-w-3xl mx-auto mb-12">
-                        by showing that with <strong className="text-white">discipline</strong>, <strong className="text-white">resilience</strong>, and <strong className="text-white">passion</strong>, one can achieve greatness in any field. My mission is to continue contributing to India’s legacy through sports, fitness, and service to the nation.
+                        To help students, professionals, leaders and athletes develop <strong className="text-white">focus</strong>, <strong className="text-white">resilience</strong>, and <strong className="text-white">discipline</strong> for peak performance by teaching the principles of the Graphene Mentality.
                     </p>
 
                     <div className="flex justify-center">

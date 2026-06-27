@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, ArrowRight, Sparkles } from "lucide-react";
+import { Phone, Mail, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 const ConnectSection = () => {
@@ -46,17 +46,17 @@ const ConnectSection = () => {
                         className="space-y-10 lg:sticky lg:top-32"
                     >
                         <div className="space-y-6">
-                            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase border border-primary/20">
-                                <Sparkles className="w-3 h-3" /> Connect with me
-                            </span>
                             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1]">
-                                Reserve a Spot <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400">
-                                    With me
+                                Let&apos;s{" "}
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-amber-500">
+                                    Connect!
                                 </span>
                             </h2>
                             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-lg">
-                                Whether you have a question about the book, want to book a speaking engagement, or just want to explore a collaboration.
+                                Every Sunday, from <span className="text-foreground font-semibold">5:00 PM to 6:00 PM</span>, I host a live mentoring session where I share my journey, lessons, and practical insights on building focus, discipline, and success.
+                            </p>
+                            <p className="text-foreground text-lg font-medium leading-relaxed max-w-lg">
+                                Fill in the details below to reserve your spot.
                             </p>
                         </div>
 

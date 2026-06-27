@@ -8,6 +8,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-source-sans);
   --font-serif: var(--font-playfair);
+  --font-reading: var(--font-lora);
 
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -132,5 +133,38 @@
     background-color: var(--primary);
     color: #000000;
     text-shadow: none;
+  }
+}
+
+@layer components {
+  /* Inline formatting inside article body (comes from rich-text HTML) */
+  .article-body a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+  }
+
+  .article-body a:hover {
+    opacity: 0.8;
+  }
+
+  .article-body strong,
+  .article-body b {
+    font-weight: 700;
+    color: var(--foreground);
+  }
+
+  /* Editorial drop cap on the opening paragraph */
+  .article-body > p:first-of-type::first-letter {
+    float: left;
+    font-family: var(--font-serif);
+    font-size: 4.25rem;
+    line-height: 0.82;
+    font-weight: 700;
+    color: var(--primary);
+    padding-right: 0.08em;
+    margin-top: 0.02em;
   }
 }
