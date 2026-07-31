@@ -103,7 +103,7 @@ const BookHero = () => {
                         initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
                         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                         transition={{ duration: 1.2, ease: "circOut", delay: 0.2 }}
-                        className="relative w-[180px] h-[280px] sm:w-[240px] sm:h-[360px] md:w-[400px] md:h-[600px] shadow-2xl rounded-r-xl md:rounded-r-2xl"
+                        className="relative w-[180px] h-[280px] sm:w-[240px] sm:h-[360px] md:w-[330px] md:h-[495px] shadow-2xl rounded-r-xl md:rounded-r-2xl"
                     >
                         <motion.div
                             animate={{ y: [-10, 10, -10] }}
