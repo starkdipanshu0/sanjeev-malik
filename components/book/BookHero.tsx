@@ -49,7 +49,7 @@ const BookHero = () => {
                 <div className="absolute inset-0 opacity-[0.03] mix-blend-multiply" style={{ backgroundImage: "url('/images/noise.png')" }}></div>
             </div>
 
-            <div className="container relative z-10 mx-auto px-4 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
                 {/* 3D Book Visual - Mobile: Show First (smaller) / Desktop: Show Second (right column behavior) 
                     Re-ordering for mobile to show image first or keeping text first? 
                     Usually Hero text is first. Key is size.
@@ -70,9 +70,9 @@ const BookHero = () => {
                         The <span className="text-primary">Graphene</span> Mentality
                     </h1>
 
-                    <p className="text-sm md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    <p className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                         Unlock the secret to becoming unbreakable. Be the strongest yet most flexible version of yourself.
-                        <span className="block mt-2 md:mt-4 text-sm md:text-base font-medium text-primary">
+                        <span className="block mt-2 md:mt-4 text-sm md:text-base font-medium text-emphasis">
                             By Author Lt. Col. Sanjeev Malik
                         </span>
                     </p>
@@ -86,7 +86,7 @@ const BookHero = () => {
                         <Button
                             size="lg"
                             variant="outline"
-                            className="flex-1 md:flex-none h-12 md:h-14 px-4 md:px-8 text-sm md:text-lg font-medium border-primary/20 hover:bg-primary/5 hover:text-primary transition-all duration-300"
+                            className="flex-1 md:flex-none"
                             onClick={() => {
                                 document.getElementById("free-chapter")?.scrollIntoView({ behavior: "smooth" });
                             }}

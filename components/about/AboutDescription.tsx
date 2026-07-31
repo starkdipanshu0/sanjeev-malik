@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const AboutDescription = () => {
     return (
-        <section className="relative py-24 md:py-32 bg-secondary/5 overflow-hidden">
+        <section className="relative py-20 md:py-32 bg-secondary/5 overflow-hidden">
             {/* Watermark Background */}
             <div className="absolute top-20 right-0 pointer-events-none opacity-[0.03] select-none">
                 <span className="text-[20vw] font-serif font-black leading-none text-foreground">
@@ -12,7 +12,7 @@ const AboutDescription = () => {
                 </span>
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 relative z-10">
 
                 <motion.div
                     id="continue-reading"

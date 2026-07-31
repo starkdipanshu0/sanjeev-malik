@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const GrapheneIntro = () => {
     return (
-        <section className="py-20 md:py-32 bg-background relative overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 max-w-4xl text-center md:text-left">
+        <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+            <div className="mx-auto w-full max-w-4xl px-6 md:px-12 text-center md:text-left">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

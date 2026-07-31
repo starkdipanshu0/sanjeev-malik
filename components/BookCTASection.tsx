@@ -43,13 +43,13 @@ const BookCTASection = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="w-full py-20 px-6 bg-foreground text-background relative overflow-hidden perspective-[1000px]"
+            className="w-full py-20 md:py-32 bg-foreground text-background relative overflow-hidden perspective-[1000px]"
         >
             {/* Abstract Background Shapes */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 opacity-30" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[80px] -translate-x-1/2 translate-y-1/2 opacity-30" />
 
-            <div className="container mx-auto max-w-5xl relative z-10">
+            <div className="mx-auto w-full max-w-5xl px-6 md:px-12 relative z-10">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}

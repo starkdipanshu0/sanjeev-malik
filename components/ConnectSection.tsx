@@ -46,7 +46,7 @@ const ConnectSection = () => {
     };
 
     return (
-        <section className="w-full py-16 md:py-28 bg-background relative overflow-hidden border-t border-border/40" id="connect">
+        <section className="w-full py-16 md:py-24 bg-background relative overflow-hidden border-t border-border/40" id="connect">
             {/* Ambient wash */}
             <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[10%] right-[0%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] opacity-40" />
@@ -56,7 +56,7 @@ const ConnectSection = () => {
             {/* Hairline grid texture, inlined - matches the benefits section */}
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(120,90,60,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(120,90,60,0.10)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]" />
 
-            <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
                     {/* Left Column: Contact Info */}

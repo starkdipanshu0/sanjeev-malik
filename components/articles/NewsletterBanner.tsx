@@ -23,7 +23,7 @@ export const NewsletterBanner = () => {
 
     return (
         <div className="w-full bg-card text-foreground py-4 md:py-3 px-4 border-b border-border relative z-40">
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 text-center md:text-left relative">
+            <div className="mx-auto w-full max-w-7xl flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 text-center md:text-left relative">
 
                 <p className="text-sm md:text-base font-serif font-medium max-w-xl leading-snug md:pr-0 px-4 md:px-0">
                     Weekly wisdom you can read in 5 minutes.

@@ -127,8 +127,8 @@ const ChapterWalkthrough = () => {
     const [activeChapter, setActiveChapter] = useState<number | null>(null);
 
     return (
-        <section className="py-20 bg-background relative z-10">
-            <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+        <section className="py-16 md:py-24 bg-background relative z-10">
+            <div className="mx-auto w-full max-w-5xl px-6 md:px-12">
                 <div className="mb-16 text-center">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4">
                         Inside the <span className="text-primary">Pages</span>

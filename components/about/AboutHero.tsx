@@ -8,7 +8,7 @@ import { Linkedin, Twitter, Instagram } from "lucide-react";
 const AboutHero = () => {
     return (
         <section className="relative w-full min-h-screen flex items-center justify-center bg-background overflow-hidden py-24 md:py-32">
-            <div className="container mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Column: Image */}
                 <motion.div

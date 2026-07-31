@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const BookSynopsis = () => {
     return (
-        <section className="py-24 bg-secondary/30 relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">
             {/* Decorative Background Text */}
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none opacity-[0.03]">
                 <h2 className="text-[20vw] font-serif font-black text-foreground whitespace-nowrap">
@@ -12,7 +12,7 @@ const BookSynopsis = () => {
                 </h2>
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 relative z-10">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

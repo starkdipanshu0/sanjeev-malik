@@ -6,7 +6,7 @@ import Image from "next/image";
 const HistoricVictory = () => {
     return (
         <section className="py-16 md:py-24 bg-zinc-950 relative overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 relative z-10">
                 <div className="grid lg:grid-cols-12 gap-12 items-center">
 
                     {/* Image Column */}

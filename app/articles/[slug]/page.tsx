@@ -52,7 +52,7 @@ export default async function ArticlePage({ params }: PageProps) {
         <article className="min-h-screen bg-background pt-12 pb-20 relative">
             <ReadingProgressBar />
 
-            <div className="container mx-auto px-6 md:px-12">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
 
                 {/* Hero */}
                 <header className="max-w-3xl mx-auto text-center">

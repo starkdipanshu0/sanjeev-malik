@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 
 const PurchaseOptions = () => {
     return (
-        <section id="purchase-options" className="py-24 relative overflow-hidden">
+        <section id="purchase-options" className="py-16 md:py-24 relative overflow-hidden">
             <div className="absolute inset-0 bg-primary/5 -skew-y-3 origin-top-left scale-110 z-0"></div>
 
-            <div className="container relative z-10 mx-auto px-6 md:px-12 text-center">
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12 text-center">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

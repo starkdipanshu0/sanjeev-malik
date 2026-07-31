@@ -56,7 +56,7 @@ const BookBenefitsSection = () => {
     const shouldReduceMotion = useReducedMotion();
 
     return (
-        <section className="w-full py-10 md:py-32 bg-background relative overflow-hidden">
+        <section className="w-full py-20 md:py-32 bg-background relative overflow-hidden">
             {/* Ambient Background Elements */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-muted/40 blur-[100px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3" />
@@ -65,7 +65,7 @@ const BookBenefitsSection = () => {
                 /grid-pattern.svg does not exist in public/ and rendered nothing. */}
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(120,90,60,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(120,90,60,0.10)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]" />
 
-            <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-6 md:gap-16 lg:gap-24 items-center">
 
                     {/* Header Section */}

@@ -60,7 +60,7 @@ const AchievementGallery = () => {
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url('/images/noise.png')" }} />
 
-            <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-5xl">
+            <div className="mx-auto w-full max-w-5xl px-6 md:px-12 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

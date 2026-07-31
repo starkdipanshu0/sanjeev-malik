@@ -54,7 +54,7 @@ const HeroSection = () => {
             </div>
 
 
-            <div className="container relative z-10 mx-auto px-4 md:px-12 flex flex-col items-center text-center max-w-5xl gap-[clamp(1.25rem,2.6vh,1.75rem)]">
+            <div className="relative z-10 mx-auto w-full max-w-5xl px-6 md:px-12 flex flex-col items-center text-center gap-[clamp(1.25rem,2.6vh,1.75rem)]">
 
                 {/* 2. Top Quote Section */}
                 <motion.div

@@ -23,7 +23,7 @@ const BlogCarouselSection = () => {
 
     return (
         <section className="w-full py-12 md:py-20 bg-secondary/30 text-foreground overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
 
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 relative">

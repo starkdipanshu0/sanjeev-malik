@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="w-full bg-[#050505] text-white border-t border-white/10 flex flex-col font-sans overflow-hidden">
 
             {/* Main Content - Compact High-Density Grid */}
-            <div className="container mx-auto max-w-7xl">
+            <div className="mx-auto w-full max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-white/10">
 
                     {/* Brand Section (Span 5) */}
@@ -158,7 +158,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className="w-full px-6 md:px-12 py-3 bg-black border-t border-white/5 flex justify-between items-center text-[10px] text-white/20 font-mono tracking-widest uppercase">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 py-3 border-t border-white/5 flex justify-between items-center text-[10px] text-white/20 font-mono tracking-widest uppercase">
                 <p>© 2026 Sanjeev Malik</p>
                 <div className="flex gap-6">
                     <span className="hover:text-white cursor-pointer transition-colors">Privacy</span>

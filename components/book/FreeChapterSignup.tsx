@@ -7,13 +7,13 @@ import { ArrowRight, Mail } from "lucide-react";
 
 const FreeChapterSignup = () => {
     return (
-        <section id="free-chapter" className="py-24 relative overflow-hidden bg-primary/5 border-y border-primary/10">
+        <section id="free-chapter" className="py-16 md:py-24 relative overflow-hidden bg-primary/5 border-y border-primary/10">
             {/* Background Decor */}
             <div className="absolute top-0 right-0 p-12 opacity-[0.05] pointer-events-none">
                 <Mail size={400} />
             </div>
 
-            <div className="container relative z-10 mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12">
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12">
 
                 {/* Text Content */}
                 <motion.div

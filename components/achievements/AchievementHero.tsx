@@ -10,7 +10,7 @@ export const AchievementHero = () => {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-overlay" />
             <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/80 via-[#050505]/50 to-[#050505]" />
 
-            <div className="relative z-10 container mx-auto px-6 text-center">
+            <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const AboutAuthorSection = () => {
     return (
-        <section className="w-full py-6 md:py-20 bg-secondary/30 min-h-[50vh] md:min-h-auto flex items-center">
-            <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+        <section className="w-full py-12 md:py-20 bg-secondary/30 flex items-center">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
                 <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
 
                     {/* Left Column: Image (Placeholder) */}

@@ -7,8 +7,8 @@ import { Mail } from "lucide-react";
 
 const NewsletterSection = () => {
     return (
-        <section className="w-full py-12 md:py-24 bg-background border-t border-border/40">
-            <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+        <section className="w-full py-16 md:py-24 bg-background border-t border-border/40">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end">
 
                     {/* Left Column: Heading & Copy */}

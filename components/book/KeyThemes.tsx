@@ -13,8 +13,8 @@ const themes = [
 
 const KeyThemes = () => {
     return (
-        <section className="py-20 border-t border-border bg-gradient-to-b from-transparent to-secondary/30">
-            <div className="container mx-auto px-6 md:px-12 text-center">
+        <section className="py-16 md:py-24 border-t border-border bg-gradient-to-b from-transparent to-secondary/30">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 text-center">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

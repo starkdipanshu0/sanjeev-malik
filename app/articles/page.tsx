@@ -13,7 +13,7 @@ export default function ArticlesPage() {
     return (
         <main className="min-h-screen bg-background pt-12 pb-20">
             {/* Page Header */}
-            <div className="container mx-auto px-6 md:px-12 mb-20 text-center">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12 mb-20 text-center">
                 <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6">
                     My <span className="text-muted-foreground">Blogs</span>
                 </h1>
@@ -23,7 +23,7 @@ export default function ArticlesPage() {
             </div>
 
             {/* Main Content Grid */}
-            <div className="container mx-auto px-6 md:px-12">
+            <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
                     {/* Left Column: Articles List (Span 8) */}
