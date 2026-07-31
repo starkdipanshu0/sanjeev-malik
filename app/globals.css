@@ -167,10 +167,12 @@
   --ink-soft: hsl(24 16% 28%);
   --ink-faint: hsl(24 12% 45%);
 
-  /* --primary is 2.73:1 on light surfaces and fails AA as TEXT. Use --emphasis
-     for any orange that carries words; --primary stays for fills and edges. */
-  --emphasis: hsl(18 70% 30%);
-  --emphasis-icon: hsl(20 85% 38%);
+  /* Two tones, ONE hue. --primary is 2.73:1 on light surfaces and fails AA as
+     text, so --emphasis carries every orange word and glyph on a light
+     surface while --primary stays a fill. Both sit at hue 24 so they read as
+     one colour light and dark, not as two different colours. */
+  --emphasis: hsl(24 88% 32%);
+  --emphasis-icon: var(--emphasis);
 
   /* Near-black for use ON primary. White on primary is only 2.73:1. */
   --on-primary-strong: hsl(22 50% 10%);
