@@ -14,8 +14,8 @@ export default function Home() {
       <BookBenefitsSection />
       <BlogCarouselSection />
       <BookCTASection />
-      <ConnectSection />
       <NewsletterSection />
+      <ConnectSection />
     </div>
   );
 }
