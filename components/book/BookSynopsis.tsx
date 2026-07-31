@@ -36,7 +36,7 @@ const BookSynopsis = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="space-y-6 text-lg text-muted-foreground leading-relaxed"
+                        className="space-y-6 max-w-xl text-lg text-muted-foreground leading-relaxed"
                     >
                         <p>
                             In a world overwhelmed by distractions, <strong className="text-foreground font-medium">Lt Col Sanjeev Malik</strong>—a Special Forces doctor and a renowned endurance athlete—introduces <strong className="text-foreground font-medium">The Graphene Mentality</strong>. More than a book, it is a practical guide for building unbreakable focus and mental strength. He believes that most people fail to pursue their passions not because they lack talent, but because they lack a strong purpose and a disciplined mindset. The Graphene Mentality bridges that gap.

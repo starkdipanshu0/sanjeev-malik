@@ -231,7 +231,7 @@ const AchievementSection = ({ item, index }: { item: AchievementEntry; index: nu
             </div>
 
             {/* Description Text */}
-            <div className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-3xl">
+            <div className="text-base md:text-lg text-zinc-300 leading-relaxed max-w-xl">
                 <p>{item.description}</p>
             </div>
 

@@ -26,7 +26,7 @@ const Visions = () => {
                         To empower a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-primary bg-[length:200%_auto] animate-gradient">Billion Minds</span> with the Graphene Mentality
                     </h2>
 
-                    <p className="text-lg md:text-xl font-light text-zinc-300 leading-relaxed max-w-3xl mx-auto mb-12">
+                    <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl mx-auto mb-12">
                         To help students, professionals, leaders and athletes develop <strong className="text-white">focus</strong>, <strong className="text-white">resilience</strong>, and <strong className="text-white">discipline</strong> for peak performance by teaching the principles of the Graphene Mentality.
                     </p>
 

@@ -95,8 +95,9 @@ export default async function ArticlePage({ params }: PageProps) {
                     </div>
                 </div>
 
-                {/* Body */}
-                <div className="relative max-w-3xl mx-auto">
+                {/* Body - max-w-2xl keeps the measure near 66 characters per line
+                    at 20px Lora. The hero and cover above stay wider on purpose. */}
+                <div className="relative max-w-2xl mx-auto">
 
                     {/* Floating Table of Contents (left margin, large screens only) */}
                     <aside className="hidden xl:block absolute right-full top-0 h-full mr-8 w-48">
@@ -157,13 +158,13 @@ export default async function ArticlePage({ params }: PageProps) {
                                     );
                                 case 'list':
                                     return block.style === 'ordered' ? (
-                                        <ol key={index} className="list-decimal pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-relaxed text-foreground/85 my-6">
+                                        <ol key={index} className="list-decimal pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">
                                             {block.items.map((it, i) => (
                                                 <li key={i} dangerouslySetInnerHTML={{ __html: it }} />
                                             ))}
                                         </ol>
                                     ) : (
-                                        <ul key={index} className="list-disc pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-relaxed text-foreground/85 my-6">
+                                        <ul key={index} className="list-disc pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">
                                             {block.items.map((it, i) => (
                                                 <li key={i} dangerouslySetInnerHTML={{ __html: it }} />
                                             ))}

@@ -121,15 +121,19 @@ export const AdminEditor = () => {
                             <p className="text-xl text-muted-foreground italic max-w-2xl mx-auto">{excerpt}</p>
                         </div>
 
-                        <div className="prose prose-lg prose-zinc dark:prose-invert max-w-none">
+                        {/* Measure and paragraph classes mirror the published article
+                            (app/articles/[slug]/page.tsx) so the preview shows the real
+                            line length. The `prose` classes here were dead - the
+                            typography plugin is not installed. */}
+                        <div className="article-body font-reading max-w-2xl mx-auto">
                             {blocks.map((block, index) => {
                                 // Basic Render Logic mimicking the real article page
                                 switch (block.type) {
-                                    case 'paragraph': return <p key={index} dangerouslySetInnerHTML={{ __html: block.content }} className="leading-relaxed opacity-90" />;
+                                    case 'paragraph': return <p key={index} dangerouslySetInnerHTML={{ __html: block.content }} className="text-lg md:text-xl leading-[1.85] text-foreground/85 mb-6 md:mb-7" />;
                                     case 'heading':
                                         const H = `h${block.level}` as any;
                                         return <H key={index} className="font-serif font-bold mt-8 mb-4">{block.content}</H>;
-                                    case 'quote': return <blockquote key={index} className="border-l-4 border-primary bg-secondary/10 p-6 rounded-r-lg italic my-8">"{block.content}"</blockquote>;
+                                    case 'quote': return <blockquote key={index} className="border-l-4 border-primary bg-secondary/10 p-6 rounded-r-lg italic my-8">&ldquo;{block.content}&rdquo;</blockquote>;
                                     case 'image': return (
                                         <figure key={index} className="my-10">
                                             <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg bg-secondary/10">
@@ -139,8 +143,8 @@ export const AdminEditor = () => {
                                         </figure>
                                     );
                                     case 'list': return block.style === 'ordered' ?
-                                        <ol key={index} className="list-decimal pl-6 space-y-2 marker:text-primary font-medium">{block.items.map((it, i) => <li key={i}>{it}</li>)}</ol> :
-                                        <ul key={index} className="list-disc pl-6 space-y-2 marker:text-primary font-medium">{block.items.map((it, i) => <li key={i}>{it}</li>)}</ul>;
+                                        <ol key={index} className="list-decimal pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">{block.items.map((it, i) => <li key={i}>{it}</li>)}</ol> :
+                                        <ul key={index} className="list-disc pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">{block.items.map((it, i) => <li key={i}>{it}</li>)}</ul>;
                                     case 'divider': return <hr key={index} className="my-12 border-border/40" />;
                                     default: return null;
                                 }
