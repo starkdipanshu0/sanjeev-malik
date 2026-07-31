@@ -27,7 +27,7 @@ const AboutAuthorSection = () => {
                             <div className="absolute top-4 -right-4 w-full h-full bg-primary/10 rounded-2xl -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2" />
 
                             {/* Main Image Container */}
-                            <div className="relative aspect-[3.5/4.5] w-64 md:w-80 lg:w-96 overflow-hidden rounded-xl shadow-2xl bg-zinc-100">
+                            <div className="relative aspect-[3.5/4.5] w-64 md:w-80 lg:w-96 overflow-hidden rounded-xl shadow-2xl bg-muted">
                                 <Image
                                     src="/images/homeauther.jpeg"
                                     alt="Lt. Col. Dr. Sanjeev Malik"
@@ -41,7 +41,7 @@ const AboutAuthorSection = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
 
                                 {/* Inner Border */}
-                                <div className="absolute inset-0 border border-white/10 rounded-xl z-20" />
+                                <div className="absolute inset-0 border border-border/60 rounded-xl z-20" />
                             </div>
                         </div>
                     </motion.div>
@@ -72,7 +72,7 @@ const AboutAuthorSection = () => {
                             </div>
 
                             <div className="pt-8">
-                                <Button asChild size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5 hover:text-primary transition-all">
+                                <Button asChild size="lg" variant="outline">
                                     <Link href="/about#continue-reading">
                                         Continue Reading
                                     </Link>

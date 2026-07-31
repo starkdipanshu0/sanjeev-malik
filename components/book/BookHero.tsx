@@ -79,7 +79,7 @@ const BookHero = () => {
 
                     <div className="flex flex-row gap-3 md:gap-4 justify-center lg:justify-start pt-2 md:pt-4 w-full md:w-auto px-2 md:px-0">
                         <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3" target="_blank" rel="noopener noreferrer" className="flex-1 md:flex-none">
-                            <Button size="lg" className="w-full h-12 md:h-14 px-4 md:px-8 text-sm md:text-lg font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:-translate-y-1 transition-all duration-300">
+                            <Button size="lg" className="w-full">
                                 Buy Now
                             </Button>
                         </a>

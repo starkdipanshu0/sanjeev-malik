@@ -210,13 +210,15 @@ const AchievementSection = ({ item, index }: { item: AchievementEntry; index: nu
                     <>
                         <button
                             onClick={prevSlide}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/50 backdrop-blur-md rounded-full text-white hover:bg-primary transition-all hover:scale-110"
+                            aria-label="Previous image"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 size-10 inline-flex items-center justify-center bg-black/50 backdrop-blur-md rounded-full text-white transition-colors hover:bg-primary hover:text-on-primary-strong focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
                         >
                             <ChevronLeft size={24} />
                         </button>
                         <button
                             onClick={nextSlide}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-black/50 backdrop-blur-md rounded-full text-white hover:bg-primary transition-all hover:scale-110"
+                            aria-label="Next image"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 size-10 inline-flex items-center justify-center bg-black/50 backdrop-blur-md rounded-full text-white transition-colors hover:bg-primary hover:text-on-primary-strong focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
                         >
                             <ChevronRight size={24} />
                         </button>

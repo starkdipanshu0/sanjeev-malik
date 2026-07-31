@@ -147,7 +147,7 @@ const HeroSection = () => {
                             placeholder="Enter your email"
                             className="flex-1 min-w-0 h-11 md:h-12 bg-background/80 backdrop-blur-sm border-primary/20 focus:ring-primary/50 text-sm md:text-base rounded-full px-4 md:px-6"
                         />
-                        <Button size="lg" type="submit" className="shrink-0 h-11 md:h-12 px-4 md:px-8 text-sm md:text-base font-bold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/25 rounded-full hover:scale-105 transition-all whitespace-nowrap">
+                        <Button size="lg" type="submit" className="shrink-0">
                             Get Free Chapter
                         </Button>
                     </form>

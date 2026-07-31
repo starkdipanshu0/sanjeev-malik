@@ -61,7 +61,7 @@ const BookSynopsis = () => {
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
                                 className="flex items-start space-x-4 p-4 md:p-6 bg-background/60 backdrop-blur-sm rounded-xl border border-border/50 hover:border-primary/30 transition-colors"
                             >
-                                <div className="h-2 w-2 mt-2.5 bg-primary rounded-full shrink-0 shadow-[0_0_10px_rgba(255,215,0,0.5)]" />
+                                <div className="h-2 w-2 mt-2.5 bg-primary rounded-full shrink-0 shadow-[0_0_10px_var(--primary)]" />
                                 <span className="text-foreground font-medium">{item}</span>
                             </motion.div>
                         ))}

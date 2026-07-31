@@ -29,6 +29,59 @@
   --color-ring: var(--ring);
   --color-gold: var(--gold);
 
+  /* Machined surface palette (light sections) */
+  --color-plate-top: var(--plate-top);
+  --color-plate-bottom: var(--plate-bottom);
+  --color-plate-top-featured: var(--plate-top-featured);
+  --color-plate-bottom-featured: var(--plate-bottom-featured);
+  --color-bevel-light: var(--bevel-light);
+  --color-bevel-light-soft: var(--bevel-light-soft);
+  --color-bevel-shade: var(--bevel-shade);
+  --color-bevel-shade-deep: var(--bevel-shade-deep);
+  --color-well: var(--well);
+  --color-well-hover: var(--well-hover);
+  --color-chassis: var(--chassis);
+  --color-groove: var(--groove);
+
+  /* Warm ink ramp */
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+
+  /* Accessible orange for text, and the safe on-primary colour */
+  --color-emphasis: var(--emphasis);
+  --color-emphasis-icon: var(--emphasis-icon);
+  --color-on-primary-strong: var(--on-primary-strong);
+
+  /* Warm elevation scale - neutral black reads as grey grime on sand */
+  --shadow-plate:
+    inset 0 1px 0 0 rgb(255 255 255 / 0.95), inset 0 -1px 0 0 rgb(120 80 40 / 0.1),
+    0 1px 2px -1px rgb(74 45 20 / 0.1), 0 4px 8px -3px rgb(74 45 20 / 0.14),
+    0 14px 28px -12px rgb(74 45 20 / 0.22);
+  --shadow-plate-featured:
+    inset 0 1px 0 0 rgb(255 255 255 / 0.95), inset 0 -1px 0 0 rgb(120 80 40 / 0.12),
+    0 1px 2px -1px rgb(74 45 20 / 0.12), 0 5px 10px -3px rgb(74 45 20 / 0.16),
+    0 22px 40px -16px rgb(74 45 20 / 0.3);
+  --shadow-plate-pressed:
+    inset 0 2px 5px -1px rgb(74 45 20 / 0.22), inset 0 -1px 0 0 rgb(255 255 255 / 0.9),
+    0 1px 0 0 rgb(255 255 255 / 0.65);
+  --shadow-well:
+    inset 0 0 0 1px rgb(74 45 20 / 0.1), inset 0 2px 4px 0 rgb(74 45 20 / 0.22),
+    inset 0 -1px 0 0 rgb(255 255 255 / 0.85), 0 1px 0 0 rgb(255 255 255 / 0.9);
+  --shadow-well-lit:
+    inset 0 0 0 1px hsl(24 80% 44%), inset 0 1px 0 0 rgb(255 240 220 / 0.8),
+    inset 0 -2px 3px 0 rgb(120 45 0 / 0.35), 0 2px 3px 0 rgb(120 60 15 / 0.3);
+  --shadow-well-hover:
+    inset 0 0 0 1px hsl(24 80% 44%), inset 0 1px 0 0 rgb(255 240 220 / 0.8),
+    inset 0 -2px 3px 0 rgb(120 45 0 / 0.35), 0 6px 12px -4px rgb(120 60 15 / 0.38);
+  --shadow-chassis:
+    inset 0 2px 5px -1px rgb(74 45 20 / 0.18), inset 0 -1px 0 0 rgb(255 255 255 / 0.7);
+  --shadow-key:
+    inset 0 1px 0 0 rgb(255 240 220 / 0.75), inset 0 -2px 3px 0 rgb(120 45 0 / 0.32),
+    0 2px 3px 0 rgb(120 60 15 / 0.28), 0 8px 16px -6px rgb(120 60 15 / 0.42);
+  --shadow-key-pressed:
+    inset 0 2px 5px 0 rgb(120 45 0 / 0.35), inset 0 -1px 0 0 rgb(255 240 220 / 0.35);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -92,6 +145,36 @@
   --ring: hsl(24 95% 53%);
   /* using gold/accent for ring */
 
+  /* Machined surface palette. Every value here previously existed as an
+     arbitrary literal in BookBenefitsSection / ConnectSection. */
+  --plate-top: hsl(36 52% 97%);
+  --plate-bottom: hsl(30 34% 92%);
+  --plate-top-featured: hsl(34 48% 96%);
+  --plate-bottom-featured: hsl(28 32% 90%);
+
+  --bevel-light: hsl(42 70% 99%);
+  --bevel-light-soft: hsl(38 55% 97%);
+  --bevel-shade: hsl(28 26% 80%);
+  --bevel-shade-deep: hsl(26 24% 74%);
+
+  --well: hsl(30 26% 87%);
+  --well-hover: hsl(32 30% 91%);
+  --chassis: hsl(30 32% 88%);
+  --groove: hsl(28 22% 76%);
+
+  /* Warm ink ramp - warmer than pure --foreground, for body copy on plates */
+  --ink: hsl(24 16% 15%);
+  --ink-soft: hsl(24 16% 28%);
+  --ink-faint: hsl(24 12% 45%);
+
+  /* --primary is 2.73:1 on light surfaces and fails AA as TEXT. Use --emphasis
+     for any orange that carries words; --primary stays for fills and edges. */
+  --emphasis: hsl(18 70% 30%);
+  --emphasis-icon: hsl(20 85% 38%);
+
+  /* Near-black for use ON primary. White on primary is only 2.73:1. */
+  --on-primary-strong: hsl(22 50% 10%);
+
   /* Sidebar */
   --sidebar: hsl(30 35% 93%);
   /* Matching card */
@@ -112,6 +195,40 @@
   --chart-5: hsl(27 87% 67%);
 }
 
+/* Machined-surface recipes. Previously duplicated verbatim across
+   BookBenefitsSection and ConnectSection, where the copies had already
+   drifted apart. Defined once here. */
+@utility plate {
+  background-image: linear-gradient(to bottom, var(--plate-top), var(--plate-bottom));
+  border-width: 1px;
+  border-top-color: var(--bevel-light);
+  border-left-color: var(--bevel-light-soft);
+  border-right-color: var(--bevel-shade);
+  border-bottom-color: var(--bevel-shade-deep);
+  box-shadow: var(--shadow-plate);
+}
+
+@utility plate-featured {
+  background-image: linear-gradient(
+    to bottom,
+    var(--plate-top-featured),
+    var(--plate-bottom-featured)
+  );
+  box-shadow: var(--shadow-plate-featured);
+}
+
+@utility well {
+  background-color: var(--well);
+  color: var(--emphasis-icon);
+  box-shadow: var(--shadow-well);
+}
+
+@utility well-lit {
+  background-color: var(--primary);
+  color: var(--on-primary-strong);
+  box-shadow: var(--shadow-well-lit);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -124,14 +241,14 @@
   /* Custom Text Selection (Raw Marker Kinetic Style) */
   ::selection {
     background-color: var(--primary);
-    color: #000000;
+    color: var(--on-primary-strong);
     text-shadow: none;
   }
 
   /* Support for Firefox */
   ::-moz-selection {
     background-color: var(--primary);
-    color: #000000;
+    color: var(--on-primary-strong);
     text-shadow: none;
   }
 }

@@ -75,10 +75,10 @@ const Header = () => {
                                     <span className={cn(
                                         "text-sm font-medium tracking-wide transition-colors duration-300",
                                         isScrolled
-                                            ? "text-zinc-600 group-hover:text-black"
+                                            ? "text-muted-foreground group-hover:text-foreground"
                                             : isDarkPage
                                                 ? "text-white/80 group-hover:text-white"
-                                                : "text-zinc-800 group-hover:text-black"
+                                                : "text-foreground/80 group-hover:text-foreground"
                                     )}>
                                         {link.name}
                                     </span>
@@ -93,14 +93,8 @@ const Header = () => {
                             <Link href="/book#purchase-options">
                                 <Button
                                     size="sm"
-                                    className={cn(
-                                        "ml-4 font-serif tracking-wide transition-all duration-300",
-                                        isScrolled
-                                            ? "bg-black text-white hover:bg-zinc-800"
-                                            : isDarkPage
-                                                ? "bg-white text-black hover:bg-white/90"
-                                                : "bg-black/90 text-white hover:bg-black hover:scale-105 shadow-lg"
-                                    )}
+                                    variant={!isScrolled && isDarkPage ? "onDark" : "contrast"}
+                                    className="ml-4 font-serif"
                                 >
                                     Get the Book
                                 </Button>
@@ -110,12 +104,14 @@ const Header = () => {
                         {/* Mobile Toggle */}
                         <button
                             className={cn(
-                                "md:hidden relative z-50 p-2 -mr-2 transition-colors",
-                                !isScrolled && isDarkPage ? "text-white" : "text-zinc-800"
+                                "md:hidden relative z-50 p-2 -mr-2 rounded-full transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50",
+                                !isScrolled && isDarkPage ? "text-white" : "text-foreground"
                             )}
+                            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                            aria-expanded={isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
-                            {isMobileMenuOpen ? <X className="w-6 h-6 text-zinc-800" /> : <Menu className="w-6 h-6" />}
+                            {isMobileMenuOpen ? <X className="w-6 h-6 text-foreground" /> : <Menu className="w-6 h-6" />}
                         </button>
                     </div>
                 </div>
@@ -129,7 +125,7 @@ const Header = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl md:hidden pt-24 px-6"
+                        className="fixed inset-0 z-40 bg-background/97 backdrop-blur-xl md:hidden pt-24 px-6"
                     >
                         <nav className="flex flex-col gap-8 items-center justify-center h-[60vh]">
                             {navLinks.map((link, i) => (
@@ -141,7 +137,7 @@ const Header = () => {
                                 >
                                     <Link
                                         href={link.href}
-                                        className="text-3xl font-serif text-zinc-900 hover:text-primary transition-colors block text-center"
+                                        className="text-3xl font-serif text-foreground hover:text-emphasis transition-colors block text-center"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.name}
@@ -154,10 +150,7 @@ const Header = () => {
                                 transition={{ delay: 0.5 }}
                             >
                                 <Link href="/book#purchase-options" onClick={() => setIsMobileMenuOpen(false)}>
-                                    <Button
-                                        size="lg"
-                                        className="mt-8 bg-black text-white rounded-full px-8"
-                                    >
+                                    <Button size="lg" variant="contrast" className="mt-8 font-serif">
                                         Get the Book
                                     </Button>
                                 </Link>

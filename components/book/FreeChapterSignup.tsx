@@ -64,7 +64,7 @@ const FreeChapterSignup = () => {
                                 className="h-12 bg-secondary/50 border-input focus-visible:ring-primary"
                             />
                         </div>
-                        <Button size="lg" className="w-full h-12 text-base font-bold bg-primary hover:bg-primary/90 shadow-lg group">
+                        <Button size="lg" className="w-full group">
                             Send Me Chapter 1
                             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Button>

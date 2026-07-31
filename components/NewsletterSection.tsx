@@ -64,7 +64,7 @@ const NewsletterSection = () => {
                                     className="h-12 bg-background border-border focus-visible:ring-primary"
                                 />
                             </div>
-                            <Button type="submit" size="lg" className="w-full h-12 font-bold bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Button type="submit" size="lg" className="w-full">
                                 Subscribe Now
                             </Button>
                             <p className="text-xs text-muted-foreground text-center pt-2">

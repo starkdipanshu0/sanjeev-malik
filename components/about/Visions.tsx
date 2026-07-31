@@ -7,7 +7,7 @@ const Visions = () => {
         <section className="relative py-32 bg-zinc-950 text-white overflow-hidden flex items-center justify-center min-h-[60vh]">
             {/* Ambient Background */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 blur-[150px] rounded-full opacity-40 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-900/20 blur-[120px] rounded-full opacity-30 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/15 blur-[120px] rounded-full opacity-30 pointer-events-none" />
             <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: "url('/images/noise.png')" }} />
 
             <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">

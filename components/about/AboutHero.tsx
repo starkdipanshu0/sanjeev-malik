@@ -66,7 +66,7 @@ const AboutHero = () => {
                                 href="https://www.linkedin.com/in/lt-col-dr-sanjeev-malik"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                                className="size-10 inline-flex items-center justify-center rounded-full border border-border bg-transparent text-foreground transition-colors duration-200 hover:bg-primary hover:border-primary hover:text-on-primary-strong focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                             >
                                 <Linkedin className="w-5 h-5" />
                             </Link>
@@ -74,7 +74,7 @@ const AboutHero = () => {
                                 href="https://x.com/LtColDrMalik?s=20"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                                className="size-10 inline-flex items-center justify-center rounded-full border border-border bg-transparent text-foreground transition-colors duration-200 hover:bg-primary hover:border-primary hover:text-on-primary-strong focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                             >
                                 <Twitter className="w-5 h-5" />
                             </Link>
@@ -82,7 +82,7 @@ const AboutHero = () => {
                                 href="https://www.instagram.com/thesanjeevmalik?igsh=MThhNG9qZ2VwZjRtdQ=="
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                                className="size-10 inline-flex items-center justify-center rounded-full border border-border bg-transparent text-foreground transition-colors duration-200 hover:bg-primary hover:border-primary hover:text-on-primary-strong focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                             >
                                 <Instagram className="w-5 h-5" />
                             </Link>

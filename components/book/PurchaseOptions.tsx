@@ -36,7 +36,7 @@ const PurchaseOptions = () => {
                             <div className="text-4xl font-bold text-foreground mb-2">₹273.60</div>
                         </div>
                         <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver-ebook/dp/B0FJ1GFZZX/ref=tmm_kin_swatch_0?_encoding=UTF8&sr=8-3" target="_blank" rel="noopener noreferrer" className="w-full mt-8">
-                            <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                            <Button variant="outline" size="lg" className="w-full">
                                 Buy on Amazon
                             </Button>
                         </a>
@@ -50,7 +50,7 @@ const PurchaseOptions = () => {
                         transition={{ delay: 0.1 }}
                         className="bg-background border-2 border-primary rounded-2xl p-8 flex flex-col justify-between shadow-xl relative scale-105 z-10"
                     >
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-on-primary-strong text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
                             Most Popular
                         </div>
                         <div>
@@ -60,7 +60,7 @@ const PurchaseOptions = () => {
 
                         </div>
                         <a href="https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3" target="_blank" rel="noopener noreferrer" className="w-full mt-8">
-                            <Button className="w-full bg-primary text-white hover:bg-primary/90 text-lg py-6 shadow-lg hover:shadow-primary/25">
+                            <Button size="lg" className="w-full">
                                 Order Paperback
                             </Button>
                         </a>

@@ -22,7 +22,7 @@ export const NewsletterBanner = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="w-full bg-[#F5E5BE] text-black py-4 md:py-3 px-4 border-b border-black/10 relative z-40">
+        <div className="w-full bg-card text-foreground py-4 md:py-3 px-4 border-b border-border relative z-40">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 text-center md:text-left relative">
 
                 <p className="text-sm md:text-base font-serif font-medium max-w-xl leading-snug md:pr-0 px-4 md:px-0">
@@ -34,16 +34,16 @@ export const NewsletterBanner = () => {
                     <input
                         type="email"
                         placeholder="Your email address"
-                        className="h-10 px-3 py-2 bg-white border border-black/10 rounded-md focus:outline-none focus:border-black/40 text-sm min-w-0 flex-1 placeholder:text-black/40 font-sans"
+                        className="h-10 px-4 bg-background border border-border rounded-full focus:outline-none focus:border-primary/50 text-sm min-w-0 flex-1 placeholder:text-muted-foreground font-sans"
                     />
-                    <Button className="h-10 bg-black text-white hover:bg-black/80 font-bold tracking-wide rounded-md px-4 shrink-0 transition-transform active:scale-95 text-xs md:text-sm">
+                    <Button variant="contrast" size="sm" className="shrink-0">
                         I&apos;M IN!
                     </Button>
                 </div>
 
                 <button
                     onClick={dismiss}
-                    className="absolute right-0 top-0 md:relative md:top-auto md:right-auto text-black/40 hover:text-black transition-colors p-1 md:p-2"
+                    className="absolute right-0 top-0 md:relative md:top-auto md:right-auto text-muted-foreground hover:text-foreground transition-colors p-1 md:p-2 rounded-full focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
                     aria-label="Dismiss banner"
                 >
                     <X className="w-4 h-4 md:w-5 md:h-5" />

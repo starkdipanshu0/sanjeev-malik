@@ -28,38 +28,29 @@ const benefits = [
     }
 ];
 
-/* Plate: raised, edge-lit. Warm-tinted cast shadow (contact + form + ambient) -
-   neutral black reads as grey grime on the sand background. */
+/* Surface recipes live in globals.css as the `plate` / `well` utilities so
+   this section and ConnectSection share one definition instead of two copies. */
 const PLATE_BASE =
-    "group relative flex h-full overflow-hidden rounded-xl md:rounded-2xl p-4 md:p-5 lg:p-6 " +
-    "bg-gradient-to-b from-[hsl(36_52%_97%)] to-[hsl(30_34%_92%)] " +
-    "border border-t-[color:hsl(42_70%_99%)] border-l-[color:hsl(38_55%_97%)] border-r-[color:hsl(28_26%_80%)] border-b-[color:hsl(26_24%_74%)] " +
-    "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.95),inset_0_-1px_0_0_rgba(120,80,40,0.10),0_1px_2px_-1px_rgba(74,45,20,0.10),0_4px_8px_-3px_rgba(74,45,20,0.14),0_14px_28px_-12px_rgba(74,45,20,0.22)] " +
+    "plate group relative flex h-full overflow-hidden rounded-xl md:rounded-2xl p-4 md:p-5 lg:p-6 " +
     "transition-[box-shadow,border-color] duration-300 ease-out " +
-    "hover:shadow-[inset_0_2px_5px_-1px_rgba(74,45,20,0.22),inset_0_-1px_0_0_rgba(255,255,255,0.9),0_1px_0_0_rgba(255,255,255,0.65)] " +
-    "motion-reduce:transition-none";
+    "hover:shadow-plate-pressed motion-reduce:transition-none";
 
-const PLATE_FEATURED =
-    "from-[hsl(34_48%_96%)] to-[hsl(28_32%_90%)] " +
-    "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.95),inset_0_-1px_0_0_rgba(120,80,40,0.12),0_1px_2px_-1px_rgba(74,45,20,0.12),0_5px_10px_-3px_rgba(74,45,20,0.16),0_22px_40px_-16px_rgba(74,45,20,0.30)]";
+const PLATE_FEATURED = "plate-featured";
 
 /* Well: milled INTO the plate - the optical opposite of the plate itself.
    Two opposing depth signals on one surface is what sells dimensionality. */
 const WELL_BASE =
     "relative shrink-0 flex items-center justify-center w-11 h-11 md:w-12 md:h-12 rounded-lg " +
-    "shadow-[inset_0_0_0_1px_rgba(74,45,20,0.10),inset_0_2px_4px_0_rgba(74,45,20,0.22),inset_0_-1px_0_0_rgba(255,255,255,0.85),0_1px_0_0_rgba(255,255,255,0.9)] " +
     "transition-[background-color,box-shadow,color,transform] duration-300 ease-out " +
-    "group-hover:-translate-y-px group-hover:bg-[hsl(24_95%_53%)] group-hover:text-[hsl(22_50%_10%)] " +
-    "group-hover:shadow-[inset_0_0_0_1px_hsl(24_80%_44%),inset_0_1px_0_0_rgba(255,240,220,0.8),inset_0_-2px_3px_0_rgba(120,45,0,0.35),0_6px_12px_-4px_rgba(120,60,15,0.38)] " +
+    "group-hover:-translate-y-px group-hover:bg-primary group-hover:text-on-primary-strong " +
+    "group-hover:shadow-well-hover " +
     "motion-reduce:transition-none motion-reduce:group-hover:translate-y-0";
 
 /* Lit well on the focal plate - orange fill with near-black glyph (6.1:1).
    White on orange is 2.73:1 and is never used anywhere in this section. */
-const WELL_LIT =
-    "bg-[hsl(24_95%_53%)] text-[hsl(22_50%_10%)] " +
-    "shadow-[inset_0_0_0_1px_hsl(24_80%_44%),inset_0_1px_0_0_rgba(255,240,220,0.8),inset_0_-2px_3px_0_rgba(120,45,0,0.35),0_2px_3px_0_rgba(120,60,15,0.30)]";
+const WELL_LIT = "well-lit";
 
-const WELL_DORMANT = "bg-[hsl(30_26%_87%)] text-[hsl(20_85%_38%)]";
+const WELL_DORMANT = "well";
 
 const BookBenefitsSection = () => {
     const shouldReduceMotion = useReducedMotion();
@@ -68,7 +59,7 @@ const BookBenefitsSection = () => {
         <section className="w-full py-10 md:py-32 bg-background relative overflow-hidden">
             {/* Ambient Background Elements */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-muted/40 blur-[100px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3" />
 
             {/* Hairline grid texture. Inlined as a CSS gradient - the previous
                 /grid-pattern.svg does not exist in public/ and rendered nothing. */}
@@ -112,7 +103,7 @@ const BookBenefitsSection = () => {
                     </div>
 
                     {/* Benefits Grid - chassis tray recessed into the page (desktop only) */}
-                    <div className="relative rounded-2xl p-0 md:p-3 bg-transparent md:bg-[hsl(30_32%_88%)] shadow-none md:shadow-[inset_0_2px_5px_-1px_rgba(74,45,20,0.18),inset_0_-1px_0_0_rgba(255,255,255,0.7)]">
+                    <div className="relative rounded-2xl p-0 md:p-3 bg-transparent md:bg-chassis shadow-none md:shadow-chassis">
                         <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-fr gap-3 md:gap-4">
                             {benefits.map((benefit, index) => (
                                 <motion.div
@@ -132,7 +123,7 @@ const BookBenefitsSection = () => {
                                     {/* Engraved part number - letterpress deboss */}
                                     <span
                                         aria-hidden="true"
-                                        className="pointer-events-none select-none hidden md:block absolute top-4 right-4 font-serif font-bold text-xs leading-none text-[hsl(24_24%_38%)] [text-shadow:0_1px_0_hsl(45_70%_99%)]"
+                                        className="pointer-events-none select-none hidden md:block absolute top-4 right-4 font-serif font-bold text-xs leading-none text-ink-soft/70 [text-shadow:0_1px_0_var(--bevel-light)]"
                                     >
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
@@ -151,16 +142,16 @@ const BookBenefitsSection = () => {
                                             {/* Milled groove - 1px dark line over a 1px light line */}
                                             <div
                                                 aria-hidden="true"
-                                                className="hidden md:block mt-4 h-px w-10 bg-[hsl(28_22%_76%)] shadow-[0_1px_0_0_hsl(45_70%_99%)]"
+                                                className="hidden md:block mt-4 h-px w-10 bg-groove shadow-[0_1px_0_0_var(--bevel-light)]"
                                             />
                                         </div>
 
-                                        <p className="w-full text-[0.9375rem] md:text-[17px] text-[hsl(24_16%_15%)] font-medium leading-snug md:leading-[1.45] text-balance md:mt-auto">
+                                        <p className="w-full text-[0.9375rem] md:text-[17px] text-ink font-medium leading-snug md:leading-[1.45] text-balance md:mt-auto">
                                             {benefit.text.split(benefit.highlight).map((part, i, arr) => (
                                                 <span key={i}>
                                                     {part}
                                                     {i < arr.length - 1 && (
-                                                        <span className="font-semibold text-[hsl(18_70%_30%)] underline decoration-2 decoration-[color:hsl(24_95%_53%)] underline-offset-[3px]">
+                                                        <span className="font-semibold text-emphasis underline decoration-2 decoration-primary underline-offset-[3px]">
                                                             {benefit.highlight}
                                                         </span>
                                                     )}

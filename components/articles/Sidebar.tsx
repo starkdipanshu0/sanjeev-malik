@@ -34,7 +34,7 @@ export const Sidebar = () => {
                         placeholder="Your email address"
                         className="bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                     />
-                    <Button className="w-full bg-black text-white hover:bg-zinc-800">
+                    <Button variant="contrast" className="w-full">
                         Subscribe <Mail className="ml-2 w-4 h-4" />
                     </Button>
                 </form>

@@ -32,8 +32,8 @@ const KeyThemes = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            whileHover={{ y: -5, backgroundColor: "rgba(var(--primary), 0.05)" }}
-                            className="flex flex-col items-center justify-center p-6 border border-border rounded-xl bg-background shadow-sm hover:shadow-md transition-all cursor-default group"
+                            whileHover={{ y: -5 }}
+                            className="flex flex-col items-center justify-center p-6 border border-border rounded-xl bg-background shadow-sm transition-[background-color,box-shadow,border-color] duration-300 hover:bg-primary/5 hover:border-primary/30 hover:shadow-md cursor-default group"
                         >
                             <span className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 block">{theme.icon}</span>
                             <span className="font-medium text-foreground text-sm tracking-wide">{theme.title}</span>

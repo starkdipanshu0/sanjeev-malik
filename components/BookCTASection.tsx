@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, BookOpen, ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const AMAZON_URL = "https://www.amazon.in/Graphene-Mentality-Distraction-Strength-Deliver/dp/8198845410/ref=sr_1_3?sr=8-3";
 
@@ -72,13 +73,12 @@ const BookCTASection = () => {
                         </p>
 
                         <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
-                            <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer">
-                                <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-lg font-bold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
-                                    <span className="relative z-10">Grab Your Copy</span>
-                                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10" />
-                                    <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                                </button>
-                            </a>
+                            <Button size="xl" className="group" asChild>
+                                <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer">
+                                    <span>Grab Your Copy</span>
+                                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0" />
+                                </a>
+                            </Button>
                         </div>
                     </motion.div>
 
@@ -140,10 +140,12 @@ const BookCTASection = () => {
                             <div className="space-y-3 w-full">
                                 <p className="text-xs font-semibold tracking-widest text-primary uppercase">Available Now On</p>
                                 <div className="flex items-center justify-center gap-4">
-                                    <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer" className="bg-white px-4 py-2 rounded-lg hover:scale-105 transition-transform cursor-pointer shadow-lg opacity-90 hover:opacity-100 flex items-center gap-2">
-                                        <ShoppingCart className="w-4 h-4 text-black" />
-                                        <span className="text-black font-bold text-sm">Amazon</span>
-                                    </a>
+                                    <Button variant="onDark" size="sm" asChild>
+                                        <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer">
+                                            <ShoppingCart className="w-4 h-4" />
+                                            <span>Amazon</span>
+                                        </a>
+                                    </Button>
                                     {/* Add more logos here if needed */}
                                 </div>
                             </div>
