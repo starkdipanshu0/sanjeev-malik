@@ -42,7 +42,7 @@ const BookCTASection = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="w-full py-20 px-6 bg-foreground text-background relative overflow-hidden perspective-1000"
+            className="w-full py-20 px-6 bg-foreground text-background relative overflow-hidden perspective-[1000px]"
         >
             {/* Abstract Background Shapes */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 opacity-30" />

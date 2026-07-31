@@ -40,7 +40,7 @@ const BookHero = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative min-h-[100dvh] w-full overflow-hidden bg-background flex items-center justify-center pt-32 pb-12 md:py-24 lg:pt-40 perspective-1000"
+            className="relative min-h-[100dvh] w-full overflow-hidden bg-background flex items-center justify-center pt-32 pb-12 md:py-24 lg:pt-40 perspective-[1000px]"
         >
             {/* Dynamic Background Elements */}
             <div className="absolute inset-0 z-0">
@@ -97,7 +97,7 @@ const BookHero = () => {
                 </motion.div>
 
                 {/* 3D Book Visual */}
-                <div className="flex items-center justify-center perspective-1000 order-1 lg:order-2 mb-4 lg:mb-0">
+                <div className="flex items-center justify-center perspective-[1000px] order-1 lg:order-2 mb-4 lg:mb-0">
                     <motion.div
                         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
                         initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
