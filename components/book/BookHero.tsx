@@ -40,7 +40,7 @@ const BookHero = () => {
             ref={ref}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative min-h-[100dvh] w-full overflow-hidden bg-background flex items-center justify-center pt-32 pb-12 md:py-24 lg:pt-40 perspective-[1000px]"
+            className="relative min-h-dvh w-full overflow-hidden bg-background flex items-center justify-center pt-24 pb-8 md:pt-24 md:pb-10 perspective-[1000px]"
         >
             {/* Dynamic Background Elements */}
             <div className="absolute inset-0 z-0">
@@ -103,7 +103,7 @@ const BookHero = () => {
                         initial={{ opacity: 0, scale: 0.8, rotateY: 90 }}
                         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                         transition={{ duration: 1.2, ease: "circOut", delay: 0.2 }}
-                        className="relative w-[180px] h-[280px] sm:w-[240px] sm:h-[360px] md:w-[330px] md:h-[495px] shadow-2xl rounded-r-xl md:rounded-r-2xl"
+                        className="relative w-auto aspect-[2/3] h-[clamp(200px,30vh,280px)] sm:h-[360px] md:h-[clamp(300px,62vh,495px)] shadow-2xl rounded-r-xl md:rounded-r-2xl"
                     >
                         <motion.div
                             animate={{ y: [-10, 10, -10] }}
