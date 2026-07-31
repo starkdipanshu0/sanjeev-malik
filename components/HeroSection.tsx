@@ -88,7 +88,7 @@ const HeroSection = () => {
                             rotateY,
                             transformStyle: "preserve-3d"
                         }}
-                        className="relative aspect-[646/1000] h-[clamp(170px,30vh,300px)] max-md:[@media(min-height:760px)]:h-[clamp(170px,36vh,340px)] md:h-[clamp(220px,46vh,520px)] md:[@media(min-height:820px)]:h-[clamp(220px,50vh,540px)] rounded-r-xl"
+                        className="relative aspect-[646/1000] h-[clamp(170px,28vh,300px)] max-md:[@media(min-height:760px)]:h-[clamp(170px,34vh,340px)] md:h-[clamp(220px,46vh,520px)] md:[@media(min-height:820px)]:h-[clamp(220px,50vh,540px)] rounded-r-xl"
                     >
                         {/* Glow Behind */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-primary/20 to-transparent blur-3xl rounded-full" />
@@ -135,7 +135,7 @@ const HeroSection = () => {
                         <h2 className="font-serif font-bold tracking-tight text-foreground leading-[1.15] text-[clamp(1.5rem,3.4vh,2rem)] md:text-[clamp(2rem,5vh,3.5rem)]">
                             The <span className="text-primary">Graphene</span> Mentality
                         </h2>
-                        <p className="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed md:leading-snug">
+                        <p className="text-foreground/70 md:text-muted-foreground text-base max-w-2xl mx-auto leading-normal md:leading-snug">
                             Inspired from the element Graphene that is 200 times stronger than steel and yet highly flexible,
                             this book will make you strong and adaptable to deal with all challenges in pursuit of your dreams.
                         </p>

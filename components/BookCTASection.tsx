@@ -64,7 +64,7 @@ const BookCTASection = () => {
 
                         <h2 className="font-serif text-4xl md:text-6xl font-bold leading-tight">
                             Ready to Build Your <br />
-                            <span className="text-primary">Graphene Mentality</span>
+                            <span className="text-primary">Graphene Mentality?</span>
                         </h2>
 
                         <p className="text-lg md:text-xl text-background/70 max-w-lg mx-auto md:mx-0 leading-relaxed">

@@ -55,33 +55,26 @@ const AboutAuthorSection = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
-                                Hi, I’m <span className="text-primary">Lt Col Sanjeev Malik</span>
+                                Hi, I am <span className="text-primary">Lt Col Sanjeev Malik</span>
                             </h2>
                             <p className="text-base md:text-xl font-medium text-foreground mb-4">
-                                I’m an Indian Army Doctor and have served with elite special forces.
+                                I am an Indian Army Doctor and have served with elite special forces.
                             </p>
 
-                            <div className="space-y-2 md:space-y-6 text-sm md:text-lg text-muted-foreground leading-relaxed hidden md:block">
+                            {/* Reading continues on /about from the paragraph after these. */}
+                            <div className="space-y-3 md:space-y-5 text-sm md:text-lg text-muted-foreground leading-relaxed">
                                 <p>
-                                    I’m the author of <span className="font-semibold text-foreground">The Graphene Mentality</span> and an endurance athlete—winner of <span className="font-semibold text-foreground">5 Gold medals</span> for India at the 42nd World Medical and Health Games.
+                                    I’m the author of <span className="font-semibold text-foreground">The Graphene Mentality</span>.
                                 </p>
                                 <p>
-                                    Across every challenge, I discovered one truth: the human mind is far stronger and more adaptable than we think—and real success comes from the <span className="font-semibold text-foreground">right mindset</span>.
-                                </p>
-                            </div>
-
-                            {/* Mobile only simplified bio */}
-                            <div className="space-y-2 text-sm text-muted-foreground leading-relaxed md:hidden">
-                                <p>
-                                    <span className="font-semibold text-primary">Author of The Graphene Mentality.</span><br />
-                                    From Special Forces to winning 5 gold medals for India, I help you build an unbreakable mind.
+                                    I’m also an endurance athlete and won <span className="font-semibold text-foreground">5 Gold medals</span> in athletics for India at <span className="font-semibold text-foreground">42nd World Medical and Health Games</span>, widely regarded as Olympics for Healthcare Professionals worldwide.
                                 </p>
                             </div>
 
                             <div className="pt-8">
                                 <Button asChild size="lg" variant="outline" className="border-primary/20 hover:bg-primary/5 hover:text-primary transition-all">
-                                    <Link href="/about">
-                                        Read More
+                                    <Link href="/about#continue-reading">
+                                        Continue Reading
                                     </Link>
                                 </Button>
                             </div>

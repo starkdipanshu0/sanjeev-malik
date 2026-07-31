@@ -1,40 +1,78 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ZapOff, Crosshair, Anchor, Mountain } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import { Crosshair, Anchor, Mountain, Route } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const benefits = [
     {
-        icon: ZapOff,
-        text: "Cut through constant distractions",
-        highlight: "distractions"
-    },
-    {
         icon: Crosshair,
-        text: "Develop laser sharp focus",
-        highlight: "laser sharp focus"
+        text: "Sharpen focus that cuts through the distraction",
+        highlight: "focus",
+        featured: true
     },
     {
         icon: Anchor,
-        text: "Build discipline anchored in a higher purpose",
+        text: "Build discipline that holds when motivation fades",
         highlight: "discipline"
     },
     {
         icon: Mountain,
-        text: "Stay resilient and committed to your goals even when motivation fades",
-        highlight: "resilient"
+        text: "Forge resilience that outlasts every setback",
+        highlight: "resilience"
+    },
+    {
+        icon: Route,
+        text: "Train adaptability that bends without breaking",
+        highlight: "adaptability"
     }
 ];
 
+/* Plate: raised, edge-lit. Warm-tinted cast shadow (contact + form + ambient) -
+   neutral black reads as grey grime on the sand background. */
+const PLATE_BASE =
+    "group relative flex h-full overflow-hidden rounded-xl md:rounded-2xl p-4 md:p-5 lg:p-6 " +
+    "bg-gradient-to-b from-[hsl(36_52%_97%)] to-[hsl(30_34%_92%)] " +
+    "border border-t-[color:hsl(42_70%_99%)] border-l-[color:hsl(38_55%_97%)] border-r-[color:hsl(28_26%_80%)] border-b-[color:hsl(26_24%_74%)] " +
+    "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.95),inset_0_-1px_0_0_rgba(120,80,40,0.10),0_1px_2px_-1px_rgba(74,45,20,0.10),0_4px_8px_-3px_rgba(74,45,20,0.14),0_14px_28px_-12px_rgba(74,45,20,0.22)] " +
+    "transition-[box-shadow,border-color] duration-300 ease-out " +
+    "hover:shadow-[inset_0_2px_5px_-1px_rgba(74,45,20,0.22),inset_0_-1px_0_0_rgba(255,255,255,0.9),0_1px_0_0_rgba(255,255,255,0.65)] " +
+    "motion-reduce:transition-none";
+
+const PLATE_FEATURED =
+    "from-[hsl(34_48%_96%)] to-[hsl(28_32%_90%)] " +
+    "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.95),inset_0_-1px_0_0_rgba(120,80,40,0.12),0_1px_2px_-1px_rgba(74,45,20,0.12),0_5px_10px_-3px_rgba(74,45,20,0.16),0_22px_40px_-16px_rgba(74,45,20,0.30)]";
+
+/* Well: milled INTO the plate - the optical opposite of the plate itself.
+   Two opposing depth signals on one surface is what sells dimensionality. */
+const WELL_BASE =
+    "relative shrink-0 flex items-center justify-center w-11 h-11 md:w-12 md:h-12 rounded-lg " +
+    "shadow-[inset_0_0_0_1px_rgba(74,45,20,0.10),inset_0_2px_4px_0_rgba(74,45,20,0.22),inset_0_-1px_0_0_rgba(255,255,255,0.85),0_1px_0_0_rgba(255,255,255,0.9)] " +
+    "transition-[background-color,box-shadow,color,transform] duration-300 ease-out " +
+    "group-hover:-translate-y-px group-hover:bg-[hsl(24_95%_53%)] group-hover:text-[hsl(22_50%_10%)] " +
+    "group-hover:shadow-[inset_0_0_0_1px_hsl(24_80%_44%),inset_0_1px_0_0_rgba(255,240,220,0.8),inset_0_-2px_3px_0_rgba(120,45,0,0.35),0_6px_12px_-4px_rgba(120,60,15,0.38)] " +
+    "motion-reduce:transition-none motion-reduce:group-hover:translate-y-0";
+
+/* Lit well on the focal plate - orange fill with near-black glyph (6.1:1).
+   White on orange is 2.73:1 and is never used anywhere in this section. */
+const WELL_LIT =
+    "bg-[hsl(24_95%_53%)] text-[hsl(22_50%_10%)] " +
+    "shadow-[inset_0_0_0_1px_hsl(24_80%_44%),inset_0_1px_0_0_rgba(255,240,220,0.8),inset_0_-2px_3px_0_rgba(120,45,0,0.35),0_2px_3px_0_rgba(120,60,15,0.30)]";
+
+const WELL_DORMANT = "bg-[hsl(30_26%_87%)] text-[hsl(20_85%_38%)]";
+
 const BookBenefitsSection = () => {
+    const shouldReduceMotion = useReducedMotion();
+
     return (
         <section className="w-full py-10 md:py-32 bg-background relative overflow-hidden">
             {/* Ambient Background Elements */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3" />
 
-            {/* Grid Pattern Overlay */}
-            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-[0.03] pointer-events-none" />
+            {/* Hairline grid texture. Inlined as a CSS gradient - the previous
+                /grid-pattern.svg does not exist in public/ and rendered nothing. */}
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(120,90,60,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(120,90,60,0.10)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]" />
 
             <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
                 <div className="grid lg:grid-cols-2 gap-6 md:gap-16 lg:gap-24 items-center">
@@ -69,40 +107,70 @@ const BookBenefitsSection = () => {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-muted-foreground text-base md:text-xl font-light leading-relaxed max-w-md mx-auto lg:mx-0"
                         >
-                            Through simple and practical strategies, this book will help you forge an unbreakable mind.
+                            Through simple and practical strategies, this book will help you build an unbreakable mind.
                         </motion.p>
                     </div>
 
-                    {/* Benefits Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6">
-                        {benefits.map((benefit, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
-                                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                                className="group relative p-4 md:p-7 rounded-2xl md:rounded-3xl bg-secondary border border-border/50 shadow-sm hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 transition-all duration-300"
-                            >
-                                <div className="relative z-10 flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-5">
-                                    <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 transition-all duration-300">
-                                        <benefit.icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
-                                    </div>
+                    {/* Benefits Grid - chassis tray recessed into the page (desktop only) */}
+                    <div className="relative rounded-2xl p-0 md:p-3 bg-transparent md:bg-[hsl(30_32%_88%)] shadow-none md:shadow-[inset_0_2px_5px_-1px_rgba(74,45,20,0.18),inset_0_-1px_0_0_rgba(255,255,255,0.7)]">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-fr gap-3 md:gap-4">
+                            {benefits.map((benefit, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+                                    whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
+                                    whileHover={shouldReduceMotion ? undefined : { y: 2, transition: { duration: 0.2, ease: "easeOut" } }}
+                                    className={cn(PLATE_BASE, benefit.featured && PLATE_FEATURED)}
+                                >
+                                    {/* Illuminated power-rail on the focal plate */}
+                                    {benefit.featured && (
+                                        <div className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-80" />
+                                    )}
 
-                                    <p className="text-sm md:text-lg text-foreground/90 font-medium leading-snug md:leading-relaxed">
-                                        {benefit.text.split(benefit.highlight).map((part, i, arr) => (
-                                            <span key={i}>
-                                                {part}
-                                                {i < arr.length - 1 && (
-                                                    <span className="text-primary font-semibold">{benefit.highlight}</span>
+                                    {/* Engraved part number - letterpress deboss */}
+                                    <span
+                                        aria-hidden="true"
+                                        className="pointer-events-none select-none hidden md:block absolute top-4 right-4 font-serif font-bold text-xs leading-none text-[hsl(24_24%_38%)] [text-shadow:0_1px_0_hsl(45_70%_99%)]"
+                                    >
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
+
+                                    <div className="relative z-10 h-full w-full flex flex-row md:flex-col items-center md:items-start md:justify-between gap-4 md:gap-5">
+                                        <div className="flex flex-col md:w-full">
+                                            <div
+                                                className={cn(
+                                                    WELL_BASE,
+                                                    benefit.featured ? WELL_LIT : WELL_DORMANT
                                                 )}
-                                            </span>
-                                        ))}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
+                                            >
+                                                <benefit.icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={2} />
+                                            </div>
+
+                                            {/* Milled groove - 1px dark line over a 1px light line */}
+                                            <div
+                                                aria-hidden="true"
+                                                className="hidden md:block mt-4 h-px w-10 bg-[hsl(28_22%_76%)] shadow-[0_1px_0_0_hsl(45_70%_99%)]"
+                                            />
+                                        </div>
+
+                                        <p className="w-full text-[0.9375rem] md:text-[17px] text-[hsl(24_16%_15%)] font-medium leading-snug md:leading-[1.45] text-balance md:mt-auto">
+                                            {benefit.text.split(benefit.highlight).map((part, i, arr) => (
+                                                <span key={i}>
+                                                    {part}
+                                                    {i < arr.length - 1 && (
+                                                        <span className="font-semibold text-[hsl(18_70%_30%)] underline decoration-2 decoration-[color:hsl(24_95%_53%)] underline-offset-[3px]">
+                                                            {benefit.highlight}
+                                                        </span>
+                                                    )}
+                                                </span>
+                                            ))}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
