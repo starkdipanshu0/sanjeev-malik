@@ -34,15 +34,17 @@ const AboutDescription = () => {
                 <motion.div
                     id="continue-reading"
                     {...reveal(0)}
-                    className="max-w-3xl mx-auto mb-14 md:mb-16 text-center scroll-mt-28 md:scroll-mt-32"
+                    className="max-w-5xl mx-auto mb-14 md:mb-16 text-center scroll-mt-28 md:scroll-mt-32"
                 >
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
+                    {/* max-w-5xl and lg:whitespace-nowrap keep this on one line from
+                        lg up; it needs ~830px at 48px and still wraps below that. */}
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6 lg:whitespace-nowrap">
                         From the <span className="text-primary">Frontlines</span> to the <span className="text-primary">Boardroom</span>
                     </h2>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                 </motion.div>
 
-                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
+                <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
 
                     {/* Lead paragraph. A drop cap was used here, but the opening
                         paragraphs are single lines, so the float bled into the one
@@ -73,28 +75,6 @@ const AboutDescription = () => {
                     <motion.p {...reveal(0.35)}>
                         My journey taught me that real success doesn&rsquo;t come from talent, genetics, or intelligence alone &mdash; it comes from the <strong className="text-foreground font-semibold">right mindset</strong>.
                     </motion.p>
-
-                    {/* Pull quote - breaks out wider than the measure so it
-                        interrupts the reading rhythm rather than sitting in it. */}
-                    <motion.figure
-                        {...reveal(0.4)}
-                        className="py-6 md:py-10 lg:-mx-16 xl:-mx-24"
-                    >
-                        <div className="relative rounded-2xl border border-primary/15 bg-background px-8 py-10 md:px-12 md:py-12 text-center shadow-xl">
-                            <span
-                                aria-hidden="true"
-                                className="pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 font-serif text-8xl leading-none text-primary/15 select-none"
-                            >
-                                &ldquo;
-                            </span>
-                            <blockquote className="relative z-10 font-serif text-2xl md:text-3xl text-foreground leading-snug text-balance">
-                                The strongest battles are not fought on the field, but in the mind.
-                            </blockquote>
-                            <figcaption className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-emphasis">
-                                &mdash; Conquer Yourself
-                            </figcaption>
-                        </div>
-                    </motion.figure>
 
                     <motion.div
                         {...reveal(0.45)}
