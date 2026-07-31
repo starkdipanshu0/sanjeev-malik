@@ -7,7 +7,7 @@ import { Linkedin, Twitter, Instagram } from "lucide-react";
 
 const AboutHero = () => {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center bg-background overflow-hidden py-24 md:py-32">
+        <section className="relative w-full min-h-dvh flex items-center justify-center bg-background overflow-hidden pt-24 pb-10 md:pt-24 md:pb-12">
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12 grid lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Column: Image */}
@@ -15,7 +15,7 @@ const AboutHero = () => {
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="relative w-full h-[600px] rounded-2xl overflow-hidden shadow-2xl"
+                    className="relative w-full h-[clamp(300px,45vh,420px)] lg:h-[clamp(360px,65vh,600px)] rounded-2xl overflow-hidden shadow-2xl"
                 >
                     <Image
                         src="/images/author.jpg" // Using existing image path
