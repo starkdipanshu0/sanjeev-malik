@@ -16,7 +16,7 @@ export default function AchievementsPage() {
             <AchievementGallery />
 
             {/* Footer Call to Action */}
-            <section className="py-24 bg-white text-black text-center">
+            <section className="py-20 md:py-24 bg-white text-black text-center">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-5xl font-serif mb-6">Inspired by the Journey?</h2>
                     <p className="text-xl text-black/60 max-w-2xl mx-auto mb-8 font-sans">

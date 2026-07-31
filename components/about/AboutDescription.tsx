@@ -37,8 +37,7 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <span className="float-left text-7xl font-serif font-bold text-primary leading-[0.8] mr-3 mt-1">L</span>
-                            ife has given me many uniforms to wear, from serving with the <strong className="text-foreground">Special Forces</strong> and the <strong className="text-foreground">President’s Bodyguard</strong> to representing India at the <strong className="text-foreground">World Medical and Health Games</strong> where I was blessed to win 5 Gold medals in Athletics.
+                            <span className="float-left text-7xl font-serif font-bold text-primary leading-[0.8] mr-3 mt-1">I</span> am an Indian Army Doctor and have served with <strong className="text-foreground">elite special forces</strong>. I’m the author of <strong className="text-foreground">The Graphene Mentality</strong>. I’m also an endurance athlete and won <strong className="text-foreground">5 Gold medals</strong> in athletics for India at the <strong className="text-foreground">42nd World Medical and Health Games</strong>, widely regarded as the Olympics for Healthcare Professionals worldwide.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +45,7 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            While serving these roles, I've learnt one of the most important lessons of my life! The human mind is far stranger and more adaptable than we think. My journey taught me that real success doesn't come from talent, genetics, or intelligence—it comes from the <strong className="text-foreground">Right Mindset</strong>.
+                            Across every battlefield and challenge I have faced, I discovered one powerful truth: the human mind is far stronger and more adaptable than we think. My journey taught me that real success doesn’t come from talent, genetics, or intelligence alone—it comes from the <strong className="text-foreground">right mindset</strong>.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -54,7 +53,7 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            A mindset that makes you fearless to pursue your bold decisions. A mindset that makes you focused and disciplined to do the boring but necessary work everyday. A mindset that makes you resilient to rise stronger after every failure.
+                            A mindset that makes you fearless enough to pursue bold decisions. A mindset that keeps you focused and disciplined to do the hard but necessary work every day. A mindset that helps you grow consistently. And a mindset that makes you resilient enough to rise stronger after every failure.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +61,7 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.5 }}
                         >
-                            This realization inspired me to write my book, <span className="text-foreground font-serif font-semibold">The Graphene Mentality</span>. Just like Graphene—the world’s strongest yet most flexible material—I believe our minds too can become unbreakable yet adaptable enough to thrive and succeed in any situation.
+                            This realisation inspired me to write my book, <span className="text-foreground font-serif font-semibold">The Graphene Mentality: In the Age of Distraction</span>. Just like graphene—the world’s strongest yet most flexible material—I believe our minds too can become unbreakable, yet adaptable enough to thrive and succeed in any situation.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +69,7 @@ const AboutDescription = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.6 }}
                         >
-                            Through my work, I share practical strategies to build focus, discipline and mental resilience needed to thrive, perform, and succeed in any field especially in an age of constant distraction.
+                            Through my work, I share practical strategies to build <strong className="text-foreground">focus, discipline, and mental resilience</strong>—the qualities needed to perform and succeed in every field, from academics and entrepreneurship to sports and the artistic world.
                         </motion.p>
                     </div>
 

@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export const AchievementHero = () => {
     return (
-        <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden bg-[#050505]">
+        <section className="relative w-full min-h-[70vh] py-24 flex items-center justify-center overflow-hidden bg-[#050505]">
             {/* Background Texture/Effect */}
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 mix-blend-overlay" />
             <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/80 via-[#050505]/50 to-[#050505]" />

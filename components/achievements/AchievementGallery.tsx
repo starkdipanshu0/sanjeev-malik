@@ -42,27 +42,6 @@ const galleryItems: AchievementEntry[] = [
     },
     {
         media: [
-            { type: "image", src: "/achievements/WhatsApp Image 2026-01-20 at 11.03.45 AM.jpeg" }
-        ],
-        title: "State Honor",
-        description: "Felicitated by Former CM of Haryana Shri Bhupinder Singh Hooda. Acknowledging the distinguished achievements and contributions to the nation.",
-        date: "2024"
-    },
-    {
-        media: [
-            {
-                type: "video",
-                src: "https://www.youtube.com/embed/0wI0WCPFmWo?autoplay=1",
-                thumbnail: "https://img.youtube.com/vi/0wI0WCPFmWo/maxresdefault.jpg",
-                isYoutube: true
-            }
-        ],
-        title: "Defying Odds: 5 Gold Medals",
-        description: "In a display of sheer resilience and discipline, Lt. Col. Dr. Sanjeev Malik made history at the 42nd World Medicine & Health Games in Colombia. Despite suffering a leg fracture just two months prior to the event—leaving him in a cast for weeks—Dr. Malik underwent intense rehabilitation to not only compete but dominate. Representing the Indian Army and the medical fraternity, he secured 5 Gold Medals, proving that mental fortitude is just as vital as physical fitness.",
-        date: "Documentary"
-    },
-    {
-        media: [
             {
                 type: "video",
                 src: "/achievements/IMG_5471.MP4",
@@ -77,7 +56,7 @@ const galleryItems: AchievementEntry[] = [
 
 const AchievementGallery = () => {
     return (
-        <section className="py-24 bg-zinc-950 text-white relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-zinc-950 text-white relative overflow-hidden">
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url('/images/noise.png')" }} />
 
@@ -86,7 +65,7 @@ const AchievementGallery = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-24"
+                    className="text-center mb-12 md:mb-16"
                 >
                     <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4">
                         Journey of <span className="text-primary">Excellence</span>
@@ -97,7 +76,7 @@ const AchievementGallery = () => {
                 </motion.div>
 
                 {/* Single Column Vertical Stack */}
-                <div className="space-y-32">
+                <div className="space-y-16 md:space-y-24">
                     {galleryItems.map((item, index) => (
                         <AchievementSection key={index} item={item} index={index} />
                     ))}
@@ -145,7 +124,7 @@ const AchievementSection = ({ item, index }: { item: AchievementEntry; index: nu
             </div>
 
             {/* Media Viewer */}
-            <div className="relative w-full rounded-3xl overflow-hidden bg-zinc-900 border border-white/10 shadow-2xl aspect-video md:aspect-[21/9]">
+            <div className="relative w-full rounded-3xl overflow-hidden bg-zinc-900 border border-white/10 shadow-2xl aspect-video">
                 {/* Media Content */}
                 <div className="absolute inset-0 bg-black flex items-center justify-center">
                     <AnimatePresence mode="wait">
@@ -250,11 +229,11 @@ const AchievementSection = ({ item, index }: { item: AchievementEntry; index: nu
             </div>
 
             {/* Description Text */}
-            <div className="prose prose-lg prose-invert text-zinc-400 leading-relaxed max-w-none">
+            <div className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-3xl">
                 <p>{item.description}</p>
             </div>
 
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mt-8" />
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         </motion.div>
     );
 };

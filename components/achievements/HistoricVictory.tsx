@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HistoricVictory = () => {
     return (
-        <section className="py-24 bg-zinc-950 relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-zinc-950 relative overflow-hidden">
             <div className="container mx-auto px-6 md:px-12 relative z-10">
                 <div className="grid lg:grid-cols-12 gap-12 items-center">
 
@@ -33,8 +33,8 @@ const HistoricVictory = () => {
                             </div>
                         </div>
                         {/* Decorative Gold Elements */}
-                        <div className="absolute -z-10 -top-6 -left-6 w-full h-full border border-primary/20 rounded-2xl" />
-                        <div className="absolute -z-10 -bottom-6 -right-6 w-24 h-24 bg-primary/20 blur-3xl rounded-full" />
+                        <div className="hidden md:block absolute -z-10 -top-6 -left-6 w-full h-full border border-primary/20 rounded-2xl" />
+                        <div className="hidden md:block absolute -z-10 -bottom-6 -right-6 w-24 h-24 bg-primary/20 blur-3xl rounded-full" />
                     </motion.div>
 
                     {/* Content Column */}
@@ -55,7 +55,7 @@ const HistoricVictory = () => {
                             </h2>
                         </div>
 
-                        <div className="space-y-6 text-lg text-zinc-400 leading-relaxed text-justify hyphens-auto">
+                        <div className="space-y-6 text-lg text-zinc-400 leading-relaxed">
                             <p>
                                 On <strong className="text-white">11 Nov 2023</strong>, while representing India, Lt Col Sanjeev Malik made history by winning <strong className="text-white">Five Gold medals</strong> in the <strong className="text-white">42nd World Medicine and Health Games</strong> held in Columbia.
                             </p>

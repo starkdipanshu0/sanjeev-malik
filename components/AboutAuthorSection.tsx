@@ -58,15 +58,15 @@ const AboutAuthorSection = () => {
                                 Hi, I’m <span className="text-primary">Lt Col Sanjeev Malik</span>
                             </h2>
                             <p className="text-base md:text-xl font-medium text-foreground mb-4">
-                                I’m an Indian Army doctor and have served with elite special forces.
+                                I’m an Indian Army Doctor and have served with elite special forces.
                             </p>
 
                             <div className="space-y-2 md:space-y-6 text-sm md:text-lg text-muted-foreground leading-relaxed hidden md:block">
                                 <p>
-                                    I’m the author of <span className="font-semibold text-foreground">The Graphene Mentality</span>.
+                                    I’m the author of <span className="font-semibold text-foreground">The Graphene Mentality</span> and an endurance athlete—winner of <span className="font-semibold text-foreground">5 Gold medals</span> for India at the 42nd World Medical and Health Games.
                                 </p>
                                 <p>
-                                    Life has given me many uniforms to wear—from serving with the Special Forces and the President's Bodyguard to representing India at the World Medical and Health Games, where I was blessed to win five gold medals in athletics.
+                                    Across every challenge, I discovered one truth: the human mind is far stronger and more adaptable than we think—and real success comes from the <span className="font-semibold text-foreground">right mindset</span>.
                                 </p>
                             </div>
 
