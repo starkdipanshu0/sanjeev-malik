@@ -69,7 +69,7 @@ const BookCTASection = () => {
                         </h2>
 
                         <p className="text-lg md:text-xl text-background/70 max-w-lg mx-auto md:mx-0 leading-relaxed">
-                            Discover the secrets to unbreakable resilience and laser focus. Start your journey with "The Graphene Mentality" today.
+                            Discover the secrets to build laser sharp focus, discipline, and mental resilience. Practical insights on building a strong mindset.
                         </p>
 
                         <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
