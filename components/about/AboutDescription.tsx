@@ -34,7 +34,7 @@ const AboutDescription = () => {
                 <motion.div
                     id="continue-reading"
                     {...reveal(0)}
-                    className="max-w-2xl mx-auto mb-14 md:mb-16 text-center scroll-mt-28 md:scroll-mt-32"
+                    className="max-w-3xl mx-auto mb-14 md:mb-16 text-center scroll-mt-28 md:scroll-mt-32"
                 >
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
                         From the <span className="text-primary">Frontlines</span> to the <span className="text-primary">Boardroom</span>
@@ -42,7 +42,7 @@ const AboutDescription = () => {
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                 </motion.div>
 
-                <div className="max-w-2xl mx-auto space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
+                <div className="max-w-3xl mx-auto space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
 
                     {/* Lead paragraph. A drop cap was used here, but the opening
                         paragraphs are single lines, so the float bled into the one
