@@ -18,6 +18,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // The blog moved from /articles to /blogs. Keep the old URLs alive so any
+  // existing link or indexed page follows through instead of 404ing.
+  async redirects() {
+    return [
+      { source: '/articles', destination: '/blogs', permanent: true },
+      { source: '/articles/:slug', destination: '/blogs/:slug', permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

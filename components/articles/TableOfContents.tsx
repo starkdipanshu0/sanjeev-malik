@@ -34,7 +34,8 @@ export const TableOfContents = ({ blocks }: TableOfContentsProps) => {
         return () => observer.disconnect();
     }, [headings]);
 
-    if (headings.length === 0) return null;
+    // A contents list with a single entry is noise, not navigation.
+    if (headings.length < 2) return null;
 
     return (
         <nav className="space-y-2">
@@ -45,7 +46,7 @@ export const TableOfContents = ({ blocks }: TableOfContentsProps) => {
                     return (
                         <li key={index} className={cn("text-sm transition-colors border-l-2 pl-4",
                             heading.level === 3 && "ml-2",
-                            activeId === id ? "border-primary text-foreground font-medium" : "border-transparent text-muted-foreground hover:text-foreground hover:border-border"
+                            activeId === id ? "border-primary text-foreground font-medium" : "border-transparent text-ink-soft hover:text-foreground hover:border-border"
                         )}>
                             <a
                                 href={`#${id}`}

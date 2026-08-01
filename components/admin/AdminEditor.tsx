@@ -122,7 +122,7 @@ export const AdminEditor = () => {
                         </div>
 
                         {/* Measure and paragraph classes mirror the published article
-                            (app/articles/[slug]/page.tsx) so the preview shows the real
+                            (app/blogs/[slug]/page.tsx) so the preview shows the real
                             line length. The `prose` classes here were dead - the
                             typography plugin is not installed. */}
                         <div className="article-body font-reading max-w-2xl mx-auto">

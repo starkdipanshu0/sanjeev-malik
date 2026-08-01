@@ -58,7 +58,7 @@ const BlogCarouselSection = () => {
                         <div className="w-px h-8 bg-border/50" />
 
                         <Button variant="link" className="group" asChild>
-                            <Link href="/articles" className="flex items-center gap-2">
+                            <Link href="/blogs" className="flex items-center gap-2">
                                 View All Blogs
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
@@ -76,7 +76,7 @@ const BlogCarouselSection = () => {
                             key={article.id}
                             className="snap-start shrink-0 w-[300px] md:w-[400px] bg-background rounded-xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
                         >
-                            <Link href={`/articles/${article.slug}`} className="flex flex-col h-full">
+                            <Link href={`/blogs/${article.slug}`} className="flex flex-col h-full">
                                 {/* Card Content */}
                                 <div className="p-6 md:p-8 flex flex-col h-full">
                                     <h3 className="text-xl md:text-2xl font-bold font-serif mb-3 group-hover:text-primary transition-colors text-balance">
@@ -128,7 +128,7 @@ const BlogCarouselSection = () => {
                 </div>
                 <div className="mt-6 md:hidden flex justify-center">
                     <Button variant="outline" className="w-full max-w-xs" asChild>
-                        <Link href="/articles">
+                        <Link href="/blogs">
                             View All Blogs
                         </Link>
                     </Button>

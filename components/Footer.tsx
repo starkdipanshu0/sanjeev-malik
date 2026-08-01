@@ -70,7 +70,7 @@ const Footer = () => {
                         <ul className="space-y-3">
                             {[
                                 { label: 'Book', href: '/book' },
-                                { label: 'Latest Blogs', href: '/articles' },
+                                { label: 'Latest Blogs', href: '/blogs' },
                                 { label: 'Achievements', href: '/achievements' },
                                 { label: 'About the Author', href: '/about' }
                             ].map((item) => (

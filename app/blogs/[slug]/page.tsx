@@ -2,10 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getArticleBySlug, getOtherArticles, getAllArticles } from "@/lib/articles";
-import { ArrowLeft, ArrowRight, Clock, Calendar, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react";
 import { ReadingProgressBar } from "@/components/articles/ReadingProgressBar";
 import { TableOfContents } from "@/components/articles/TableOfContents";
+import { ShareRow } from "@/components/articles/ShareRow";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps) {
 
     if (!article) {
         return {
-            title: 'Article Not Found',
+            title: 'Post Not Found | Sanjeev Malik',
         }
     }
 
@@ -43,7 +43,14 @@ export default async function ArticlePage({ params }: PageProps) {
         notFound();
     }
 
-    const otherArticles = getOtherArticles(article.id);
+    // The three posts are a deliberate sequence, so offer real prev/next.
+    // "Read Next" previously fed every other article, uncapped, into a
+    // 3-column grid - 2 cards leaving a permanent hole, growing to 9 later.
+    const all = getAllArticles();
+    const position = all.findIndex((a) => a.id === article.id);
+    const previous = position > 0 ? all[position - 1] : null;
+    const next = position < all.length - 1 ? all[position + 1] : null;
+    const otherArticles = getOtherArticles(article.id).slice(0, 3);
     // Glue short connector words (The, a, to, of, ...) to the following word so they
     // don't strand at the end of a title line. Non-breaking space keeps phrases intact.
     const displayTitle = article.title.replace(/(\s)(\S{1,3})\s/g, '$1$2 ');
@@ -56,8 +63,8 @@ export default async function ArticlePage({ params }: PageProps) {
 
                 {/* Hero */}
                 <header className="max-w-3xl mx-auto text-center">
-                    <Link href="/articles" className="flex w-fit items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-8 transition-colors">
-                        <ArrowLeft className="w-4 h-4" /> Back to Articles
+                    <Link href="/blogs" className="flex w-fit items-center gap-2 text-sm text-ink-soft hover:text-emphasis mb-8 transition-colors">
+                        <ArrowLeft className="w-4 h-4" /> Back to Blogs
                     </Link>
 
                     <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground leading-[1.1] tracking-tight text-balance mb-5">
@@ -84,7 +91,7 @@ export default async function ArticlePage({ params }: PageProps) {
 
                 {/* Cover Image */}
                 <div className="max-w-3xl mx-auto">
-                    <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden my-12 md:my-16 shadow-2xl">
+                    <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden my-12 md:my-16 shadow-(--shadow-plate-featured)">
                         <Image
                             src={article.image}
                             alt={article.title}
@@ -105,6 +112,19 @@ export default async function ArticlePage({ params }: PageProps) {
                             <TableOfContents blocks={article.content} />
                         </div>
                     </aside>
+
+                    {/* Mobile / tablet contents. The TOC was xl-only, so every phone
+                        reader got no in-article navigation. TableOfContents returns
+                        null below 2 headings, so this collapses away on short posts. */}
+                    <details className="xl:hidden plate group mb-8 rounded-2xl px-5 py-4 [&:not(:has(nav))]:hidden">
+                        <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-bold uppercase tracking-[0.15em] text-ink-soft outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded">
+                            On this page
+                            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-open:rotate-90 motion-reduce:transition-none" />
+                        </summary>
+                        <div className="pt-4">
+                            <TableOfContents blocks={article.content} />
+                        </div>
+                    </details>
 
                     <div className="article-body font-reading">
                         {article.content.map((block, index) => {
@@ -158,13 +178,13 @@ export default async function ArticlePage({ params }: PageProps) {
                                     );
                                 case 'list':
                                     return block.style === 'ordered' ? (
-                                        <ol key={index} className="list-decimal pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">
+                                        <ol key={index} className="list-decimal pl-6 space-y-2 marker:text-emphasis text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">
                                             {block.items.map((it, i) => (
                                                 <li key={i} dangerouslySetInnerHTML={{ __html: it }} />
                                             ))}
                                         </ol>
                                     ) : (
-                                        <ul key={index} className="list-disc pl-6 space-y-2 marker:text-primary text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">
+                                        <ul key={index} className="list-disc pl-6 space-y-2 marker:text-emphasis text-lg md:text-xl leading-[1.85] text-foreground/85 my-6">
                                             {block.items.map((it, i) => (
                                                 <li key={i} dangerouslySetInnerHTML={{ __html: it }} />
                                             ))}
@@ -184,16 +204,33 @@ export default async function ArticlePage({ params }: PageProps) {
                         })}
                     </div>
 
-                    {/* Share Footer */}
-                    <div className="mt-16 pt-8 border-t border-border/40 flex items-center justify-between">
-                        <span className="font-serif font-bold text-lg">Share this article</span>
-                        <div className="flex gap-3">
-                            <Button variant="outline" size="icon" className="rounded-full"><Linkedin className="w-4 h-4" /></Button>
-                            <Button variant="outline" size="icon" className="rounded-full"><Twitter className="w-4 h-4" /></Button>
-                            <Button variant="outline" size="icon" className="rounded-full"><Facebook className="w-4 h-4" /></Button>
-                            <Button variant="outline" size="icon" className="rounded-full"><Share2 className="w-4 h-4" /></Button>
-                        </div>
-                    </div>
+                    <ShareRow title={article.title} slug={article.slug} />
+
+                    {/* Series navigation */}
+                    {(previous || next) && (
+                        <nav aria-label="Series navigation" className="mt-10 grid gap-4 sm:grid-cols-2">
+                            {previous ? (
+                                <Link href={`/blogs/${previous.slug}`} className="plate group rounded-2xl p-5 transition-[box-shadow] duration-300 hover:shadow-(--shadow-plate-pressed) outline-none focus-visible:ring-2 focus-visible:ring-primary/60">
+                                    <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-ink-faint">
+                                        <ArrowLeft className="w-3.5 h-3.5" /> Previous
+                                    </span>
+                                    <span className="mt-2 block font-serif font-bold text-foreground leading-snug text-balance group-hover:text-emphasis transition-colors">
+                                        {previous.title}
+                                    </span>
+                                </Link>
+                            ) : <span className="hidden sm:block" />}
+                            {next && (
+                                <Link href={`/blogs/${next.slug}`} className="plate group rounded-2xl p-5 text-right transition-[box-shadow] duration-300 hover:shadow-(--shadow-plate-pressed) outline-none focus-visible:ring-2 focus-visible:ring-primary/60 sm:col-start-2">
+                                    <span className="flex items-center justify-end gap-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-ink-faint">
+                                        Next <ArrowRight className="w-3.5 h-3.5" />
+                                    </span>
+                                    <span className="mt-2 block font-serif font-bold text-foreground leading-snug text-balance group-hover:text-emphasis transition-colors">
+                                        {next.title}
+                                    </span>
+                                </Link>
+                            )}
+                        </nav>
+                    )}
 
                     {/* Author Bio */}
                     <div className="mt-12">
@@ -202,12 +239,12 @@ export default async function ArticlePage({ params }: PageProps) {
                                 <Image src="/images/author.jpg" alt={article.author} fill className="object-cover" />
                             </div>
                             <div>
-                                <p className="text-xs font-bold tracking-[0.2em] uppercase text-primary mb-1">Written by</p>
+                                <p className="text-xs font-bold tracking-[0.2em] uppercase text-emphasis mb-1">Written by</p>
                                 <h3 className="font-serif text-xl font-bold text-foreground mb-2 text-balance">{article.author}</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                                     Indian Army doctor, Special Forces veteran, and record-setting endurance athlete. Author of <span className="text-foreground font-medium">The Graphene Mentality</span> — a practical guide to building focus, discipline, and resilience.
                                 </p>
-                                <Link href="/book" className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all">
+                                <Link href="/book" className="inline-flex items-center gap-2 text-sm font-bold text-emphasis hover:gap-3 transition-all">
                                     Explore the Book <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -221,11 +258,11 @@ export default async function ArticlePage({ params }: PageProps) {
                         <h2 className="font-serif text-2xl md:text-3xl font-bold mb-8 text-center text-balance">Read Next</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                             {otherArticles.map((other) => (
-                                <Link key={other.id} href={`/articles/${other.slug}`} className="group block">
+                                <Link key={other.id} href={`/blogs/${other.slug}`} className="group block">
                                     <div className="relative aspect-[3/2] rounded-xl overflow-hidden mb-4">
                                         <Image src={other.image} alt={other.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                                     </div>
-                                    <h3 className="font-serif font-bold text-lg group-hover:text-primary transition-colors leading-snug mb-1 text-balance">
+                                    <h3 className="font-serif font-bold text-lg group-hover:text-emphasis transition-colors leading-snug mb-1 text-balance">
                                         {other.title}
                                     </h3>
                                     <p className="text-xs text-muted-foreground">{other.readTime}</p>

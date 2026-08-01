@@ -258,7 +258,7 @@
 @layer components {
   /* Inline formatting inside article body (comes from rich-text HTML) */
   .article-body a {
-    color: var(--primary);
+    color: var(--emphasis);
     text-decoration: underline;
     text-underline-offset: 2px;
     font-weight: 500;
@@ -282,7 +282,7 @@
     font-size: 4.25rem;
     line-height: 0.82;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--emphasis);
     padding-right: 0.08em;
     margin-top: 0.02em;
   }

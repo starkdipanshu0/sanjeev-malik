@@ -18,7 +18,7 @@ export const Sidebar = () => {
                 </blockquote>
                 <div className="mt-4 flex items-center gap-3">
                     <div className="h-0.5 w-8 bg-primary/50" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-primary">Sanjeev Malik</span>
+                    <span className="text-sm font-bold uppercase tracking-widest text-emphasis">Sanjeev Malik</span>
                 </div>
             </div>
 
