@@ -2,14 +2,22 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Mail } from "lucide-react";
+import { Mail, Check } from "lucide-react";
 
+const perks = [
+    "One practical mindset idea, every week",
+    "Five-minute read, no filler",
+    "Unsubscribe in one click",
+];
+
+/* bg-secondary/30 keeps the homepage alternating. This section and
+   ConnectSection below it were both bg-background, so the two ran together
+   with no visible seam. */
 const NewsletterSection = () => {
     return (
-        <section className="w-full py-16 md:py-24 bg-background border-t border-border/40">
+        <section className="w-full py-16 md:py-24 bg-secondary/30 border-t border-border/40">
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     {/* Left Column: Heading & Copy */}
                     <div className="space-y-6">
@@ -18,10 +26,14 @@ const NewsletterSection = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="flex items-center gap-3 text-primary"
+                            className="flex items-center gap-3"
                         >
-                            <Mail className="w-5 h-5" />
-                            <span className="text-xs font-bold tracking-[0.2em] uppercase">Newsletter</span>
+                            <span className="well flex h-11 w-11 shrink-0 items-center justify-center rounded-lg">
+                                <Mail className="w-5 h-5" strokeWidth={2} />
+                            </span>
+                            <span className="text-xs font-bold tracking-[0.2em] uppercase text-emphasis">
+                                Newsletter
+                            </span>
                         </motion.div>
 
                         <motion.h2
@@ -29,10 +41,9 @@ const NewsletterSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight"
+                            className="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight text-balance"
                         >
-                            Subscribe to my <br />
-                            <span className="text-primary">weekly Newsletter</span>
+                            Subscribe to my <span className="text-primary">weekly Newsletter</span>
                         </motion.h2>
 
                         <motion.p
@@ -40,10 +51,27 @@ const NewsletterSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.3 }}
-                            className="text-muted-foreground text-lg max-w-md leading-relaxed"
+                            className="text-muted-foreground text-lg max-w-md leading-relaxed text-pretty"
                         >
                             Get powerful mindset-building tips delivered straight to your inbox.
                         </motion.p>
+
+                        <motion.ul
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            className="space-y-3 pt-2"
+                        >
+                            {perks.map((perk) => (
+                                <li key={perk} className="flex items-center gap-3 text-foreground/80">
+                                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15">
+                                        <Check className="w-3 h-3 text-emphasis" strokeWidth={3} />
+                                    </span>
+                                    <span className="text-base">{perk}</span>
+                                </li>
+                            ))}
+                        </motion.ul>
                     </div>
 
                     {/* Right Column: Form */}
@@ -52,23 +80,32 @@ const NewsletterSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="bg-secondary/30 p-8 md:p-10 rounded-2xl border border-primary/10 lg:mb-2"
+                        className="plate rounded-2xl p-8 md:p-10"
                     >
-                        <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                        <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-medium text-foreground">Email Address</label>
-                                <Input
-                                    id="email"
+                                <label
+                                    htmlFor="newsletter-email"
+                                    className="block text-xs font-bold uppercase tracking-[0.15em] text-foreground/70"
+                                >
+                                    Email Address
+                                </label>
+                                {/* Recessed field, matching the milled wells elsewhere */}
+                                <input
+                                    id="newsletter-email"
                                     type="email"
+                                    autoComplete="email"
                                     placeholder="name@example.com"
-                                    className="h-12 bg-background border-border focus-visible:ring-primary"
+                                    className="w-full h-12 rounded-lg px-4 text-base text-foreground bg-well placeholder:text-muted-foreground/70 shadow-(--shadow-well) border-0 outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-primary/60"
                                 />
                             </div>
+
                             <Button type="submit" size="lg" className="w-full">
                                 Subscribe Now
                             </Button>
-                            <p className="text-xs text-muted-foreground text-center pt-2">
-                                Join <strong>5,000+ leaders</strong>. Unsubscribe anytime.
+
+                            <p className="text-xs text-muted-foreground text-center">
+                                Join <strong className="text-foreground font-semibold">5,000+ leaders</strong>. Unsubscribe anytime.
                             </p>
                         </form>
                     </motion.div>
