@@ -32,7 +32,7 @@ const KeyAchievements = () => {
     return (
         <section className="py-16 md:py-24 bg-background relative overflow-hidden">
             {/* Background noise texture */}
-            <div className="absolute inset-0 opacity-[0.4] mix-blend-soft-light" style={{ backgroundImage: "url('/images/noise.png')" }} />
+            <div className="grain absolute inset-0 opacity-[0.25] mix-blend-soft-light pointer-events-none" />
 
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12 relative z-10">
                 <div className="text-center mb-16">

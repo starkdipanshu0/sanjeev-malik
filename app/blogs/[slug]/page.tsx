@@ -27,15 +27,30 @@ export async function generateMetadata({ params }: PageProps) {
     const article = getArticleBySlug(slug);
 
     if (!article) {
-        return {
-            title: 'Post Not Found | Sanjeev Malik',
-        }
+        return { title: "Post Not Found" };
     }
 
+    // Bare title only - the root layout's template appends the site suffix.
     return {
-        title: `${article.title} | Sanjeev Malik`,
+        title: article.title,
         description: article.excerpt,
-    }
+        alternates: { canonical: `/blogs/${article.slug}` },
+        openGraph: {
+            type: "article",
+            title: article.title,
+            description: article.excerpt,
+            url: `/blogs/${article.slug}`,
+            publishedTime: article.date,
+            authors: [article.author],
+            images: [{ url: article.image, alt: article.title }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: article.title,
+            description: article.excerpt,
+            images: [article.image],
+        },
+    };
 }
 
 export default async function ArticlePage({ params }: PageProps) {

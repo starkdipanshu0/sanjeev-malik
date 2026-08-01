@@ -58,7 +58,7 @@ const AchievementGallery = () => {
     return (
         <section className="py-16 md:py-24 bg-zinc-950 text-white relative overflow-hidden">
             {/* Background Texture */}
-            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url('/images/noise.png')" }} />
+            <div className="grain absolute inset-0 opacity-[0.05] pointer-events-none" />
 
             <div className="mx-auto w-full max-w-5xl px-6 md:px-12 relative z-10">
                 <motion.div
