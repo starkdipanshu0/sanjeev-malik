@@ -24,7 +24,7 @@ export const Sidebar = () => {
 
             {/* Newsletter - Minimalist */}
             <div className="space-y-4">
-                <h3 className="font-serif text-2xl font-bold">Subscribe to my weekly Newsletter</h3>
+                <h3 className="font-serif text-2xl font-bold text-balance">Subscribe to my weekly Newsletter</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                     Get powerful mindset-building tips delivered straight to your inbox.
                 </p>
@@ -42,7 +42,7 @@ export const Sidebar = () => {
 
             {/* Key Qualities */}
             <div className="space-y-4 pt-4 border-t border-border/40">
-                <h3 className="font-serif text-lg font-bold">Core Pillars</h3>
+                <h3 className="font-serif text-lg font-bold text-balance">Core Pillars</h3>
                 <ul className="space-y-3">
                     {["Resilience", "Strategic Thinking", "Discipline", "Integrity"].map((item, i) => (
                         <li key={i} className="flex items-center gap-3 text-sm font-medium text-muted-foreground">

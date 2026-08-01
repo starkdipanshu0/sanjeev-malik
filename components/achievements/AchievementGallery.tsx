@@ -67,7 +67,7 @@ const AchievementGallery = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12 md:mb-16"
                 >
-                    <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4">
+                    <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 text-balance">
                         Journey of <span className="text-primary">Excellence</span>
                     </h2>
                     <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
@@ -118,7 +118,7 @@ const AchievementSection = ({ item, index }: { item: AchievementEntry; index: nu
                     {item.date && <span className="w-1 h-1 rounded-full bg-primary" />}
                     <span>{isVideo ? "Video Highlight" : "Gallery"}</span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-2">
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-2 text-balance">
                     {item.title}
                 </h3>
             </div>

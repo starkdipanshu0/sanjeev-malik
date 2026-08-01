@@ -31,7 +31,7 @@ const PurchaseOptions = () => {
                         className="bg-background border border-border rounded-2xl p-8 flex flex-col justify-between hover:border-primary/50 transition-colors shadow-lg"
                     >
                         <div>
-                            <h3 className="text-2xl font-serif font-bold mb-2">Kindle / eBook</h3>
+                            <h3 className="text-2xl font-serif font-bold mb-2 text-balance">Kindle / eBook</h3>
                             <p className="text-muted-foreground text-sm mb-6">Read instantly on any device.</p>
                             <div className="text-4xl font-bold text-foreground mb-2">₹273.60</div>
                         </div>
@@ -54,7 +54,7 @@ const PurchaseOptions = () => {
                             Most Popular
                         </div>
                         <div>
-                            <h3 className="text-2xl font-serif font-bold mb-2">Paperback</h3>
+                            <h3 className="text-2xl font-serif font-bold mb-2 text-balance">Paperback</h3>
                             <p className="text-muted-foreground text-sm mb-6">The classic reading experience.</p>
                             <div className="text-4xl font-bold text-foreground mb-2">₹288.00</div>
 

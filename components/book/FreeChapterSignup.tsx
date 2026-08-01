@@ -22,7 +22,7 @@ const FreeChapterSignup = () => {
                     viewport={{ once: true }}
                     className="flex-1 space-y-6 text-center lg:text-left"
                 >
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground text-balance">
                         Experience the <br />
                         <span className="text-primary">Transformation</span> First.
                     </h2>

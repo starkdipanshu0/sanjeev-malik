@@ -203,7 +203,7 @@ export default async function ArticlePage({ params }: PageProps) {
                             </div>
                             <div>
                                 <p className="text-xs font-bold tracking-[0.2em] uppercase text-primary mb-1">Written by</p>
-                                <h3 className="font-serif text-xl font-bold text-foreground mb-2">{article.author}</h3>
+                                <h3 className="font-serif text-xl font-bold text-foreground mb-2 text-balance">{article.author}</h3>
                                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                                     Indian Army doctor, Special Forces veteran, and record-setting endurance athlete. Author of <span className="text-foreground font-medium">The Graphene Mentality</span> — a practical guide to building focus, discipline, and resilience.
                                 </p>
@@ -218,14 +218,14 @@ export default async function ArticlePage({ params }: PageProps) {
                 {/* Read Next */}
                 {otherArticles.length > 0 && (
                     <section className="max-w-5xl mx-auto mt-20 pt-12 border-t border-border/40">
-                        <h2 className="font-serif text-2xl md:text-3xl font-bold mb-8 text-center">Read Next</h2>
+                        <h2 className="font-serif text-2xl md:text-3xl font-bold mb-8 text-center text-balance">Read Next</h2>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                             {otherArticles.map((other) => (
                                 <Link key={other.id} href={`/articles/${other.slug}`} className="group block">
                                     <div className="relative aspect-[3/2] rounded-xl overflow-hidden mb-4">
                                         <Image src={other.image} alt={other.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                                     </div>
-                                    <h3 className="font-serif font-bold text-lg group-hover:text-primary transition-colors leading-snug mb-1">
+                                    <h3 className="font-serif font-bold text-lg group-hover:text-primary transition-colors leading-snug mb-1 text-balance">
                                         {other.title}
                                     </h3>
                                     <p className="text-xs text-muted-foreground">{other.readTime}</p>

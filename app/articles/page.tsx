@@ -14,7 +14,7 @@ export default function ArticlesPage() {
         <main className="min-h-screen bg-background pt-12 pb-20">
             {/* Page Header */}
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12 mb-20 text-center">
-                <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6">
+                <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 text-balance">
                     My <span className="text-muted-foreground">Blogs</span>
                 </h1>
                 <p className="max-w-xl mx-auto text-muted-foreground text-lg">

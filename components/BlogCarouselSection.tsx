@@ -28,7 +28,7 @@ const BlogCarouselSection = () => {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 relative">
                     <div className="space-y-4">
-                        <h2 className="font-serif text-3xl md:text-5xl font-bold">
+                        <h2 className="font-serif text-3xl md:text-5xl font-bold text-balance">
                             My Blogs
                         </h2>
                     </div>
@@ -79,7 +79,7 @@ const BlogCarouselSection = () => {
                             <Link href={`/articles/${article.slug}`} className="flex flex-col h-full">
                                 {/* Card Content */}
                                 <div className="p-6 md:p-8 flex flex-col h-full">
-                                    <h3 className="text-xl md:text-2xl font-bold font-serif mb-3 group-hover:text-primary transition-colors">
+                                    <h3 className="text-xl md:text-2xl font-bold font-serif mb-3 group-hover:text-primary transition-colors text-balance">
                                         {article.title}
                                     </h3>
 

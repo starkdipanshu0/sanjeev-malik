@@ -22,7 +22,7 @@ const Visions = () => {
                         Vision &amp; Mission
                     </span>
 
-                    <h2 className="text-3xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight mb-8">
+                    <h2 className="text-3xl md:text-5xl lg:text-5xl font-serif font-bold leading-tight mb-8 text-balance">
                         To empower a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-primary bg-[length:200%_auto] animate-gradient">Billion Minds</span> with the Graphene Mentality
                     </h2>
 

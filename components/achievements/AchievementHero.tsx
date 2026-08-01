@@ -20,7 +20,7 @@ export const AchievementHero = () => {
                         Milestones & Honors
                     </Badge>
 
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight text-balance">
                         Lt. Col. Sanjeev Malik <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-200">Creates History</span>
                     </h1>
 

@@ -66,7 +66,7 @@ const BookHero = () => {
                         International Bestseller
                     </div> */}
 
-                    <h1 className="text-4xl md:text-7xl font-serif font-bold tracking-tight text-foreground leading-[1.1]">
+                    <h1 className="text-4xl md:text-7xl font-serif font-bold tracking-tight text-foreground leading-[1.1] text-balance">
                         The <span className="text-primary">Graphene</span> Mentality
                     </h1>
 

@@ -19,7 +19,7 @@ export default function AchievementsPage() {
             {/* Footer Call to Action */}
             <section className="py-16 md:py-24 bg-secondary text-foreground text-center">
                 <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
-                    <h2 className="text-3xl md:text-5xl font-serif mb-6">Inspired by the Journey?</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif mb-6 text-balance">Inspired by the Journey?</h2>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 font-sans">
                         Discover the mindset behind these achievements in the book &ldquo;The Graphene Mentality&rdquo;.
                     </p>

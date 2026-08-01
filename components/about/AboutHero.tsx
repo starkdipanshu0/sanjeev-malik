@@ -34,7 +34,7 @@ const AboutHero = () => {
                     transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                     className="space-y-8"
                 >
-                    <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight text-foreground">
+                    <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight text-foreground text-balance">
                         Hi, I&apos;m <br />
                         <span className="text-primary">Sanjeev Malik</span>
                     </h1>

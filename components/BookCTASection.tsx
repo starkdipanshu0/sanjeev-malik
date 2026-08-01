@@ -63,12 +63,12 @@ const BookCTASection = () => {
                             <span className="text-sm font-medium tracking-wide text-background/80">BESTSELLER</span>
                         </div> */}
 
-                        <h2 className="font-serif text-4xl md:text-6xl font-bold leading-tight">
-                            Ready to Build Your <br />
+                        <h2 className="font-serif text-4xl md:text-6xl font-bold leading-tight text-balance">
+                            Ready to Build Your{" "}
                             <span className="text-primary">Graphene Mentality?</span>
                         </h2>
 
-                        <p className="text-lg md:text-xl text-background/70 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        <p className="text-lg md:text-xl text-background/70 max-w-lg mx-auto md:mx-0 leading-relaxed text-pretty">
                             Discover the secrets to build laser sharp focus, discipline, and mental resilience. Practical insights on building a strong mindset.
                         </p>
 

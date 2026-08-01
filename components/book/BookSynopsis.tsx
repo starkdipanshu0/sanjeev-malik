@@ -21,7 +21,7 @@ const BookSynopsis = () => {
                         transition={{ duration: 0.8 }}
                         className="text-center"
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6 leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-6 leading-tight text-balance">
                             In the Age of Distraction, Build <span className="text-primary">Focus</span> and Mental Strength to Fulfil Your Dreams
                         </h2>
                         <div className="w-24 h-1 bg-primary/20 mx-auto rounded-full mb-8" />

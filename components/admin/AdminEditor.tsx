@@ -117,7 +117,7 @@ export const AdminEditor = () => {
                     <div className="p-12 md:p-20">
                         <div className="mb-12 text-center">
                             <span className="text-primary text-sm font-bold uppercase tracking-widest">{category}</span>
-                            <h1 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 leading-tight">{title}</h1>
+                            <h1 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6 leading-tight text-balance">{title}</h1>
                             <p className="text-xl text-muted-foreground italic max-w-2xl mx-auto">{excerpt}</p>
                         </div>
 
@@ -280,7 +280,7 @@ export const AdminEditor = () => {
 
                             {/* Add Blocks Card */}
                             <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
-                                <h3 className="text-sm font-bold uppercase tracking-widest mb-4">Add Content</h3>
+                                <h3 className="text-sm font-bold uppercase tracking-widest mb-4 text-balance">Add Content</h3>
                                 <div className="grid grid-cols-2 gap-3">
                                     <Button variant="outline" className="justify-start gap-2" onClick={() => addBlock('paragraph')}>
                                         <span className="font-serif">T</span> Text
@@ -305,7 +305,7 @@ export const AdminEditor = () => {
 
                             {/* Meta & Publish Card */}
                             <div className="bg-card border border-border rounded-xl p-6 shadow-sm space-y-4">
-                                <h3 className="text-sm font-bold uppercase tracking-widest mb-2">Publishing</h3>
+                                <h3 className="text-sm font-bold uppercase tracking-widest mb-2 text-balance">Publishing</h3>
 
                                 <div>
                                     <label className="text-xs text-muted-foreground mb-1 block">Cover Image URL</label>

@@ -54,15 +54,15 @@ const AboutAuthorSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
+                            <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4 text-balance">
                                 Hi, I am <span className="text-primary">Lt Col Sanjeev Malik</span>
                             </h2>
-                            <p className="text-base md:text-xl font-medium text-foreground mb-4">
+                            <p className="text-base md:text-xl font-medium text-foreground mb-4 text-pretty">
                                 I am an Indian Army Doctor and have served with elite special forces.
                             </p>
 
                             {/* Reading continues on /about from the paragraph after these. */}
-                            <div className="space-y-3 md:space-y-5 text-sm md:text-lg text-muted-foreground leading-relaxed">
+                            <div className="space-y-3 md:space-y-5 text-sm md:text-lg text-muted-foreground leading-relaxed text-pretty">
                                 <p>
                                     I’m the author of <span className="font-semibold text-foreground">The Graphene Mentality</span>.
                                 </p>

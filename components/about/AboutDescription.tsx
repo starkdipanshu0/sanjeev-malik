@@ -38,13 +38,13 @@ const AboutDescription = () => {
                 >
                     {/* max-w-5xl and lg:whitespace-nowrap keep this on one line from
                         lg up; it needs ~830px at 48px and still wraps below that. */}
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6 lg:whitespace-nowrap">
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6 lg:whitespace-nowrap text-balance">
                         From the <span className="text-primary">Frontlines</span> to the <span className="text-primary">Boardroom</span>
                     </h2>
                     <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
                 </motion.div>
 
-                <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
+                <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
 
                     {/* Lead paragraph. A drop cap was used here, but the opening
                         paragraphs are single lines, so the float bled into the one

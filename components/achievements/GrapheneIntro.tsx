@@ -17,7 +17,7 @@ const GrapheneIntro = () => {
                         The Philosophy
                     </span>
 
-                    <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground leading-tight">
+                    <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground leading-tight text-balance">
                         In the Age of Distraction, Build <br />
                         <span className="text-primary">Focus and Mental Strength</span> to Fulfil Your Dreams
                     </h2>
@@ -32,7 +32,7 @@ const GrapheneIntro = () => {
                     </div>
 
                     <div className="bg-secondary/20 p-8 rounded-2xl border border-primary/10 mt-12">
-                        <h3 className="text-xl font-bold text-foreground mb-6">
+                        <h3 className="text-xl font-bold text-foreground mb-6 text-balance">
                             Through simple, actionable strategies, you will learn how to:
                         </h3>
                         <ul className="grid sm:grid-cols-2 gap-4 text-left">

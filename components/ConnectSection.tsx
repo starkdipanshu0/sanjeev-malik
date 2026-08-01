@@ -73,7 +73,7 @@ const ConnectSection = () => {
                                 <span className="text-xs font-bold tracking-[0.2em] uppercase">Live Mentoring</span>
                             </div>
 
-                            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1]">
+                            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] text-balance">
                                 Let&apos;s <span className="text-emphasis">Connect</span>
                             </h2>
 

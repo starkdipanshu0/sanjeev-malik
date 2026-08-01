@@ -70,7 +70,7 @@ const KeyAchievements = () => {
                                 </div>
 
                                 <div>
-                                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors text-balance">
                                         {item.title}
                                     </h3>
                                     <p className="text-muted-foreground leading-relaxed text-sm md:text-base group-hover:text-foreground/80 transition-colors">

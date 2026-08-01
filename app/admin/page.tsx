@@ -17,7 +17,7 @@ export default function AdminPage() {
                     <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
                     <span className="text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground">Restricted Area</span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
+                <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-balance">
                     Content <span className="italic text-primary">Forge</span>
                 </h1>
                 <p className="text-muted-foreground mt-2">Create and structure your insights before deployment.</p>

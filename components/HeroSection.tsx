@@ -132,7 +132,7 @@ const HeroSection = () => {
                     className="flex flex-col items-center gap-[clamp(1rem,2.2vh,1.5rem)] w-full"
                 >
                     <div className="space-y-[clamp(0.625rem,1.4vh,1rem)]">
-                        <h2 className="font-serif font-bold tracking-tight text-foreground leading-[1.15] text-[clamp(1.5rem,3.4vh,2rem)] md:text-[clamp(2rem,5vh,3.5rem)]">
+                        <h2 className="font-serif font-bold tracking-tight text-foreground leading-[1.15] text-[clamp(1.5rem,3.4vh,2rem)] md:text-[clamp(2rem,5vh,3.5rem)] text-balance">
                             The <span className="text-primary">Graphene</span> Mentality
                         </h2>
                         <p className="text-foreground/70 md:text-muted-foreground text-base max-w-2xl mx-auto leading-normal md:leading-snug">

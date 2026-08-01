@@ -49,7 +49,7 @@ const HistoricVictory = () => {
                             <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-sm font-bold tracking-widest uppercase mb-4 border border-primary/30">
                                 Historic Victory
                             </span>
-                            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+                            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight text-balance">
                                 5 <span className="text-primary">Gold Medals</span> <br />
                                 <span className="text-white/60 text-3xl md:text-4xl">for India</span>
                             </h2>

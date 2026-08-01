@@ -130,7 +130,7 @@ const ChapterWalkthrough = () => {
         <section className="py-16 md:py-24 bg-background relative z-10">
             <div className="mx-auto w-full max-w-5xl px-6 md:px-12">
                 <div className="mb-16 text-center">
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4">
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-foreground mb-4 text-balance">
                         Inside the <span className="text-primary">Pages</span>
                     </h2>
                     <p className="text-muted-foreground text-lg">A comprehensive breakdown of the journey.</p>
@@ -141,7 +141,7 @@ const ChapterWalkthrough = () => {
                         <div key={partIndex} className="relative">
                             {/* Part Header */}
                             <div className="sticky top-20 z-20 bg-background/95 backdrop-blur-sm py-4 mb-6 border-b border-border">
-                                <h3 className="text-sm font-bold tracking-widest text-primary uppercase">
+                                <h3 className="text-sm font-bold tracking-widest text-primary uppercase text-balance">
                                     {part.partTitle}
                                 </h3>
                             </div>

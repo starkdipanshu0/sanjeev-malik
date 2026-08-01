@@ -76,7 +76,7 @@ const BookBenefitsSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="font-serif text-3xl md:text-6xl font-bold text-foreground leading-[1.1]">
+                            <h2 className="font-serif text-3xl md:text-6xl font-bold text-foreground leading-[1.1] text-balance">
                                 How the <span className="text-primary">Graphene Mentality</span> <br />
                                 will benefit you
                             </h2>

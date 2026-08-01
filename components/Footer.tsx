@@ -88,7 +88,7 @@ const Footer = () => {
                     <div className="md:col-span-4 p-10 bg-white/[0.02] relative overflow-hidden group hover:bg-white/[0.04] transition-colors duration-500 border-t md:border-t-0 border-white/10">
                         <div className="relative z-10 h-full flex flex-col justify-center gap-6">
                             <div>
-                                <h3 className="text-xl font-serif text-white/90">Subscribe to my weekly Newsletter</h3>
+                                <h3 className="text-xl font-serif text-white/90 text-balance">Subscribe to my weekly Newsletter</h3>
                                 <p className="text-xs text-white/40 mt-2 leading-relaxed">
                                     Get powerful mindset-building tips delivered straight to your inbox.
                                 </p>

@@ -37,7 +37,7 @@ export const ArticleCard = ({ article, index }: ArticleCardProps) => {
                     <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {article.readTime}</span>
                 </div>
 
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
+                <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors text-balance">
                     <Link href={`/articles/${article.slug}`}>
                         {article.title}
                     </Link>

@@ -45,7 +45,7 @@ export const AchievementsCarousel = () => {
         <section className="py-16 md:py-24 bg-[#0a0a0a] text-white border-t border-white/5">
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12 mb-12 flex items-end justify-between">
                 <div>
-                    <h2 className="text-3xl md:text-4xl font-serif mb-4">Milestones of Excellence</h2>
+                    <h2 className="text-3xl md:text-4xl font-serif mb-4 text-balance">Milestones of Excellence</h2>
                     <p className="text-white/60 max-w-xl">
                         A continuous journey of breaking barriers and setting new benchmarks across multiple disciplines.
                     </p>
@@ -80,7 +80,7 @@ export const AchievementsCarousel = () => {
                         </div>
 
                         <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <h3 className="text-xl font-serif text-white mb-2">{item.title}</h3>
+                            <h3 className="text-xl font-serif text-white mb-2 text-balance">{item.title}</h3>
                             <p className="text-sm text-white/70 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
                                 {item.description}
                             </p>
