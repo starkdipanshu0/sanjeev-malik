@@ -6,6 +6,9 @@ import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react";
 import { ReadingProgressBar } from "@/components/articles/ReadingProgressBar";
 import { TableOfContents } from "@/components/articles/TableOfContents";
 import { ShareRow } from "@/components/articles/ShareRow";
+import { ArticleRail } from "@/components/articles/ArticleRail";
+import { Button } from "@/components/ui/button";
+import { AMAZON_PAPERBACK_URL } from "@/lib/constants";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -89,8 +92,9 @@ export default async function ArticlePage({ params }: PageProps) {
                     </div>
                 </header>
 
-                {/* Cover Image */}
-                <div className="max-w-3xl mx-auto">
+                {/* Cover Image - full container width. At max-w-3xl it was only
+                    768px on a wide screen, which is most of why the page read narrow. */}
+                <div className="w-full">
                     <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden my-12 md:my-16 shadow-(--shadow-plate-featured)">
                         <Image
                             src={article.image}
@@ -102,16 +106,12 @@ export default async function ArticlePage({ params }: PageProps) {
                     </div>
                 </div>
 
-                {/* Body - max-w-2xl keeps the measure near 66 characters per line
-                    at 20px Lora. The hero and cover above stay wider on purpose. */}
-                <div className="relative max-w-2xl mx-auto">
+                {/* Body - max-w-3xl is ~77 characters at 20px Lora. Leaves 208px
+                    of margin each side inside the 1184px content box, which is
+                    exactly what ArticleRail is sized to occupy. */}
+                <div className="relative max-w-3xl mx-auto">
 
-                    {/* Floating Table of Contents (left margin, large screens only) */}
-                    <aside className="hidden xl:block absolute right-full top-0 h-full mr-8 w-48">
-                        <div className="sticky top-28">
-                            <TableOfContents blocks={article.content} />
-                        </div>
-                    </aside>
+                    <ArticleRail blocks={article.content} title={article.title} slug={article.slug} />
 
                     {/* Mobile / tablet contents. The TOC was xl-only, so every phone
                         reader got no in-article navigation. TableOfContents returns
@@ -151,7 +151,10 @@ export default async function ArticlePage({ params }: PageProps) {
                                 }
                                 case 'quote':
                                     return (
-                                        <blockquote key={index} className="relative my-12 pl-8 border-l-2 border-primary">
+                                        // -mx-8 at lg+ breaks the quote past the measure so it reads
+                                        // as punctuation. Kept to 32px: the sticky rail occupies
+                                        // -208px to -48px, so this clears it by 16px.
+                                        <blockquote key={index} className="relative my-12 pl-8 border-l-2 border-primary lg:-mx-8 lg:pr-8">
                                             <span aria-hidden className="absolute -top-6 left-4 text-7xl font-serif text-primary/15 leading-none select-none pointer-events-none">&ldquo;</span>
                                             <p className="relative text-xl md:text-2xl font-serif font-medium text-foreground/90 leading-snug">
                                                 {block.content}
@@ -203,6 +206,37 @@ export default async function ArticlePage({ params }: PageProps) {
                             }
                         })}
                     </div>
+
+                    {/* End-of-article CTA. A reader who finishes a post previously
+                        got only the bio; this is the point of highest intent. */}
+                    <aside className="plate mt-16 flex flex-col items-center gap-6 rounded-2xl p-6 text-center sm:flex-row sm:p-8 sm:text-left">
+                        <div className="relative h-32 w-[86px] shrink-0 overflow-hidden rounded-r-lg shadow-(--shadow-plate)">
+                            <Image
+                                src="/images/book_cover_flat.jpg"
+                                alt=""
+                                fill
+                                sizes="86px"
+                                className="object-cover"
+                            />
+                        </div>
+                        <div className="flex-1">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-emphasis">
+                                From the book
+                            </p>
+                            <h2 className="mt-1 font-serif text-xl font-bold text-foreground text-balance md:text-2xl">
+                                The Graphene Mentality
+                            </h2>
+                            <p className="mt-2 text-sm leading-relaxed text-ink-soft text-pretty">
+                                Practical strategies to build focus, discipline, and mental resilience &mdash; in the age of distraction.
+                            </p>
+                        </div>
+                        <Button asChild className="shrink-0">
+                            <a href={AMAZON_PAPERBACK_URL} target="_blank" rel="noopener noreferrer">
+                                Grab Your Copy
+                                <ArrowRight className="h-4 w-4" />
+                            </a>
+                        </Button>
+                    </aside>
 
                     <ShareRow title={article.title} slug={article.slug} />
 
